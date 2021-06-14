@@ -20,11 +20,11 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
 
 //register route
 router.post("/register", (req, res) => {
-  // const { errors, isValid } = validateRegisterInput(req.body);
+  const { errors, isValid } = validateRegisterInput(req.body);
 
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
   User.findOne({ username: req.body.username }).then(user => {
     if (user) {
@@ -63,11 +63,11 @@ router.post("/register", (req, res) => {
 //login route 
 
 router.post("/login", (req, res) => {
-  // const { errors, isValid } = validateLoginInput(req.body);
+  const { errors, isValid } = validateLoginInput(req.body);
 
-  // if (!isValid) {
-  //   return res.status(400).json(errors);
-  // }
+  if (!isValid) {
+    return res.status(400).json(errors);
+  }
 
   const username = req.body.username;
   const password = req.body.password;
