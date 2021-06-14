@@ -38,7 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // If this is a first time user, start with an empty store
     store = configureStore({});
   }
-  const root = document.getElementById("root");
 
+  const root = document.getElementById("root");
+	
   ReactDOM.render(<Root store={store} />, root);
+	window.store = store;
 });
