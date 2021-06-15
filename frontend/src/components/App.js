@@ -11,8 +11,6 @@ import Modal from "../components/modal/Modal";
 const App = () => (
   <div>
     <Modal />
-    <div className={styles.Background}>
-      <div className={styles.Overlay}>
         <nav>
           <NavBarContainer />
         </nav>
@@ -20,8 +18,6 @@ const App = () => (
 					<Route path="/homecook/:id" component={BusinessContainer} />
           <Route path="/" component={MainPageContainer} />
         </Switch>
-      </div>
-    </div>
   </div>
 );
 
