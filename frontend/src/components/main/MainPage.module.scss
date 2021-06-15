@@ -26,6 +26,45 @@
 	letter-spacing: -2px;
 }
 
+.MainMiddle {
+  display: flex;
+  image-rendering: auto;
+  font-size: 25px;
+
+    .MiddlePic {
+    width: 500px;
+    height: auto;
+  }
+}
+
+.MiddleText {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin-bottom: 96px;
+  padding: 25px;
+
+  .MainMiddleTopText {
+    color: 181818;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+  }
+
+  .MainMiddleLowerText {
+    color: 181818;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+  }
+}
+
 .Footer {
 	margin-bottom: 16px;
 	margin-left: 16px;
