@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
 const users = require("./routes/api/users");
+const products = require("./routes/api/products");
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -20,6 +21,7 @@ mongoose
   .catch(err => console.log(err));
 
   app.use("/api/users", users);
+  app.use("/api/products", products);
   app.use(passport.initialize());
   require('./config/passport')(passport);
 

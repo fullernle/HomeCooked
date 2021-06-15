@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const ProductSchema = new Schema({
 
-  businessId: {
-    type: [{
+  business: {
+    type: {
       type: Schema.Types.ObjectId,
       ref: 'Businesses'
-    }]
+    }
   },
 
   name: {
@@ -26,7 +26,7 @@ const ProductSchema = new Schema({
   },
 
   quantity: {
-    type: Integer,
+    type: Number,
     required: true 
   },
 
