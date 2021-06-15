@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.Logo {
+	text-decoration: none;
+	color: $font-color;
+	font-size: 64px;
+}
+
+.NavBar {
+	display: flex;
+	background-color: transparent;
+	height: 80px;
+	align-items: center;
+	justify-content: space-between;
+	padding:0px 12px;
+}
+
+.NavLinks {
+	background-color: white;
+	padding: 10px;
+	margin: 0px 8px;
+	border-radius: 8px;
+}
+
+.NavLinks:nth-child(1){
+	background-color: transparent;
+}
+
+.NavLinks:hover {
+	background-color: $accent-color-hover;
+}
