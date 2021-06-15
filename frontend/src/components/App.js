@@ -6,17 +6,20 @@ import NavBarContainer from "./nav/NavbarContainer";
 import MainPageContainer from "./main/MainPageContainer";
 import LoginFormContainer from "./session/LoginFormContainer";
 import SignupFormContainer from "./session/SignupFormContainer";
+import styles from "./App.module.scss";
 
 const App = () => (
   <div>
-		<nav>
-   		<NavBarContainer />
-		</nav>
-    <Switch>
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route path="/" component={MainPageContainer} />
-    </Switch>
+    <div className={styles.Background}>
+      <nav>
+        <NavBarContainer />
+      </nav>
+      <Switch>
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <Route path="/" component={MainPageContainer} />
+      </Switch>
+    </div>
   </div>
 );
 

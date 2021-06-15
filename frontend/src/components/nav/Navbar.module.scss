@@ -1,31 +1,97 @@
 @import "../variables.scss";
+@media (min-width: 900px) {
+  .Logo {
+    text-decoration: none;
+    color: white;
+    font-size: 64px;
+    backdrop-filter: blur(6px);
+    font-family: "Times New Roman", Times, serif;
+    align-self: center;
+    text-align: center;
+    position: absolute;
+  }
 
-.Logo {
-	text-decoration: none;
-	color: $font-color;
-	font-size: 64px;
+  .NavBar {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    padding: 0px 12px;
+    justify-content: center;
+  }
+
+  .LinkContainer {
+    position: absolute;
+    top: 32px;
+    right: 64px;
+  }
+
+  .NavLinks {
+    text-decoration: none;
+    background-color: white;
+    align-self: flex-end;
+    color: $main-color;
+    padding: 4px 12px;
+    margin: 0px 8px;
+    border-radius: 4px;
+  }
+
+  .NavLinks:nth-child(1) {
+    background-color: transparent;
+    color: white;
+  }
+
+  .NavLinks:hover {
+    background-color: $main-color-hover;
+    color: white;
+  }
 }
 
-.NavBar {
-	display: flex;
-	background-color: transparent;
-	height: 80px;
-	align-items: center;
-	justify-content: space-between;
-	padding:0px 12px;
-}
 
-.NavLinks {
-	background-color: white;
-	padding: 10px;
-	margin: 0px 8px;
-	border-radius: 8px;
-}
 
-.NavLinks:nth-child(1){
-	background-color: transparent;
-}
+@media (max-width: 900px) {
+  .Logo {
+    text-decoration: none;
+    color: $font-color;
+    font-size: 64px;
+    backdrop-filter: blur(6px);
+    font-family: "Times New Roman", Times, serif;
+		align-self: flex-end;
+		left: 16px;
+		top: 16px;
+  }
 
-.NavLinks:hover {
-	background-color: $accent-color-hover;
+  .NavBar {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    padding: 0px 12px;
+    justify-content: space-between;
+		align-items: center;
+  }
+
+  .LinkContainer {
+		margin-top: 12px;
+		margin-right: 64px;
+  }
+
+  .NavLinks {
+    text-decoration: none;
+    background-color: $font-color;
+    color: $main-color;
+    padding: 4px 12px;
+    margin: 0px 8px;
+    border-radius: 4px;
+  }
+
+  .NavLinks:nth-child(1) {
+    background-color: transparent;
+    color: $font-color;
+  }
+
+  .NavLinks:hover {
+    background-color: $main-color-hover;
+    color: white;
+  }
 }

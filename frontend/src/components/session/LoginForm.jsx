@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import styles from "SessionForm.module.scss";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -41,6 +42,14 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
+  demoUser() {
+    let demoUser = { email: "test@test.com", password: "test123" };
+    this.props.login(demoUser).then(() => {
+      this.props.closeModal();
+      this.props.history.push("/");
+    });
+  }
+
   renderErrors() {
     return (
       <ul>
@@ -53,11 +62,11 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.LoginFormWrapper}>
         <form onSubmit={this.handleSubmit}>
           <div className="login-form">
             <input
-							className="form-field"
+              className="form-field"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
@@ -65,7 +74,7 @@ class LoginForm extends React.Component {
             />
             <br />
             <input
-							className="form-field"
+              className="form-field"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
