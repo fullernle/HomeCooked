@@ -3,6 +3,7 @@ import { AuthRoute, ProtectedRoute } from "../util/RouteUtil";
 import { Switch, Route } from "react-router-dom";
 import NavBarContainer from "./nav/NavbarContainer";
 
+import BusinessContainer from "./business/BusinessContainer"
 import MainPageContainer from "./main/MainPageContainer";
 import styles from "./App.module.scss";
 import Modal from "../components/modal/Modal";
@@ -16,6 +17,7 @@ const App = () => (
           <NavBarContainer />
         </nav>
         <Switch>
+					<Route path="/homecook/:id" component={BusinessContainer} />
           <Route path="/" component={MainPageContainer} />
         </Switch>
       </div>
