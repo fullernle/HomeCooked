@@ -26,6 +26,24 @@
     right: 64px;
   }
 
+  .LoginBttn {
+		border: none;
+		position: absolute;
+    top: 32px;
+    right: 64px;
+    text-decoration: none;
+    background-color: white;
+    align-self: flex-end;
+    color: $main-color;
+    padding: 4px 12px;
+    margin: 0px 8px;
+    border-radius: 4px;
+  }
+
+	.LoginBttn:hover {
+    background-color: $main-color-hover;
+    color: white;
+	}
   .NavLinks {
     text-decoration: none;
     background-color: white;
@@ -47,8 +65,6 @@
   }
 }
 
-
-
 @media (max-width: 900px) {
   .Logo {
     text-decoration: none;
@@ -56,9 +72,9 @@
     font-size: 64px;
     backdrop-filter: blur(6px);
     font-family: "Times New Roman", Times, serif;
-		align-self: flex-end;
-		left: 16px;
-		top: 16px;
+    align-self: flex-end;
+    left: 16px;
+    top: 16px;
   }
 
   .NavBar {
@@ -68,12 +84,22 @@
     height: 80px;
     padding: 0px 12px;
     justify-content: space-between;
-		align-items: center;
+    align-items: center;
   }
 
   .LinkContainer {
-		margin-top: 12px;
-		margin-right: 64px;
+    margin-top: 12px;
+    margin-right: 64px;
+  }
+
+  .LoginBttn {
+    text-decoration: none;
+    background-color: white;
+    align-self: flex-end;
+    color: $main-color;
+    padding: 4px 12px;
+    margin: 0px 8px;
+    border-radius: 4px;
   }
 
   .NavLinks {

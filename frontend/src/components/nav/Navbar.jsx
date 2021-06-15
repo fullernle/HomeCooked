@@ -29,14 +29,17 @@ class Navbar extends React.Component {
       );
     } else {
       return (
-        <div className={styles.LinkContainer}>
-          <Link className={styles.NavLinks} to={"/signup"}>Signup</Link>
-          <Link className={styles.NavLinks} to={"/login"}>Login</Link>
-        </div>
+				<button className={styles.LoginBttn} onClick={() => this.props.openModal("login")}>
+					Sign In
+				</button>
+        
       );
     }
   }
-
+/* <div className={styles.LinkContainer}>
+		<Link className={styles.NavLinks} to={"/signup"}>Signup</Link>
+		<Link className={styles.NavLinks} to={"/login"}>Login</Link>
+	</div> */
   render() {
     return (
       <div className={styles.NavWrapper}>

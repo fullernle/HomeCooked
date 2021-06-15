@@ -7,9 +7,11 @@ import MainPageContainer from "./main/MainPageContainer";
 import LoginFormContainer from "./session/LoginFormContainer";
 import SignupFormContainer from "./session/SignupFormContainer";
 import styles from "./App.module.scss";
+import Modal from "../components/modal/Modal";
 
 const App = () => (
   <div>
+    <Modal />
     <div className={styles.Background}>
       <nav>
         <NavBarContainer />

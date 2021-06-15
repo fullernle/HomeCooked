@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import styles from "SessionForm.module.scss";
+import styles from "./SessionForm.module.scss";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -39,7 +39,10 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user);
+    this.props.login(user).then(() => {
+      this.props.closeModal()
+      this.props.history.push("/");
+    });
   }
 
   demoUser() {
@@ -63,26 +66,46 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className={styles.LoginFormWrapper}>
-        <form onSubmit={this.handleSubmit}>
-          <div className="login-form">
-            <input
-              className="form-field"
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
+        <div onClick={this.props.closeModal} className={styles.CloseX}>
+          x
+        </div>
+        <form className={styles.FormBox} onSubmit={this.handleSubmit}>
+          <header className="modal-header">
+            <span className="modal-title">{this.props.formType}</span>
+            <span>{this.props.otherForm}</span>
+          </header>
+
+          {this.renderErrors()}
+          <div className={styles.Form}>
+            <label>
+              <span className={styles.ModalInput}>Email:</span>
+              <br />
+              <input
+                className={styles.FormInput}
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+              />
+            </label>
+            <br />
+            <label>
+              <span className={styles.ModalInput}>Password:</span>
+              <br />
+              <input
+                className={styles.FormInput}
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+              />
+            </label>
             <br />
             <input
-              className="form-field"
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
+              className={styles.SessionSubmit}
+              type="submit"
+              value="Submit"
             />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
           </div>
         </form>
       </div>
