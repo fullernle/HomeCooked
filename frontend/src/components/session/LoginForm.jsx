@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+		this.demoUser = this.demoUser.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -70,8 +71,8 @@ class LoginForm extends React.Component {
           x
         </div>
         <form className={styles.FormBox} onSubmit={this.handleSubmit}>
-          <header className="modal-header">
-            <span className="modal-title">{this.props.formType}</span>
+          <header className={styles.ModalHeader}>
+            <span className={styles.ModalTitle}>{this.props.formType}</span>
             <span>{this.props.otherForm}</span>
           </header>
 
@@ -108,6 +109,11 @@ class LoginForm extends React.Component {
             />
           </div>
         </form>
+        {this.props.formType === "Sign In" ? (
+          <button className={styles.DemoButton} onClick={this.demoUser}>
+            Demo Login
+          </button>
+        ) : null}
       </div>
     );
   }

@@ -1,1 +1,110 @@
-@import "../modal/Modal.module.scss"
+@import "../modal/Modal.module.scss";
+@import "../variables.scss";
+
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.FormInput {
+  width: 100%;
+  background: none;
+  border: solid 2px lightgray;
+  height: 38px;
+  border-radius: 6px;
+  margin-top: 8px;
+  transition: transform 100ms ease-out, background 150ms ease-out;
+}
+
+.FormInput:hover {
+  border: solid 2px black;
+}
+
+.ModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 34px;
+	margin-bottom: 12px;
+}
+
+.ModalInput {
+  font-size: 16px;
+}
+
+.ModalChangeForm {
+  background: none;
+	color: inherit;
+	border: black solid 1px;
+  padding: 8px 12px;
+	font: inherit;
+	cursor: pointer;
+	outline: none;
+  border-radius: 24px;
+  font-size: 14px;
+  transition: all 50ms;
+
+}
+
+.ModalChangeForm:hover {
+  border: black solid 2px;
+  transform: scale(1.01);
+}
+
+.ModalTitle {
+  font-size: 24px;
+}
+
+.SessionSubmit {
+  background: black;
+  color: white;
+  border-radius: 24px;
+  height: 48px;
+  font-size: 16px;
+  border: none;
+  transition: 100ms;
+}
+
+.SessionSubmit:hover {
+  background-color: rgb(46, 46, 46);
+  transform: scale(1.05);
+}
+
+.DemoButton {
+  background: $main-color;
+  color: white;
+  border-radius: 24px;
+  border: none;
+  height: 48px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: 100ms;
+}
+
+.DemoButton:hover {
+  background-color: $main-color-hover;
+  transform: scale(1.05);
+}
+
+.CloseX {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  right: -60px;
+  top: 0px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 24px;
+  transition: 100ms;
+}
+
+.CloseX:hover {
+  background-color: rgba(182, 182, 182, 0.541);
+}
