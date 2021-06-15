@@ -11,12 +11,14 @@ const App = () => (
   <div>
     <Modal />
     <div className={styles.Background}>
-      <nav>
-        <NavBarContainer />
-      </nav>
-      <Switch>
-        <Route path="/" component={MainPageContainer} />
-      </Switch>
+      <div className={styles.Overlay}>
+        <nav>
+          <NavBarContainer />
+        </nav>
+        <Switch>
+          <Route path="/" component={MainPageContainer} />
+        </Switch>
+      </div>
     </div>
   </div>
 );

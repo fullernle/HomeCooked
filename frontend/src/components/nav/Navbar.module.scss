@@ -4,7 +4,6 @@
     text-decoration: none;
     color: white;
     font-size: 64px;
-    backdrop-filter: blur(6px);
     font-family: "Times New Roman", Times, serif;
     align-self: center;
     text-align: center;
@@ -20,17 +19,11 @@
     justify-content: center;
   }
 
-  .LinkContainer {
+  .NavBttn {
+    border: none;
     position: absolute;
     top: 32px;
     right: 64px;
-  }
-
-  .LoginBttn {
-		border: none;
-		position: absolute;
-    top: 32px;
-    right: 64px;
     text-decoration: none;
     background-color: white;
     align-self: flex-end;
@@ -40,26 +33,7 @@
     border-radius: 4px;
   }
 
-	.LoginBttn:hover {
-    background-color: $main-color-hover;
-    color: white;
-	}
-  .NavLinks {
-    text-decoration: none;
-    background-color: white;
-    align-self: flex-end;
-    color: $main-color;
-    padding: 4px 12px;
-    margin: 0px 8px;
-    border-radius: 4px;
-  }
-
-  .NavLinks:nth-child(1) {
-    background-color: transparent;
-    color: white;
-  }
-
-  .NavLinks:hover {
+  .NavBttn:hover {
     background-color: $main-color-hover;
     color: white;
   }
@@ -72,7 +46,7 @@
     font-size: 64px;
     backdrop-filter: blur(6px);
     font-family: "Times New Roman", Times, serif;
-    align-self: flex-end;
+		position: absolute;
     left: 16px;
     top: 16px;
   }
@@ -87,12 +61,11 @@
     align-items: center;
   }
 
-  .LinkContainer {
-    margin-top: 12px;
-    margin-right: 64px;
-  }
-
-  .LoginBttn {
+  .NavBttn {
+    border: none;
+    position: absolute;
+    top: 32px;
+    right: 64px;
     text-decoration: none;
     background-color: white;
     align-self: flex-end;
@@ -102,21 +75,7 @@
     border-radius: 4px;
   }
 
-  .NavLinks {
-    text-decoration: none;
-    background-color: $font-color;
-    color: $main-color;
-    padding: 4px 12px;
-    margin: 0px 8px;
-    border-radius: 4px;
-  }
-
-  .NavLinks:nth-child(1) {
-    background-color: transparent;
-    color: $font-color;
-  }
-
-  .NavLinks:hover {
+  .NavBttn:hover {
     background-color: $main-color-hover;
     color: white;
   }

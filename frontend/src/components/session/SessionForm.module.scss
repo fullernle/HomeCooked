@@ -5,6 +5,7 @@
 .Form {
   display: flex;
   flex-direction: column;
+	justify-content: center;
 }
 
 .FormInput {
@@ -30,7 +31,8 @@
 }
 
 .ModalInput {
-  font-size: 16px;
+  font-size: 12px;
+	font-weight: 400;
 }
 
 .ModalChangeForm {
@@ -73,6 +75,7 @@
 
 .DemoButton {
   background: $main-color;
+	// background-color: $accent-color;
   color: white;
   border-radius: 24px;
   border: none;
@@ -85,6 +88,7 @@
 
 .DemoButton:hover {
   background-color: $main-color-hover;
+	// background-color: $accent-color-hover;
   transform: scale(1.05);
 }
 

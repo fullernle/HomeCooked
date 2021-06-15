@@ -18,18 +18,13 @@ class Navbar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div className={styles.LinkContainer}>
-          <Link className={styles.NavLinks} to={"/"}>
-            Home
-          </Link>
           <button className={styles.NavBttn} onClick={this.logoutUser}>
             Logout
           </button>
-        </div>
       );
     } else {
       return (
-				<button className={styles.LoginBttn} onClick={() => this.props.openModal("login")}>
+				<button className={styles.NavBttn} onClick={() => this.props.openModal("login")}>
 					Sign In
 				</button>
         

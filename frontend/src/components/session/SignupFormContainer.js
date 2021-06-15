@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
   return {
     signedIn: state.session.isSignedIn,
     errors: state.errors.session,
+		formType: "Register"
   };
 };
 
@@ -24,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
           dispatch(resetSessionErrors());
         }}
       >
-        Login
+        Sign In
       </button>
     ),
     closeModal: () => dispatch(closeModal()),

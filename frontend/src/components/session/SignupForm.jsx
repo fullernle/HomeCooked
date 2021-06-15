@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import styles from "./SessionForm.module.scss";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -56,43 +57,61 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit}>
-          <div className="signup-form">
+        <div onClick={this.props.closeModal} className={styles.CloseX}>
+          x
+        </div>
+        <form className={styles.FormBox} onSubmit={this.handleSubmit}>
+          <header className={styles.ModalHeader}>
+            <span className={styles.ModalTitle}>{this.props.formType}</span>
+            <span>{this.props.otherForm}</span>
+          </header>
+
+          {this.renderErrors()}
+          <div className={styles.Form}>
+            <label>
+              {/* <span className={styles.ModalInput}>Email:</span> */}
+              <input
+                className={styles.FormInput}
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+              />
+            </label>
+
+            <label>
+              {/* <span className={styles.ModalInput}>Username:</span> */}
+              <input
+                type="text"
+                value={this.state.username}
+                onChange={this.update("username")}
+                className={styles.FormInput}
+								placeholder="Username"
+              />
+            </label>
+
+            <label>
+              {/* <span className={styles.ModalInput}>Password:</span> */}
+              <input
+                className={styles.FormInput}
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+              />
+            </label>
+            <label>
+              {/* <span className={styles.ModalInput}>Confirm Password:</span> */}
+              <input
+                className={styles.FormInput}
+                type="password"
+                value={this.state.password2}
+                onChange={this.update("password2")}
+                placeholder="Confirm Password"
+              />
+            </label>
             <br />
-            <input
-							className="form-field"
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-							className="form-field"
-              type="text"
-              value={this.state.handle}
-              onChange={this.update("username")}
-              placeholder="Username"
-            />
-            <br />
-            <input
-							className="form-field"
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input
-							className="form-field"
-              type="password"
-              value={this.state.password2}
-              onChange={this.update("password2")}
-              placeholder="Confirm Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <input class={styles.SessionSubmit} type="submit" value="Submit" />
           </div>
         </form>
       </div>
