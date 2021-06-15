@@ -13,9 +13,9 @@ export default class MainPage extends Component {
 		return (
 			<div className={styles.MainPage}>
 				<div className={styles.Background}>
-					{this.props.isLoggedIn ? <h1 className={styles.header}>Welcome {loggedIn}</h1> : ""}
-					<h1 className={styles.header} >Homecooked meals,</h1>
-					<h1 className={styles.header}>delivered to your door!</h1>
+					{this.props.isLoggedIn ? <h1 className={styles.Header}>Welcome {loggedIn}</h1> : ""}
+					<h1 className={styles.Header} >Homecooked meals,</h1>
+					<h1 className={styles.Header}>delivered to your door!</h1>
 
 				</div>
 
