@@ -15,8 +15,8 @@ const App = () => (
           <NavBarContainer />
         </nav>
         <Switch>
-					<Route path="/homecook/:id" component={BusinessContainer} />
-          <Route path="/" component={MainPageContainer} />
+					<Route exact path="/homecook/:id" component={BusinessContainer} />
+          <Route exact path="/" component={MainPageContainer} />
         </Switch>
   </div>
 );
