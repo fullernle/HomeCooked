@@ -1,10 +1,15 @@
 @import "../variables.scss";
+
+.Wrapper {
+	margin: auto;
+}
 .Banner {
 	background-image: url("https://anytimerecipe.com/wp-content/uploads/2020/05/cuisine-asian_op-1240x578.jpg");
 	height: 30vh;
   background-size: cover;
 	display: flex;
 	align-items: flex-end;
+	max-width: 1400px;
 }
 
 .Overlay {
@@ -18,6 +23,7 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.185); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+	max-width: 1400px;
 }
 
 .Header {
