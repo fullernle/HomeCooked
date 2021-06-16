@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+.MainPage {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	margin-top: 32px;
+}
+
+.Background {
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	flex-direction: column;
+}
+.header {
+	color: $font-color;
+	margin: 0;
+	font-weight: 400;
+	font-size: 64px;
+	border-radius: 8px;
+	padding: 0 12px;
+	letter-spacing: -2px;
+}
+
+.Footer {
+	margin-bottom: 16px;
+	margin-left: 16px;
+	align-self: flex-start;
+}

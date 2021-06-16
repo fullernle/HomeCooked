@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Root from "./components/root";
-import configureStore from "./store/store";
+import Root from "./components/Root";
+import configureStore from "./store/Store";
 
 // We will use this to parse the user's session token
 import jwt_decode from "jwt-decode";
-import { setAuthToken } from "./util/session_api_util";
-import { logout } from "./actions/session_actions";
+import { setAuthToken } from "./util/SessionApiUtil";
+import { logout } from "./actions/SessionActions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
