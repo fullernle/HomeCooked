@@ -1,22 +1,49 @@
 @import "../variables.scss";
 
+
+.Background {
+	position: absolute;
+  background-image: url("https://vertavahealth.com/wp-content/uploads/2017/11/Thanksgiving-at-the-Treehouse-2.jpg");
+  height: 50vh;
+	width: 100%;
+  background-size: cover;
+	z-index: -100;
+	top: -80px;
+}
+
+.Overlay {
+  position: absolute; /* Sit on top of the page content */
+  // display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 50vh; /* Full height (cover the whole page) */
+	top: -80px;
+  background-color: rgba(0, 0, 0, 0.452); /* Black background with opacity */
+  z-index: -99; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
 .MainPage {
+	position: absolute;
+	top: 80px;
+	width: 100%;
+	background-color: transparent;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	justify-content: space-between;
+	// justify-content: 
 	align-items: center;
 	align-content: center;
 	margin-top: 32px;
 }
 
-.Background {
-	display: flex;
-	align-items: center;
-	justify-self: center;
-	flex-direction: column;
-}
-.header {
+// .Background {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-self: center;
+// 	flex-direction: column;
+// }
+
+.Header {
 	color: $font-color;
 	margin: 0;
 	font-weight: 400;
@@ -27,7 +54,7 @@
 }
 
 .Footer {
-	margin-bottom: 16px;
+	position: absolute;
+	bottom: 0;
 	margin-left: 16px;
-	align-self: flex-start;
 }

@@ -36,9 +36,14 @@ class Navbar extends React.Component {
 		<Link className={styles.NavLinks} to={"/login"}>Login</Link>
 	</div> */
   render() {
+		let nav = styles.NavBar; 
+		if (this.props.location.pathname === "/") {
+			nav = styles.TransNavBar
+		}
+
     return (
       <div className={styles.NavWrapper}>
-				<header className={styles.NavBar}>
+				<header className={nav}>
 					<div></div>
 					<Link to="/" className={styles.Logo}>HomeCooked</Link>
 					{this.getLinks()}
