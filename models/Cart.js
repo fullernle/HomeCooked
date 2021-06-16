@@ -26,7 +26,7 @@ const CartSchema = new Schema({
     default: Date.now
   }
 }, 
-{ timestamps: true}
+  { timestamps: true}
 );
 
 
