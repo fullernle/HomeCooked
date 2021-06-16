@@ -180,3 +180,4 @@ dist
 
 master.key
 /config/keys_dev.js
+/frontend/src/config/mapToken.js
