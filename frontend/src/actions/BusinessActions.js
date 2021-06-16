@@ -9,7 +9,7 @@ export const receiveCurrentBusiness = (business) => ({
   business,
 });
 
-export const receiveBussinesses = (businesses) => ({
+export const receiveBusinesses = (businesses) => ({
   type: RECEIVE_BUSINESSES,
   businesses,
 });
@@ -19,14 +19,20 @@ export const receiveErrors = (errors) => ({
   errors,
 });
 
+export const fetchBusinesses = () => (dispatch) =>
+  APIUtil.fetchBusinesses().then(
+    (data) => dispatch(receiveBusinesses(data.data)),
+    (err) => dispatch(receiveErrors(err.response.data))
+  );
+
 export const fetchBusiness = (businessId) => (dispatch) =>
   APIUtil.fetchBusiness(businessId).then(
     (data) => dispatch(receiveCurrentBusiness(data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
 
-export const createBusiness = (business) => (dispatch) => 
-		APIUtil.createBusiness(business).then(
-			(data) => dispatch(receiveCurrentBusiness(data)),
-			(err) => dispatch(receiveErrors(err.response.data))
-		);
+export const createBusiness = (business) => (dispatch) =>
+  APIUtil.createBusiness(business).then(
+    (data) => dispatch(receiveCurrentBusiness(data)),
+    (err) => dispatch(receiveErrors(err.response.data))
+  );

@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import { fetchBusiness } from "../../actions/BusinessActions";
+import { fetchBusiness} from "../../actions/BusinessActions";
 import Business from "./Business";
 
 const mSTP = (state, ownProps) => ({
-  business: state.businesses[ownProps.match.params.id],
+  business: state.businesses[ownProps.match.params.id]
 });
 
 const mDTP = (dispatch) => ({

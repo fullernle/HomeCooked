@@ -4,19 +4,24 @@
 .Background {
 	position: absolute;
   background-image: url("https://vertavahealth.com/wp-content/uploads/2017/11/Thanksgiving-at-the-Treehouse-2.jpg");
-  height: 50vh;
+  height: 300px;
 	width: 100%;
   background-size: cover;
 	z-index: -100;
 	top: -80px;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 .Overlay {
   position: absolute; /* Sit on top of the page content */
+	top: 0;
+	left: 0;
+	right: 0;
   // display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
-  height: 50vh; /* Full height (cover the whole page) */
-	top: -80px;
+  height: 300px; /* Full height (cover the whole page)  */
   background-color: rgba(0, 0, 0, 0.452); /* Black background with opacity */
   z-index: -99; /* Specify a stack order in case you're using a different order for other elements */
 }

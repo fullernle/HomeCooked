@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import styles from "./Business.module.scss";
 
 export default class Business extends Component {
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.match.params.id);
+  }
   render() {
+		if (!this.props.business) return null;
     return (
       <div className={styles.Wrapper}>
         <div className={styles.Banner}>

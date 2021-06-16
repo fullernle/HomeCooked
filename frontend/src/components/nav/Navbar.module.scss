@@ -52,11 +52,8 @@
     text-decoration: none;
     color: $font-color;
     font-size: 64px;
-    backdrop-filter: blur(6px);
     font-family: "Times New Roman", Times, serif;
-		position: absolute;
-    left: 16px;
-    top: 16px;
+		align-self: center;
   }
 
   .NavBar {
@@ -66,21 +63,30 @@
     height: 80px;
     padding: 0px 12px;
     justify-content: space-between;
-    align-items: center;
+		align-items: center;
   }
+
+	.TransNavBar {
+		display: flex;
+    width: 100%;
+    background-color: transparent;
+    height: 80px;
+    padding: 0px 12px;
+		justify-content: space-around;
+    justify-content: center;
+	}
 
   .NavBttn {
     border: none;
-    position: absolute;
-    top: 32px;
-    right: 64px;
     text-decoration: none;
     background-color: white;
     align-self: flex-end;
     color: $main-color;
+		font-size: 12px;
     padding: 4px 12px;
     margin: 0px 8px;
     border-radius: 4px;
+		align-self: center;
   }
 
   .NavBttn:hover {
