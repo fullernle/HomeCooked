@@ -24,3 +24,9 @@ export const fetchBusiness = (businessId) => (dispatch) =>
     (data) => dispatch(receiveCurrentBusiness(data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
+
+export const createBusiness = (business) => (dispatch) => 
+		APIUtil.createBusiness(business).then(
+			(data) => dispatch(receiveCurrentBusiness(data)),
+			(err) => dispatch(receiveErrors(err.response.data))
+		);

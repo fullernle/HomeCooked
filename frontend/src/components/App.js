@@ -5,7 +5,6 @@ import NavBarContainer from "./nav/NavbarContainer";
 
 import BusinessContainer from "./business/BusinessContainer"
 import MainPageContainer from "./main/MainPageContainer";
-import styles from "./App.module.scss";
 import Modal from "../components/modal/Modal";
 
 const App = () => (
