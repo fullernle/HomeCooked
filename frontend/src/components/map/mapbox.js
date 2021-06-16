@@ -1,6 +1,8 @@
 import * as React from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
-import RestaurantIcon from "@material-ui/icons/Restaurant";
+import {
+  RestaurantIcon
+} from "@material-ui/icons/Restaurant";
 import { withRouter } from "react-router-dom";
 
 const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
@@ -16,15 +18,26 @@ class MapBox extends React.Component {
         longitude: -122.35,
         zoom: 9.5,
       },
-      businesses: [],
+      businesses: this.props.businesses,
     };
   }
-  componentWillMount() {
-    this.props.fetchBusinesses();
-  }
+  // componentWillMount() {
+  //   this.props.fetchBusinesses();
+  // }
 
   render() {
     const { viewport } = this.state;
+
+    if (!this.state.businesses) return null;
+
+    //   try {
+    //     const res = await axios.post("/businesses", newPin);
+    //     setBusinesses([...businesses, res.data]);
+    //     setNewPlace(null);
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // };
 
     return (
       <MapGL
@@ -56,6 +69,59 @@ class MapBox extends React.Component {
         </Popup>
       </MapGL>
     );
+
+    // return (
+    //   <MapGL
+    //     {...viewport}
+    //     mapboxApiAccessToken={MAPBOX_TOKEN}
+    //     width={viewport.width}
+    //     height={viewport.height}
+    //     latitude={viewport.latitude}
+    //     longitude={viewport.longitude}
+    //     zoom={viewport.zoom}
+    //     mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
+    //     onViewportChange={(viewport) => this.setState({ viewport })}
+    //   >
+    //     {this.state.businesses.map((biz) => (
+    //       <>
+    //         <Marker
+    //           latitude={biz.lat}
+    //           longitude={biz.lng}
+    //           offsetLeft={-10}
+    //           offsetTop={-10}
+    //         >
+    //           <RestaurantIcon
+    //             style={{
+    //               fontSize: 7 * viewport.zoom,
+    //               color: "tomato",
+    //               cursor: "pointer",
+    //             }}
+    //           />
+    //         </Marker>
+
+    //         <Popup
+    //           key={biz._id}
+    //           latitude={biz.lat}
+    //           longitude={biz.long}
+    //           closeButton={true}
+    //           closeOnClick={false}
+    //           anchor="left"
+    //         >
+    //           <div className="card">
+    //             <label>Restaurant</label>
+    //             <h4 className="place">{biz.data.name}</h4>
+    //             <label>Review</label>
+    //             <p className="desc">{biz.data.rating}</p>
+    //             <label>Rating</label>
+    //             <div className="stars">
+    //               {Array(biz.data.rating).fill(<Star className="star" />)}
+    //             </div>
+    //           </div>
+    //         </Popup>
+    //       </>
+    //     ))}
+    //   </MapGL>
+    // );
   }
 }
 
