@@ -24,6 +24,12 @@ module.exports = {
 
         return res.send(businessById);
     },
+
+    find : async (req, res) => {
+      const products = await Product.find()
+      return res.send(products)
+    },
+
     businessByProduct : async (req,res)=>{
         const { id } = req.params;
         const businessByProduct = await Product.findById(id).populate('business');

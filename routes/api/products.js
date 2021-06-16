@@ -8,6 +8,7 @@ router.get("/test", (req, res) =>
 );
 
 router.post("/create/:id", Product.create);
-router.post("/populate/:id", Product.businessByProduct)
+router.post("/populate/:id", Product.businessByProduct);
+router.get("/find", Product.find);
 
 module.exports = router;

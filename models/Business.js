@@ -21,7 +21,7 @@ const BusinessSchema = new Schema(
       default: 0,
       required: true,
     },
-    product: [
+    products: [
       {
         type: Schema.Types.ObjectId,
         ref: "products",
