@@ -19,7 +19,7 @@ module.exports = {
 
         const businessById = await Business.findById(id);
 
-        businessById.posts.push(product);
+        businessById.products.push(product);
         await businessById.save();
 
         return res.send(businessById);
