@@ -1,90 +1,100 @@
 @import "../variables.scss";
 
-@media (min-width: 900px) {
-  .Logo {
-    text-decoration: none;
-    color: white;
-    font-size: 64px;
-    font-family: "Times New Roman", Times, serif;
-    align-self: center;
-    text-align: center;
-    position: absolute;
-  }
-
-  .NavBar {
-    display: flex;
-    width: 100%;
-    background-color: $main-color;
-    height: 80px;
-    padding: 0px 12px;
-    justify-content: center;
-  }
-	.TransNavBar {
-		display: flex;
-    width: 100%;
-    background-color: transparent;
-    height: 80px;
-    padding: 0px 12px;
-    justify-content: center;
-	}
-  .NavBttn {
-    border: none;
-    position: absolute;
-    top: 32px;
-    right: 64px;
-    text-decoration: none;
-    background-color: white;
-    align-self: flex-end;
-    color: $main-color;
-    padding: 4px 12px;
-    margin: 0px 8px;
-    border-radius: 4px;
-  }
-
-  .NavBttn:hover {
-    background-color: $main-color-hover;
-    color: white;
-  }
+.Logo {
+  text-decoration: none;
+  color: $font-color;
+  font-size: 32px;
+  font-family: "Times New Roman", Times, serif;
+  align-self: center;
+  text-align: center;
+  margin-left: 8px;
 }
 
-@media (max-width: 900px) {
-  .Logo {
-    text-decoration: none;
-    color: $font-color;
-    font-size: 64px;
-    backdrop-filter: blur(6px);
-    font-family: "Times New Roman", Times, serif;
-		position: absolute;
-    left: 16px;
-    top: 16px;
-  }
+.NavBar {
+  display: flex;
+  width: 100%;
+  background-color: $main-color;
+  height: 80px;
+  padding: 0px 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.TransNavBar {
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  height: 80px;
+  padding: 0px 12px;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .NavBar {
-    display: flex;
-    width: 100%;
-    background-color: transparent;
-    height: 80px;
-    padding: 0px 12px;
-    justify-content: space-between;
-    align-items: center;
-  }
+.NavBttn {
+  border: none;
+  background: $font-color;
+  color: $main-color;
+  border-radius: 24px;
+  border: none;
+  height: 34px;
+  font-size: 16px;
+  width: 100px;
+  transition: 100ms;
+}
 
-  .NavBttn {
-    border: none;
-    position: absolute;
-    top: 32px;
-    right: 64px;
-    text-decoration: none;
-    background-color: white;
-    align-self: flex-end;
-    color: $main-color;
-    padding: 4px 12px;
-    margin: 0px 8px;
-    border-radius: 4px;
-  }
+.NavBttn:hover {
+  background-color: $main-color-hover;
+  color: white;
+  transform: scale(1.05);
+}
 
-  .NavBttn:hover {
-    background-color: $main-color-hover;
-    color: white;
-  }
+.Cart {
+  display: flex;
+  margin: 0;
+  width: 100px;
+  height: 34px;
+  transition: 100ms;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.CartIcon {
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+  border: none;
+  cursor: pointer;
+}
+.Cart:hover {
+  background-color: $main-color-hover;
+}
+
+.NavBttnsWrapper {
+  margin-right: 32px;
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// GitHub Button
+.ReverseNavBttn {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: $font-color;
+  border-radius: 24px;
+  border: none;
+  height: 34px;
+  font-size: 16px;
+  width: 100px;
+  transition: 100ms;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.ReverseNavBttn:hover {
+  background-color: $main-color-hover;
+  color: white;
 }
