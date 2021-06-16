@@ -7,8 +7,8 @@ router.get("/test", (req, res) =>
   res.json({ msg: "This is the products route" })
 );
 
-router.post("/create/:id", Product.create);
-router.get("/populate/:id", Product.businessByProduct);
-router.get("/find", Product.find);
+router.post("/:id", Product.create);
+router.get("/:id", Product.businessByProduct);
+router.get("/", Product.find);
 
 module.exports = router;
