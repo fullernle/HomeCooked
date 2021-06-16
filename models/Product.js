@@ -28,6 +28,8 @@ const ProductSchema = new Schema({
     type: Number,
     required: true,
   },
+  
+  photos: [{ type: String }]
 });
 
 module.exports = Product = mongoose.model("Product", ProductSchema);

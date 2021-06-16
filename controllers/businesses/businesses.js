@@ -25,7 +25,5 @@ module.exports = {
        const business = await Business.findById(id).populate('products');
 
         res.send(business.products);
-        // res.send(business);
     },
-
 }
