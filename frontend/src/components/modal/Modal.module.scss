@@ -1,0 +1,39 @@
+@import "../variables.scss";
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
+.ModalBackground {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.ModalChild {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 348px;
+  height: 500px;
+  padding: 18px;
+  border-radius: 4%;
+  margin: auto;
+  box-sizing: border-box;
+  transition: 2s;
+
+}
+
