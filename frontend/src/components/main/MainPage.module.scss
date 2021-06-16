@@ -4,7 +4,7 @@
 .Background {
 	position: absolute;
   background-image: url("https://vertavahealth.com/wp-content/uploads/2017/11/Thanksgiving-at-the-Treehouse-2.jpg");
-  height: 300px;
+  height: 400px;
 	width: 100%;
   background-size: cover;
 	z-index: -100;
@@ -21,7 +21,7 @@
 	right: 0;
   // display: block; /* Hidden by default */
   width: 100%; /* Full width (cover the whole page) */
-  height: 300px; /* Full height (cover the whole page)  */
+  height: 400px; /* Full height (cover the whole page)  */
   background-color: rgba(0, 0, 0, 0.452); /* Black background with opacity */
   z-index: -99; /* Specify a stack order in case you're using a different order for other elements */
 }
