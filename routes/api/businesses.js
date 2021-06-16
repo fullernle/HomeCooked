@@ -30,9 +30,9 @@ const express = require("express");
 const router = express.Router();
 const Business = require("../../controllers/businesses/businesses")
 
-router.post('/create', Business.create);
-router.get('/find', Business.find);
-router.post('/find/product/:id', Business.productsByBusiness);
+router.post('/', Business.create);
+router.get('/', Business.find);
+router.get('/:id', Business.productsByBusiness);
 
 // router.get("/", (req, res) => {
 //   Business.find()
@@ -42,7 +42,6 @@ router.post('/find/product/:id', Business.productsByBusiness);
 //       res.status(404).json({ nobusinessesfound: "No businesses found" })
 //     );
 // });
-
 
 
 

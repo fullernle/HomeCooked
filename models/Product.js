@@ -5,7 +5,7 @@ const ProductSchema = new Schema({
   business: {
     type: {
       type: Schema.Types.ObjectId,
-      ref: "Businesses",
+      ref: "Business",
     },
   },
 
