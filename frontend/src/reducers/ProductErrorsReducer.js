@@ -16,7 +16,7 @@ const ProductErrorsReducer = (state = _nullErrors, action) => {
 			return _nullErrors;
 		case RECEIVE_PRODUCT_ERRORS:
 			return action.errors;
-		default 
+		default:
 			return state;
   }
 };
