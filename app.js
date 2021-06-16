@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const users = require("./routes/api/users");
 const businesses = require("./routes/api/businesses");
+const products = require("./routes/api/products");
 
 const bodyParser = require("body-parser");
 const passport = require("passport");
@@ -18,7 +19,8 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 mongoose
@@ -29,8 +31,9 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch((err) => console.log(err));
 
-app.use("/api/users", users);
 app.use("/api/businesses", businesses);
+app.use("/api/users", users);
+app.use("/api/products", products);
 
 app.use(passport.initialize());
 require("./config/passport")(passport);
