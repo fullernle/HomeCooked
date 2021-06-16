@@ -32,7 +32,7 @@ const Business = require("../../controllers/businesses/businesses")
 
 router.post('/', Business.create);
 router.get('/', Business.find);
-router.get('/:id', Business.productsByBusiness);
+router.get('/:id/products', Business.productsByBusiness);
 
 // router.get("/", (req, res) => {
 //   Business.find()

@@ -10,8 +10,8 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 
 const db = require("./config/keys").mongoURI;
-
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 mongoose

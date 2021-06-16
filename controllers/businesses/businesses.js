@@ -4,12 +4,14 @@ const Business = require('../../models/Business');
 
 module.exports = {
     create : async (req, res) =>{
-        const { name, address, phone, rating, photo } = req.body;
+        const { name, latitude, longitude } = req.body;
+        // const { coordinates } = req.body[0].coordinates
+        // const { latitude } = req.body[0].coordinates[0].latitude
+        // const { longitude } = req.body[0].coordinates[0].longitude
         const business = await Business.create({
             name,
-            address,
-            phone,
-            rating,
+            latitude,
+            longitude 
         })
 
         return res.send(business)
