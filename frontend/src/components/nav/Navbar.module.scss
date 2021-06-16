@@ -1,6 +1,5 @@
 @import "../variables.scss";
 
-// @media (min-width: 900px) {
 .Logo {
   text-decoration: none;
   color: $font-color;
@@ -32,18 +31,13 @@
 
 .NavBttn {
   border: none;
-  // position: absolute;
-  // top: 8px;
-  // right: 64px;
   background: $font-color;
-  // background-color: $accent-color;
   color: $main-color;
   border-radius: 24px;
   border: none;
   height: 34px;
   font-size: 16px;
   width: 100px;
-  // margin-top: 16px;
   transition: 100ms;
 }
 
@@ -52,47 +46,6 @@
   color: white;
   transform: scale(1.05);
 }
-// }
-
-// @media (max-width: 900px) {
-//   .Logo {
-//     text-decoration: none;
-//     color: $font-color;
-//     font-size: 64px;
-//     font-family: "Times New Roman", Times, serif;
-//     position: absolute;
-//     left: 16px;
-//     top: 16px;
-//   }
-
-//   .NavBar {
-//     display: flex;
-//     width: 100%;
-//     background-color: transparent;
-//     height: 80px;
-//     padding: 0px 12px;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   .NavBttn {
-//     background: $font-color;
-//     // background-color: $accent-color;
-//     color: $main-color;
-//     border-radius: 24px;
-//     border: none;
-//     height: 48px;
-//     font-size: 16px;
-//     width: 120px;
-//     margin-top: 10px;
-//     transition: 100ms;
-//   }
-
-//   .NavBttn:hover {
-//     background-color: $main-color-hover;
-//     color: white;
-//   }
-// }
 
 .Cart {
   display: flex;
@@ -135,7 +88,6 @@
   height: 34px;
   font-size: 16px;
   width: 100px;
-  // margin-top: 16px;
   transition: 100ms;
   text-decoration: none;
   align-items: center;
