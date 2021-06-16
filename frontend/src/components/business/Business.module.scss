@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+.Wrapper {
+	margin: auto;
+}
+.Banner {
+	background-image: url("https://anytimerecipe.com/wp-content/uploads/2020/05/cuisine-asian_op-1240x578.jpg");
+	height: 30vh;
+  background-size: cover;
+	display: flex;
+	align-items: flex-end;
+	max-width: 1400px;
+}
+
+.Overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 30vh; /* Full height (cover the whole page) */
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.185); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+	max-width: 1400px;
+}
+
+.Header {
+	margin-bottom: 12px;
+	margin-left: 12px;
+	color: $font-color;
+	z-index: 2;
+}
+
+.HeaderTitle {
+	font-size: 32px;
+	font-weight: 500;
+}
+
+.HeaderDetails {
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: 12px;
+	margin-left: 8px;
+}
