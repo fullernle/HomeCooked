@@ -3,7 +3,7 @@ const router = express.Router();
 const Cart = require("../../controllers/carts/carts")
 const passport = require("passport");
 
-router.post("/", passport.authenticate("jwt", { session: false }), Cart.createCart )
+router.post("/", passport.authenticate("jwt", { session: false }), Cart.addToCart )
 
 
 module.exports = router;

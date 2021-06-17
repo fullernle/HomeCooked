@@ -2,19 +2,22 @@ const Cart = require('../../models/Cart');
 
 module.exports = {
   addToCart : async (req, res) => {
-    const { productId, quantity, name, price } = req.body;
+    product = req.params;
+    id = product.id;
 
-    const user = req.params.user.id 
-    //need to figure out how to get logged in user id
+    try {
+
+    } catch{
+
+    }
   },
 
-    createCart : async (req, res) => {
-      // console.log(req.params);
-      const { hello } = req.body;
-      const cart = Cart.create({
-        hello,
-      })
+};
 
-      return res.send(cart)
-    }
-}
+//When user is logged in, should be able to add product to cart
+
+//addToCart should be able to find product by objId,
+
+//once found, should be able to push product into cart
+
+//if not found, should return no product avaliable.
