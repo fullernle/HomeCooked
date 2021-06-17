@@ -56,7 +56,8 @@
   border-radius: 24px;
   justify-content: center;
   align-items: center;
-	cursor: pointer;
+  cursor: pointer;
+	background-color: $main-color;
 }
 
 .CartIcon {
@@ -68,22 +69,22 @@
 }
 .Cart:hover {
   background-color: $main-color-hover;
-	transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .NavBttnsWrapper {
   margin-right: 32px;
-  width: 340px;
+  width: 220px;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 // GitHub Button
 .ReverseNavBttn {
   display: flex;
   border: none;
-  background-color: transparent;
+  // background-color: transparent;
   color: $font-color;
   border-radius: 24px;
   border: none;
@@ -99,5 +100,5 @@
 .ReverseNavBttn:hover {
   background-color: $main-color-hover;
   color: white;
-	transform: scale(1.05);
+  transform: scale(1.05);
 }

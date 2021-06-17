@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -28,11 +30,8 @@ class Navbar extends React.Component {
                 src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
               />
             </div>
-            <Link className={styles.ReverseNavBttn} to="/git">
-              GitHub
-            </Link>
             <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout
+              Logout 
             </button>
           </div>
         </>
@@ -41,12 +40,10 @@ class Navbar extends React.Component {
       return (
         <>
           <div className={styles.NavBttnsWrapper}>
-            <Link className={styles.ReverseNavBttn} to="/git">
-              GitHub
-            </Link>
             <button
               className={styles.NavBttn}
-              onClick={() => this.props.openModal("login")}>
+              onClick={() => this.props.openModal("login")}
+            >
               Sign In
             </button>
           </div>

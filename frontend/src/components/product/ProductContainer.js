@@ -4,7 +4,7 @@ import Product from "./Product"
 
 
 const mSTP = (state, ownProps) => ({
-  product: state.products[ownProps.match.params._id],
+  product: state.products[ownProps.match.params.id],
 });
 
 const mDTP = (dispatch) => ({

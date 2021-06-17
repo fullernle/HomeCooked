@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.Product {
+	display: flex;
+	height: 100px;
+	background-color: $accent-color;
+	margin: 4px;
+}
+
+.Photo {
+	background-size: cover;
+	width: 200px;
+}
+
+.ProductInfo {
+	padding: 8px;
+	height: 100px;
+	width: 200px;
+	background-color: $font-color;
+}
