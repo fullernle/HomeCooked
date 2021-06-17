@@ -3,28 +3,16 @@ const Schema = mongoose.Schema;
 
 const CartSchema = new Schema({
   user: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User"
   },
   products: [
     {
-      productId: Number,
-      name: String,
-      price: String,
-      category: String,
+      type: Schema.Types.ObjectId,
+      ref: "Product",
       quantity: Number
     }
   ],
-
-  active: {
-    type: Boolean,
-    default: true
-  },
-
-  modifiedOn: {
-    type: Date,
-    default: Date.now
-  }
 }, 
   { timestamps: true}
 );
