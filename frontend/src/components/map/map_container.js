@@ -4,7 +4,7 @@ import MapBox from "./mapbox";
 
 const mapStateToProps = (state) => {
   return {
-    businesses: Object.values(state.businesses.all ?? {}),
+    businesses: Object.values(state.businesses),
   };
 };
 
