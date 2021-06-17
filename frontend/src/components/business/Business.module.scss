@@ -2,18 +2,19 @@
 
 .Wrapper {
   height: 100vh;
-	// display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 0 24px 0 24px;
-		max-width: 1400px;
-	margin: auto;
+  // display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 24px 0 24px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .HeaderWrapper {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 128px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 128px;
+  justify-content: space-between;
 }
 .Banner {
   // background-image: url("https://anytimerecipe.com/wp-content/uploads/2020/05/cuisine-asian_op-1240x578.jpg");
@@ -23,10 +24,10 @@
   left: 0;
   right: 0;
   background-size: cover;
-	width: 100%;
+  width: 100%;
   display: flex;
   align-items: flex-end;
-	z-index: -100;
+  z-index: -100;
 }
 
 .Overlay {
@@ -45,27 +46,75 @@
   margin-left: 12px;
   color: $font-color;
   z-index: 2;
-	justify-self: flex-end;
+  justify-self: flex-end;
 }
 
 .HeaderTitle {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 500px;
 }
 
 .HeaderDetails {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
   margin-top: 12px;
   margin-left: 8px;
+  text-align: center;
 }
 
 .ProductWrapper {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-content: center;
-	justify-content: space-around;
-	// display: block;
-	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  // display: block;
+  width: 100%;
+}
+
+.Price {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.Stars {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.InfoWrapper {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.BusinessInfo {
+  display: flex;
+  margin-top: 160px;
+  color: $font-color;
+  text-align: end;
+  padding-right: 70px;
+}
+
+.BusinessLocation {
+  font-size: 20px;
+  font-weight: normal;
+  color: $font-color;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.BusinessNumber {
+  font-size: 20px;
+  margin-top: 16px;
+  color: $font-color;
+  font-weight: normal;
+}
+
+.BusinessHours {
+  font-size: 20px;
+  margin-top: 16px;
+  color: $font-color;
+  font-weight: normal;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { fetchBusinessProducts } from "../../util/BusinessUtil";
 import styles from "./Business.module.scss";
 import Product from "../product/Product";
+import StarIcon from "@material-ui/icons/Star";
 
 export default class Business extends Component {
   constructor(props) {
@@ -46,7 +47,27 @@ export default class Business extends Component {
           <div className={styles.HeaderWrapper}>
             <div className={styles.Header}>
               <h1 className={styles.HeaderTitle}>{business.name}</h1>
-              <h3 className={styles.HeaderDetails}>Cajun </h3>
+              <h3 className={styles.HeaderDetails}>
+                {business.categories[0].title}
+              </h3>
+              <h3 className={styles.Price}>{business.price}</h3>
+              <div className={styles.Stars}>
+                {Array(business.rating).fill(<StarIcon className="star" />)}
+              </div>
+            </div>
+            <div className={styles.InfoWrapper}>
+              <div>
+                <h1 className={styles.BusinessInfo}>Business Info</h1>
+                <h3 className={styles.BusinessLocation}>
+                  {business.location.display_address}
+                </h3>
+                <h3 className={styles.BusinessNumber}>
+                  {business.display_phone}
+                </h3>
+                <h3 className={styles.BusinessHours}>
+                  7 Days A Week {business.hours[0].open[0].start}-{business.hours[0].open[0].end}
+                </h3>
+              </div>
             </div>
           </div>
 
