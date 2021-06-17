@@ -26,6 +26,6 @@ module.exports = {
        const { id } = req.params;
        const business = await Business.findById(id).populate('products');
 
-        res.send(business.products);
+        return res.send(business.products);
     },
 }
