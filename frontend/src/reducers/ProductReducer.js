@@ -5,15 +5,21 @@ import {
 
 export default function (state = {}, action) {
   Object.freeze(state);
+	let newState = Object.assign({}, state);
 
   switch (action.type) {
     case RECEIVE_PRODUCTS:
-      return action.products;
+			let products = action.products;
+      products.forEach((product) => {
+        let id = product._id;
+        newState[id] = product;
+      });
+      return newState;
+
     case RECEIVE_CURRENT_PRODUCT:
-      return {
-        ...state,
-        ...action.business,
-      };
+			let product = action.product;
+			newState[product._id] = product;
+			return newState;
 
     default:
       return state;

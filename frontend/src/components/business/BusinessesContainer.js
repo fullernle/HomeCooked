@@ -3,7 +3,7 @@ import { fetchBusinesses } from "../../actions/BusinessActions";
 import Businesses from "./Businesses";
 
 const mSTP = (state, ownProps) => ({
-  businesses: state.businesses
+  businesses: Object.values(state.businesses)
 });
 
 const mDTP = (dispatch) => ({

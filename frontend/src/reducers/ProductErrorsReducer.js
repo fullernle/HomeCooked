@@ -9,7 +9,7 @@ const _nullErrors = [];
 const ProductErrorsReducer = (state = _nullErrors, action) => {
   Object.freeze(state);
 
-  switch (actionl.type) {
+  switch (action.type) {
     case RECEIVE_PRODUCTS:
       return _nullErrors;
 		case RECEIVE_CURRENT_PRODUCT:

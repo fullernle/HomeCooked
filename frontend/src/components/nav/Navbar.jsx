@@ -7,8 +7,8 @@ class Navbar extends React.Component {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
-    this.otherNav = this.otherNav.bind(this);
-    this.homeNav = this.homeNav.bind(this);
+    this.transNav = this.transNav.bind(this);
+    this.normalNav = this.normalNav.bind(this);
   }
 
   logoutUser(e) {
@@ -54,7 +54,7 @@ class Navbar extends React.Component {
       );
     }
   }
-  homeNav() {
+  transNav() {
     return (
       <div className={styles.NavWrapper}>
         <header className={styles.TransNavBar}>
@@ -67,7 +67,7 @@ class Navbar extends React.Component {
     );
   }
 
-  otherNav() {
+  normalNav() {
     return (
       <div className={styles.NavWrapper}>
         <header className={styles.NavBar}>
@@ -81,9 +81,9 @@ class Navbar extends React.Component {
   }
 
   render() {
-    return this.props.location.pathname === "/"
-      ? this.homeNav()
-      : this.otherNav();
+    return this.props.location.pathname === "/homecooks"
+      ? this.normalNav()
+      : this.transNav();
   }
 }
 
