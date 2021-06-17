@@ -1,6 +1,4 @@
-const Business = require('../../models/Business');
-
-
+const Business = require("../../models/Business");
 
 module.exports = {
   create: async (req, res) => {

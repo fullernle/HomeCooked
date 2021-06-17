@@ -2,8 +2,8 @@ import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/RouteUtil";
 import { Switch, Route, Redirect } from "react-router-dom";
 import NavBarContainer from "./nav/NavbarContainer";
-
-import BusinessContainer from "./business/BusinessContainer"
+import MapBox from "./map/map_container";
+import BusinessContainer from "./business/BusinessContainer";
 import MainPageContainer from "./main/MainPageContainer";
 import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";

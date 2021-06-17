@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import { fetchBusinesses } from "../../actions/BusinessActions";
+import { fetchBusinesses } from "../../util/BusinessUtil";
 import MapBox from "./mapbox";
 
 const mapStateToProps = (state) => {
   return {
-    businesses: Object.values(state.businesses),
+    businesses: Object.values(state.businesses.all ?? {}),
   };
 };
 
