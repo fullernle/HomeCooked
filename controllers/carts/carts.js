@@ -7,10 +7,11 @@ const ObjectId = mongoose.SchemaType.ObjectId
 module.exports = {
   getCart : async (req, res) => {
     const { user } = req.body
+    const { _id } = req.params;
 
     try {
       console.log(user)
-      let cart = await Cart.findById(user)
+      let cart = await Cart.findOne()
       if (cart) {
         return res.send(cart)
       } else {
