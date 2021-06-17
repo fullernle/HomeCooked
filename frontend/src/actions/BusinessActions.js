@@ -1,5 +1,5 @@
 import * as APIUtil from "../util/BusinessUtil";
-import * as ProductActions from "../actions/ProductActions"
+import * as ProductActions from "../actions/ProductActions";
 
 export const RECEIVE_CURRENT_BUSINESS = "RECEIVE_CURRENT_BUSINESS";
 export const RECEIVE_BUSINESSES = "RECEIVE_BUSINESSES";
@@ -25,6 +25,10 @@ export const fetchBusinesses = () => (dispatch) =>
     (data) => dispatch(receiveBusinesses(data.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
+// export const fetchBusinesses = () => (dispatch) =>
+//   APIUtil.fetchBusinesses()
+//     .then((data) => dispatch(receiveBusinesses(data.data)))
+//     .catch((err) => dispatch(receiveErrors(err.response.data)));
 
 export const fetchBusiness = (businessId) => (dispatch) => {
   APIUtil.fetchBusiness(businessId).then(
