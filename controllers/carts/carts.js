@@ -29,6 +29,30 @@ module.exports = {
       return console.log("No user found");
     }
   },
+
+  updateCart: async (req, res) => {
+    console.log(req.params);
+    console.log(req.body);
+
+    let cart = await Cart.findById(req.params.cartId);
+
+    let product = req.body.product;
+    let price = product.price;
+    let quantity = product.quantity;
+
+    if (req.body.action === "add") {
+      console.log("ADD THIS ISH MOTHA EFFA");
+      console.log(price);
+      console.log(quantity);
+      console.log(cart);
+      cart.products.push(product);
+      console.log("---------------------------");
+      cart.totalQuantity = cart.products.length;
+      cart.totalPrice = 0;
+			cart.save();
+      console.log(cart);
+    }
+
+    res.send("HELLOOOO");
+  },
 };
-
-
