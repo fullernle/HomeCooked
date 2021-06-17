@@ -51,11 +51,9 @@ export default class Business extends Component {
           </div>
 
           <div className={styles.ProductWrapper}>
-            <div>
-              {products.map((product) => {
-                return <Product product={product} />;
-              })}
-            </div>
+            {products.map((product) => {
+              return <Product product={product} />;
+            })}
           </div>
         </div>
       );

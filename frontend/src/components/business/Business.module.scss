@@ -2,14 +2,18 @@
 
 .Wrapper {
   height: 100vh;
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 0 24px 0 24px;
+		max-width: 1400px;
+	margin: auto;
 }
 
 .HeaderWrapper {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 128px;
 }
 .Banner {
   // background-image: url("https://anytimerecipe.com/wp-content/uploads/2020/05/cuisine-asian_op-1240x578.jpg");
@@ -28,7 +32,7 @@
 .Overlay {
   position: absolute; /* Sit on top of the page content */
   width: 100%; /* Full width (cover the whole page) */
-  height: 400px; /* Full height (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
@@ -60,7 +64,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+	align-content: center;
+	justify-content: space-around;
 	// display: block;
 	width: 100%;
-	height: 300px;
 }

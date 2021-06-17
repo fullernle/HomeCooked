@@ -2,19 +2,50 @@
 
 .Product {
 	display: flex;
-	height: 100px;
 	background-color: $accent-color;
 	margin: 4px;
 }
 
 .Photo {
 	background-size: cover;
+	height: 116px;
 	width: 200px;
 }
 
 .ProductInfo {
+	display: flex;
+	flex-direction: column;
 	padding: 8px;
 	height: 100px;
-	width: 200px;
+	width: 160px;
 	background-color: $font-color;
+}
+
+.CartBttn {
+	background: rgb(54, 52, 52);
+  color: $font-color;
+  border-radius: 24px;
+  height: 32px;
+  font-size: 12px;
+	width: 100px;
+  border: none;
+  transition: 100ms;
+	margin-top: 20px;
+	margin-right: 4px;
+	align-self: flex-end;
+}
+
+.CartBttn:hover {
+  background-color: rgb(46, 46, 46);
+  transform: scale(1.05);
+}
+
+.Name {
+	font-size: 24px;
+	margin-bottom: 4px;
+}
+
+.Quantity, .Price {
+	font-size: 12px;
+	font-weight: 400;
 }
