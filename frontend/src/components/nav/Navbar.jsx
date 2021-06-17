@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
-    this.otherNav = this.otherNav.bind(this);
-    this.homeNav = this.homeNav.bind(this);
+    this.transNav = this.transNav.bind(this);
+    this.normalNav = this.normalNav.bind(this);
   }
 
   logoutUser(e) {
@@ -28,11 +30,8 @@ class Navbar extends React.Component {
                 src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
               />
             </div>
-            <Link className={styles.ReverseNavBttn} to="/git">
-              GitHub
-            </Link>
             <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout
+              Logout 
             </button>
           </div>
         </>
@@ -41,12 +40,10 @@ class Navbar extends React.Component {
       return (
         <>
           <div className={styles.NavBttnsWrapper}>
-            <Link className={styles.ReverseNavBttn} to="/git">
-              GitHub
-            </Link>
             <button
               className={styles.NavBttn}
-              onClick={() => this.props.openModal("login")}>
+              onClick={() => this.props.openModal("login")}
+            >
               Sign In
             </button>
           </div>
@@ -54,14 +51,10 @@ class Navbar extends React.Component {
       );
     }
   }
-  homeNav() {
-    let nav = styles.NavBar;
-    if (this.props.location.pathname === "/") {
-      nav = styles.TransNavBar;
-    }
+  transNav() {
     return (
       <div className={styles.NavWrapper}>
-        <header className={nav}>
+        <header className={styles.TransNavBar}>
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
@@ -71,14 +64,10 @@ class Navbar extends React.Component {
     );
   }
 
-  otherNav() {
-    let nav = styles.NavBar;
-    if (this.props.location.pathname === "/") {
-      nav = styles.TransNavBar;
-    }
+  normalNav() {
     return (
       <div className={styles.NavWrapper}>
-        <header className={nav}>
+        <header className={styles.NavBar}>
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
@@ -89,9 +78,9 @@ class Navbar extends React.Component {
   }
 
   render() {
-    return this.props.location.pathname === "/"
-      ? this.homeNav()
-      : this.otherNav();
+    return this.props.location.pathname === "/homecooks"
+      ? this.normalNav()
+      : this.transNav();
   }
 }
 

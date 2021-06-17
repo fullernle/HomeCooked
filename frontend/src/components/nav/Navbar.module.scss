@@ -27,6 +27,8 @@
   padding: 0px 12px;
   justify-content: space-between;
   align-items: center;
+	max-width: 1400px;
+	margin: auto;
 }
 
 .NavBttn {
@@ -38,7 +40,7 @@
   height: 34px;
   font-size: 16px;
   width: 100px;
-  transition: 100ms;
+  transition: 200ms;
 }
 
 .NavBttn:hover {
@@ -52,10 +54,12 @@
   margin: 0;
   width: 100px;
   height: 34px;
-  transition: 100ms;
+  transition: 200ms;
   border-radius: 24px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+	background-color: $main-color;
 }
 
 .CartIcon {
@@ -67,11 +71,12 @@
 }
 .Cart:hover {
   background-color: $main-color-hover;
+  transform: scale(1.05);
 }
 
 .NavBttnsWrapper {
   margin-right: 32px;
-  width: 340px;
+  width: 220px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -81,14 +86,14 @@
 .ReverseNavBttn {
   display: flex;
   border: none;
-  background-color: transparent;
+  // background-color: transparent;
   color: $font-color;
   border-radius: 24px;
   border: none;
   height: 34px;
   font-size: 16px;
   width: 100px;
-  transition: 100ms;
+  transition: 200ms;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -97,4 +102,5 @@
 .ReverseNavBttn:hover {
   background-color: $main-color-hover;
   color: white;
+  transform: scale(1.05);
 }
