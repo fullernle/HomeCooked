@@ -7,11 +7,11 @@ const BusinessSchema = new Schema({
   },
   // coordinates: {
   //   latitude: {
-  //     type: Number
+  //     type: Number,
   //     // required: true,
   //   },
   //   longitude: {
-  //     type: Number
+  //     type: Number,
   //     // required: true,
   //   },
   // },
@@ -23,7 +23,6 @@ const BusinessSchema = new Schema({
     type: Number,
     required: true,
   },
-
   categories: [{ type: Object }],
   display_phone: {
     type: String,
