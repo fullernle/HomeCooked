@@ -55,13 +55,9 @@ class Navbar extends React.Component {
     }
   }
   homeNav() {
-    let nav = styles.NavBar;
-    if (this.props.location.pathname === "/") {
-      nav = styles.TransNavBar;
-    }
     return (
       <div className={styles.NavWrapper}>
-        <header className={nav}>
+        <header className={styles.TransNavBar}>
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
@@ -72,13 +68,9 @@ class Navbar extends React.Component {
   }
 
   otherNav() {
-    let nav = styles.NavBar;
-    if (this.props.location.pathname === "/") {
-      nav = styles.TransNavBar;
-    }
     return (
       <div className={styles.NavWrapper}>
-        <header className={nav}>
+        <header className={styles.NavBar}>
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>

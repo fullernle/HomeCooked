@@ -38,7 +38,7 @@
   height: 34px;
   font-size: 16px;
   width: 100px;
-  transition: 100ms;
+  transition: 200ms;
 }
 
 .NavBttn:hover {
@@ -52,10 +52,11 @@
   margin: 0;
   width: 100px;
   height: 34px;
-  transition: 100ms;
+  transition: 200ms;
   border-radius: 24px;
   justify-content: center;
   align-items: center;
+	cursor: pointer;
 }
 
 .CartIcon {
@@ -67,6 +68,7 @@
 }
 .Cart:hover {
   background-color: $main-color-hover;
+	transform: scale(1.05);
 }
 
 .NavBttnsWrapper {
@@ -74,7 +76,7 @@
   width: 340px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 // GitHub Button
@@ -88,7 +90,7 @@
   height: 34px;
   font-size: 16px;
   width: 100px;
-  transition: 100ms;
+  transition: 200ms;
   text-decoration: none;
   align-items: center;
   justify-content: center;
@@ -97,4 +99,5 @@
 .ReverseNavBttn:hover {
   background-color: $main-color-hover;
   color: white;
+	transform: scale(1.05);
 }

@@ -17,7 +17,11 @@ export default class Business extends Component {
           <div>
             <ul>
               {this.props.businesses.map((business) => {
-                return <Link to={`/homecook/${business._id}`}>BUSINESS</Link>;
+                return (
+                  <li>
+                    <Link to={`/homecook/${business._id}`}>{business.name}</Link>
+                  </li>
+                );
               })}
             </ul>
           </div>
@@ -26,3 +30,5 @@ export default class Business extends Component {
     }
   }
 }
+
+

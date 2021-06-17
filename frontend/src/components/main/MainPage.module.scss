@@ -54,12 +54,12 @@
   color: $font-color;
   background: $main-color;
   border-radius: 4px;
-  padding: 8px;
+  padding: 12px 24px;
   border-radius: 28px;
   margin-top: 32px;
   margin-bottom: 168px;
   cursor: pointer;
-  transition: all 0.4 ease;
+  transition: all 300ms;
   &:hover {
     background: $main-color-hover;
     transform: scale(1.05);
@@ -85,6 +85,7 @@
 
 .MainMiddle {
   display: flex;
+	justify-content: space-around;
   padding-bottom: 100px;
 }
 
@@ -98,10 +99,9 @@
 .MiddleText {
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: left;
   margin-bottom: 96px;
   padding: 25px;
+	
 
   .MainMiddleTopText {
     color: $black;
@@ -139,10 +139,9 @@
 .LowerText {
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
   margin-bottom: 96px;
-  text-indent: 64px;
+	margin-left: 24px;
+	margin-top: 24px;
 
   .BeforeFooterTop {
     display: flex;

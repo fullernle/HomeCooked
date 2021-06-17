@@ -24,7 +24,7 @@ export default class MainPage extends Component {
           <h1 className={styles.Header}>Homecooked meals,</h1>
           <h1 className={styles.Header}>delivered to your door!</h1>
 
-          <Link to="/familystyle" className={styles.Link}>
+          <Link to="/homecooks" className={styles.Link}>
             Welcome Home Sunny!
           </Link>
 
