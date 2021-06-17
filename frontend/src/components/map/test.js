@@ -1,44 +1,33 @@
-import "./app.css";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import * as React from "react";
+import MapGL, { Marker, Popup } from "react-map-gl";
 import { useEffect, useState } from "react";
-import { Room, Star, StarBorder } from "@material-ui/icons";
+import StarIcon  from "@material-ui/icons/Star";
+import RestaurantIcon from "@material-ui/icons/Restaurant";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
-import { format } from "timeago.js";
 
-function App() {
-  const myStorage = window.localStorage;
-  const [currentUsername, setCurrentUsername] = useState(
-    myStorage.getItem("user")
-  );
+const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
+
+function MapBox() {
   const [businesses, setBusinesses] = useState([]);
-  const [currentPlaceId, setCurrentPlaceId] = useState(null);
-  const [newPlace, setNewPlace] = useState(null);
-  const [title, setTitle] = useState(null);
-  const [desc, setDesc] = useState(null);
-  const [star, setStar] = useState(0);
+  const [currentBusinessId, setCurrentBusinessId] = useState(null);
   const [viewport, setViewport] = useState({
-    latitude: 47.040182,
-    longitude: 17.071727,
-    zoom: 4,
+    width: 400,
+    height: 400,
+    latitude: 37.8,
+    longitude: -122.35,
+    zoom: 9.5,
   });
 
-  const handleMarkerClick = (id, lat, long) => {
-    setCurrentPlaceId(id);
-    setViewport({ ...viewport, latitude: lat, longitude: long });
-  };
-
-  const handleAddClick = (e) => {
-    const [longitude, latitude] = e.lngLat;
-    setNewPlace({
-      lat: latitude,
-      long: longitude,
-    });
+  const handleMarkerClick = (id, latitude, longitude) => {
+    setCurrentBusinessId(id);
+    setViewport({ ...viewport, latitude: latitude, longitude: longitude });
   };
 
   useEffect(() => {
     const getBusinesses = async () => {
       try {
-        const allBusinesses = await axios.get("/businesses");
+        const allBusinesses = await axios.get("/api/businesses");
         setBusinesses(allBusinesses.data);
       } catch (err) {
         console.log(err);
@@ -52,54 +41,53 @@ function App() {
       <MapGL
         {...viewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
-        width={viewport.width}
-        height={viewport.height}
-        latitude={viewport.latitude}
-        longitude={viewport.longitude}
-        zoom={viewport.zoom}
-        onViewportChange={setViewport}
+        width="50%"
+        height="100%"
         mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
-        onDblClick={currentUsername && handleAddClick}
+        onViewportChange={(viewport) => setViewport(viewport)}
       >
-        {businesses.map((p) => (
+        {businesses.map((biz) => (
           <>
             <Marker
-              latitude={biz.lat}
-              longitude={biz.long}
+              latitude={biz.coordinates.latitude}
+              longitude={biz.coordinates.longitude}
               offsetLeft={-3.5 * viewport.zoom}
               offsetTop={-7 * viewport.zoom}
             >
-              <Room
+              <RestaurantIcon
                 style={{
                   fontSize: 7 * viewport.zoom,
-                  color:
-                    currentUsername === biz.username ? "tomato" : "slateblue",
+                  color: "slateblue",
                   cursor: "pointer",
                 }}
-                onClick={() => handleMarkerClick(biz._id, biz.lat, biz.long)}
+                onClick={() =>
+                  handleMarkerClick(
+                    biz._id,
+                    biz.coordinates.latitude,
+                    biz.coordinates.longitude
+                  )
+                }
               />
             </Marker>
-            {biz._id === currentPlaceId && (
+            {biz._id === currentBusinessId && (
               <Popup
                 key={biz._id}
-                latitude={biz.lat}
-                longitude={biz.long}
+                latitude={biz.coordinates.latitude}
+                longitude={biz.coordinates.longitude}
                 closeButton={true}
                 closeOnClick={false}
-                onClose={() => setCurrentPlaceId(null)}
+                onClose={() => setCurrentBusinessId(null)}
                 anchor="left"
               >
                 <div className="card">
                   <label>Place</label>
-                  <h4 className="place">{biz.title}</h4>
+                  <h4 className="place">{biz.name}</h4>
                   <label>Review</label>
-                  <p className="desc">{biz.desc}</p>
+                  <p className="desc">{biz.address}</p>
                   <label>Rating</label>
                   <div className="stars">
-                    {Array(biz.rating).fill(<Star className="star" />)}
+                    {Array(biz.rating).fill(<StarIcon className="star" />)}
                   </div>
-                  <label>Information</label>
-                  <span className="date">{format(biz.createdAt)}</span>
                 </div>
               </Popup>
             )}
@@ -110,4 +98,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(MapBox);
