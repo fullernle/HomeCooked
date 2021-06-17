@@ -69,39 +69,48 @@ class MapBox extends React.Component {
 
   render() {
     const { viewport } = this.state;
+    const { businesses } = this.props;
 
     if (this.props.businesses.length < 1) {
       return null;
     } else {
-
       return (
-				<div>hello</div>
-        // <MapGL
-        //   {...viewport}
-        //   mapboxApiAccessToken={MAPBOX_TOKEN}
-        //   width={viewport.width}
-        //   height={viewport.height}
-        //   latitude={viewport.latitude}
-        //   longitude={viewport.longitude}
-        //   zoom={viewport.zoom}
-        //   onViewportChange={(viewport) => this.setState({ viewport })}
-        //   mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
-        // >
-        //   <Marker
-        //     latitude={37.8199}
-        //     longitude={-122.4783}
-        //     offsetLeft={-10}
-        //     offsetTop={-10}
-        //   >
-        //     <RestaurantIcon
-        //       style={{
-        //         fontSize: 7 * viewport.zoom,
-        //         color: "tomato",
-        //         cursor: "pointer",
-        //       }}
-        //     />
-        //   </Marker>
-        // </MapGL>
+        <MapGL
+          {...viewport}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          width={viewport.width}
+          height={viewport.height}
+          latitude={viewport.latitude}
+          longitude={viewport.longitude}
+          zoom={viewport.zoom}
+          onViewportChange={(viewport) => this.setState({ viewport })}
+          mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
+        >
+          {businesses.map((biz) => {
+            return (
+              <>
+                <Marker
+                  latitude={biz.coordinates.latitude}
+                  longitude={biz.coordinates.longitude}
+                  offsetLeft={-10}
+                  offsetTop={-10}
+                >
+                  <RestaurantIcon
+                    style={{
+                      fontSize: 7 * viewport.zoom,
+                      color: "tomato",
+                      cursor: "pointer",
+                    }}
+                  />
+                </Marker>
+
+                <Popup key={biz._id} latitude={biz.coordinates.latitude} longitude={biz.coordinates.longitude} closeButton={true} closeOnClick={true} anchor="left">
+
+								</Popup>
+              </>
+            );
+          })}
+        </MapGL>
       );
     }
 >>>>>>> b2370e7174afc90b7454331ca7e9c00b652a5a44
