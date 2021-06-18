@@ -23,6 +23,7 @@
 .NavBar .Logo {
   color: $main-color;
 }
+
 .TransNavBar {
   display: flex;
   width: 100%;
@@ -112,17 +113,33 @@
   transform: scale(1.05);
 }
 
+.SearchContainer {
+  width: 100%;
+  padding: 0 32px;
+  height: 36px;
+  margin-bottom: 8px;
+}
+
 .SearchInput {
-  display: flex;
-  width: 900px;
-  padding: 10px 24px;
+  width: 100%;
+  height: 100%;
+  // min-width: 100px;
+  // max-width: 777px;
+  // width: 777px;
+  // width: 325%;
+  // padding: 10px 24px;
   border-radius: 20px;
   transition: 250ms;
   backface-visibility: hidden;
-  font-size: 14px;
-  justify-content: center;
+  font-size: 16px;
+  color: $black;
+  padding-left: 12px;
 
-  color: $main-color;
+  // float: right;
+  // padding-left: -50px;
+  // position: relative;
+  // margin: auto;
+
   background-color: $font-color;
 
   &::placeholder {
@@ -130,12 +147,16 @@
     letter-spacing: 1px;
   }
 
-  &:hover {
-    padding: 12px 0;
-    outline: 0;
-    border: 1px solid transparent;
-    border-bottom: 1px solid #575756;
-    border-radius: 28;
-    background-position: 100% center;
-  }
+  // &:hover {
+  //   padding: 12px 0;
+  //   outline: 0;
+  //   border: 1px solid transparent;
+  //   border-bottom: 1px solid #575756;
+  //   border-radius: 28;
+  //   background-position: 100% center;
+  // }
+}
+
+.SearchInput:focus {
+  outline: none;
 }
