@@ -36,8 +36,8 @@ export default class Business extends Component {
                         >
                           {business.name}
                         </Link>
-                        <p>
-                          {business.price} • {business.categories[0].title},{" "}
+                        <p className={styles.Categories}>
+                          {business.categories[0].title},{" "}
                           {business.categories[1].title},{" "}
                           {business.categories[2].title}{" "}
                         </p>
