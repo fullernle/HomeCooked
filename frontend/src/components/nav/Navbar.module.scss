@@ -7,28 +7,31 @@
   font-family: "Times New Roman", Times, serif;
   align-self: center;
   text-align: center;
-  margin-left: 8px;
+  margin-left: 32px;
 }
 
 .NavBar {
   display: flex;
   width: 100%;
-  background-color: $main-color;
   height: 80px;
-  padding: 0px 12px;
   justify-content: space-between;
   align-items: center;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.NavBar .Logo {
+  color: $main-color;
 }
 .TransNavBar {
   display: flex;
   width: 100%;
   background-color: transparent;
   height: 80px;
-  padding: 0px 12px;
   justify-content: space-between;
   align-items: center;
-	max-width: 1400px;
-	margin: auto;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .NavBttn {
@@ -59,7 +62,8 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-	background-color: $main-color;
+  background-color: $accent-color;
+  margin-right: 8px;
 }
 
 .CartIcon {
@@ -70,16 +74,19 @@
   cursor: pointer;
 }
 .Cart:hover {
-  background-color: $main-color-hover;
+  background-color: $accent-color-hover;
   transform: scale(1.05);
 }
 
+.Cart:active {
+  background-color: $main-color;
+}
+
 .NavBttnsWrapper {
-  margin-right: 32px;
-  width: 220px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-right: 32px;
 }
 
 // GitHub Button
@@ -103,4 +110,32 @@
   background-color: $main-color-hover;
   color: white;
   transform: scale(1.05);
+}
+
+.SearchInput {
+  display: flex;
+  width: 900px;
+  padding: 10px 24px;
+  border-radius: 20px;
+  transition: 250ms;
+  backface-visibility: hidden;
+  font-size: 14px;
+  justify-content: center;
+
+  color: $main-color;
+  background-color: $font-color;
+
+  &::placeholder {
+    color: $black;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    padding: 12px 0;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 28;
+    background-position: 100% center;
+  }
 }

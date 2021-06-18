@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import Search from "./Search";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +15,7 @@ class Navbar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    // this.props.history.push("/");
   }
 
   // Selectively render links dependent on whether the user is logged in
@@ -63,6 +63,7 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
+          <Search />
           {this.getLinks()}
         </header>
       </div>
@@ -76,6 +77,7 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
+          <Search />
           {this.getLinks()}
         </header>
       </div>
@@ -83,9 +85,14 @@ class Navbar extends React.Component {
   }
 
   render() {
-    return this.props.location.pathname === "/homecooks"
-      ? this.normalNav()
-      : this.transNav();
+    return (
+      <>
+        {this.props.location.pathname === "/homecooks" ||
+        this.props.location.pathname === "/familystyle"
+          ? this.normalNav()
+          : this.transNav()}
+      </>
+    );
   }
 }
 

@@ -6,6 +6,7 @@ import BusinessContainer from "./business/BusinessContainer";
 import MainPageContainer from "./main/MainPageContainer";
 import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";
+import FamilyStyle from "./familystyle/FamilyStyle";
 
 import MapBoxContainer from "./map/map_container"
 
@@ -16,7 +17,11 @@ const App = () => (
           <NavBarContainer />
         </nav>
         <Switch>
+<<<<<<< HEAD
 					<Route exact path="/familystyle" component={MapBoxContainer} />
+=======
+					<Route exact path="/familystyle" component={FamilyStyle} />
+>>>>>>> style-search
 					<Route exact path="/homecooks" component={BusinessesContainer} />
 					<Route exact path="/homecook/:id" component={BusinessContainer} />
           <Route exact path="/" component={MainPageContainer} />
