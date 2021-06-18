@@ -7,3 +7,7 @@ export const fetchCart = (userId) => {
 export const createCart = (userId) => {
   return axios.post(`/api/carts/${userId}`);
 };
+
+export const addProductToCart = (cartId, product) => {
+	return axios.patch(`/api/carts/:cartId/add`, product);
+}
