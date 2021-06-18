@@ -13,19 +13,19 @@ export const receiveErrors = (errors) => ({
   errors,
 });
 
-export const fetchCart = (userId) =>
+export const fetchCart = (userId) => (dispatch) =>
   APIUtil.fetchCart(userId).then(
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
 
-export const addToCart = (product) =>
+export const addToCart = (product) => (dispatch) =>
   APIUtil.addToCart(product).then(
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
 
-export const subtractFromCart = (product) =>
+export const subtractFromCart = (product) => (dispatch) =>
   APIUtil.fetchCart(product).then(
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))

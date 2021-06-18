@@ -21,21 +21,25 @@ class Navbar extends React.Component {
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
     if (this.props.loggedIn) {
-      return (
-        <>
-          <div className={styles.NavBttnsWrapper}>
-            <div className={styles.Cart}>
-              <img
-                className={styles.CartIcon}
-                src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
-              />
+      if (!this.props.user) {
+        return null;
+      } else {
+        return (
+          <>
+            <div className={styles.NavBttnsWrapper}>
+              <Link to={`/carts/${this.props.userId}`} className={styles.Cart}>
+                <img
+                  className={styles.CartIcon}
+                  src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
+                />
+              </Link>
+              <button className={styles.NavBttn} onClick={this.logoutUser}>
+                Logout
+              </button>
             </div>
-            <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout 
-            </button>
-          </div>
-        </>
-      );
+          </>
+        );
+      }
     } else {
       return (
         <>
@@ -51,6 +55,7 @@ class Navbar extends React.Component {
       );
     }
   }
+	
   transNav() {
     return (
       <div className={styles.NavWrapper}>
