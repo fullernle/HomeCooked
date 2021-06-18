@@ -9,16 +9,34 @@
   // display: flex;
   // flex-direction: column;
   height: 100vh;
-	width: 40vw;
-  overflow:auto;
+  width: 40vw;
+  overflow: auto;
   // text-decoration: none;
 }
 
 .NavLink {
-	display:block;
+  display: block;
   text-decoration: none;
   // height: 120px;
-	width: 100%;
+  width: 100%;
   // background-color: rgb(141, 141, 141);
 }
 
+.PhotoWrapper {
+}
+.Photo {
+  // background-size: auto;
+  width: 160px;
+  height: 100px;
+}
+
+.Item {
+  display: flex;
+  justify-content: space-between;
+	margin: 4px 0;
+	background-color: rgba(80, 80, 80, 0.131);
+}
+
+.Details {
+	padding: 8px;
+}
