@@ -7,6 +7,7 @@ import configureStore from "./store/Store";
 import jwt_decode from "jwt-decode";
 import { setAuthToken } from "./util/SessionApiUtil";
 import { logout } from "./actions/SessionActions";
+import axios from "axios";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -43,4 +44,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	
   ReactDOM.render(<Root store={store} />, root);
 	window.store = store;
+	window.axios = axios;
 });
