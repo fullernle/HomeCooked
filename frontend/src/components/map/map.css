@@ -1,9 +1,12 @@
 .popup {
-  width: 250px;
-  height: 250px;
+  background-color: whitesmoke;
+  /* position: absolute; */
+  width: 300px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 100;
 }
 
 label {
@@ -14,6 +17,29 @@ label {
   margin: 3px 0;
 }
 
-.star {
+.name {
+  font-size: 24px;
+  color: rgb(0, 0, 128);
+}
+
+.stars {
   color: gold;
 }
+
+.icon {
+  font-size: 3;
+  color: red;
+  cursor: pointer;
+}
+
+/* .mapboxgl-marker {
+  z-index: -1;
+}
+
+.mapboxgl-map {
+  z-index: -2;
+} */
+
+/* .overlays {
+  z-index: -3;
+} */

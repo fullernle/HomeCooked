@@ -2,10 +2,10 @@ import * as React from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
 import { useEffect, useState } from "react";
 import StarIcon from "@material-ui/icons/Star";
-import RestaurantIcon from "@material-ui/icons/Restaurant";
+import RoomIcon from "@material-ui/icons/Room";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./map.css"
+import "./map.css";
 
 const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
 
@@ -55,14 +55,10 @@ function MapBox() {
               offsetLeft={-3.5 * viewport.zoom}
               offsetTop={-3 * viewport.zoom}
               transitionDuration="50"
-
             >
-              <RestaurantIcon
-                style={{
-                  fontSize: 7 * viewport.zoom,
-                  color: "slateblue",
-                  cursor: "pointer",
-                }}
+              <RoomIcon
+                className="icon"
+                style={{ fontSize: 3 * viewport.zoom }}
                 onClick={() =>
                   handleMarkerClick(
                     biz._id,
@@ -84,11 +80,14 @@ function MapBox() {
               >
                 <div className="popup">
                   <h4 className="name">{biz.name}</h4>
-                  <div>{biz.coordinates.display_address}</div>
                   <label>Reviews</label>
                   <div className="stars">
-                    {Array(biz.rating).fill(<StarIcon className="star" />)}{biz.review_count}
+                    {Array(biz.rating).fill(<StarIcon className="star" />)}
+                    {biz.review_count}
                   </div>
+                  <div>{biz.price}</div>
+                  <div>{biz.location.display_address}</div>
+                  <div>{biz.display_phone}</div>
                 </div>
               </Popup>
             )}
