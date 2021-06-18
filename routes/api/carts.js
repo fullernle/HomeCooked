@@ -14,7 +14,7 @@ router.patch(
   Cart.addToCart
 );
 router.patch(
-  "/:cartId/substract",
+  "/:cartId/subtract",
   passport.authenticate("jwt", { session: false }),
   Cart.subtractFromCart
 );
