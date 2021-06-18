@@ -1,0 +1,76 @@
+
+.popup {
+  background-color: transparent;
+  /* position: absolute; */
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* z-index: 100; */
+} 
+
+label {
+  width: max-content;
+  color: tomato;
+  font-size: 13px;
+  border-bottom: 0.5px solid tomato;
+  margin: 3px 0;
+}
+
+
+.stars {
+  color: gold;
+}
+
+.icon {
+  font-size: 3;
+  color: rgba(68, 156, 134, 0.8);
+  cursor: pointer;
+}
+
+/* .mapboxgl-marker {
+  z-index: -1;
+}
+
+.mapboxgl-map {
+  z-index: -2;
+} */
+
+/* .overlays {
+  z-index: -3;
+} */
+
+.name {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.Ratings {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+}
+.SmallDetails {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ReviewCount {
+	font-size: 12px;
+}
+
+.Price {
+	font-size: 12px;
+	margin-right: 12px;
+}
+
+.mapboxgl-Popup-content {
+    color: #F3F3DD;
+    background-color: #91785D;
+    border-color: #91785D;
+    max-width: 250px;
+    box-shadow: 3px 3px 2px #8B5D33;
+    font-family: 'Oswald';
+}
