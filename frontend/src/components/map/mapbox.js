@@ -82,7 +82,7 @@ function MapBox() {
                   <h4 className="name">{biz.name}</h4>
                   <label>Reviews</label>
                   <div className="stars">
-                    {Array(biz.rating).fill(<StarIcon className="star" />)}
+                    {Array(Math.floor(biz.rating)).fill(<StarIcon className="star" />)}
                     {biz.review_count}
                   </div>
                   <div>{biz.price}</div>
