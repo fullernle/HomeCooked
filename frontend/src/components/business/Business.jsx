@@ -92,25 +92,34 @@ export default class Business extends Component {
                   <div className={styles.Price}>{business.price}</div>
                 </div>
               </div>
-              <div className={styles.InfoWrapper}>
-                <div>
-                  <h1 className={styles.BusinessInfo}>Business Info</h1>
-                  <h3 className={styles.BusinessLocation}>
+            </div>
+
+            <div className={styles.Content}>
+              <div className={styles.ProductWrapper}>
+                {products.map((product) => {
+                  return <Product product={product} />;
+                })}
+              </div>
+
+              <div className={styles.BusinessDetails}>
+                <div className={styles.InfoWrapper}>
+                  {/* <div className={styles.BusinessInfo}>Details:</div> */}
+                  {/* <div className={styles.BusinessLocation}>
                     {business.location.display_address}
-                  </h3>
-                  <h3 className={styles.BusinessNumber}>
+                  </div> */}
+                  <div className={styles.BusinessNumber}>
                     {business.display_phone}
-                  </h3>
-                  <h3 className={styles.BusinessHours}>
-                    7 Days A Week {startTime}-{endTime}
-                  </h3>
+                  </div>
+									<div className={styles.HoursTitle}>
+										Hours:
+									</div>
+                  <div className={styles.BusinessHours}>
+                    7 Days A Week 
+										<br />
+										{startTime}-{endTime}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className={styles.ProductWrapper}>
-              {products.map((product) => {
-                return <Product product={product} />;
-              })}
             </div>
           </div>
         </div>

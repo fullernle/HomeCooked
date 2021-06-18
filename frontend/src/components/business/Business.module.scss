@@ -13,7 +13,7 @@
 .HeaderWrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 118px;
+  margin-bottom: 80px;
   justify-content: space-between;
 }
 .Banner {
@@ -38,10 +38,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.185); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.315); /* Black background with opacity */
   z-index: -99; /* Specify a stack order in case you're using a different order for other elements */
 }
 
+.Content {
+	display: flex;
+}
 .Header {
   margin-top: 160px;
   margin-left: 12px;
@@ -58,7 +61,7 @@
 .HeaderDetails {
   font-size: 24px;
   font-weight: 500;
-  margin-top: 12px;
+  margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
   text-align: center;
@@ -72,7 +75,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  justify-content: space-around;
+  // justify-content: space-around;
   // display: block;
   width: 100%;
 }
@@ -112,38 +115,41 @@
 	transform:scale(1.02)
 }
 
-
+.Categories {
+	font-size: 16px;
+	font-style: italic;
+}
 .InfoWrapper {
-  font-size: 32px;
-  font-weight: 400;
+	margin-top:4px;
+  display: flex;
+	flex-direction: column;
+	background-color: $font-color;
+	min-height: 100px;
+	padding: 8px;
 }
 
 .BusinessInfo {
-  display: flex;
-  margin-top: 160px;
-  color: $font-color;
-  text-align: end;
-  padding-right: 70px;
+  color: $black;
+	font-size: 20px;
 }
 
 .BusinessLocation {
-  font-size: 20px;
-  font-weight: normal;
-  color: $font-color;
-  margin-top: 12px;
-  text-align: center;
+  font-size: 14px;
+  color: $black;
 }
 
 .BusinessNumber {
-  font-size: 20px;
-  margin-top: 16px;
-  color: $font-color;
-  font-weight: normal;
+  font-size: 12px;
+  color: $black;
+	margin-bottom: 8px;
 }
 
 .BusinessHours {
-  font-size: 20px;
-  margin-top: 16px;
-  color: $font-color;
-  font-weight: normal;
+  font-size: 14px;
+  color: $black;
+}
+
+.HoursTitle {
+	font-size: 18px;
+	margin-bottom: 4px;
 }

@@ -1,38 +1,37 @@
 @import "../variables.scss";
 
 .Product {
-	display: flex;
-	background-color: $accent-color;
-	margin: 4px;
+  display: flex;
+  background-color: $accent-color;
+  margin: 4px;
 }
 
 .Photo {
-	background-size: cover;
-	height: 116px;
-	width: 200px;
+  background-size: cover;
+  height: 116px;
+  width: 200px;
 }
 
 .ProductInfo {
-	display: flex;
-	flex-direction: column;
-	padding: 8px;
-	height: 100px;
-	width: 160px;
-	background-color: $font-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  height: 100px;
+  width: 160px;
+  background-color: $font-color;
 }
 
 .CartBttn {
-	background: rgb(54, 52, 52);
+  background: rgb(54, 52, 52);
   color: $font-color;
   border-radius: 24px;
   height: 32px;
   font-size: 12px;
-	width: 100px;
+  width: 100px;
   border: none;
   transition: 100ms;
-	margin-top: 20px;
-	margin-right: 4px;
-	align-self: flex-end;
+  align-self: flex-end;
 }
 
 .CartBttn:hover {
@@ -41,15 +40,16 @@
 }
 
 .CartBttn:active {
-	background-color: $accent-color;
+  background-color: $accent-color;
 }
 
 .Name {
-	margin-bottom: 4px;
-	max-height: 40px;
+  margin-bottom: 4px;
+  max-height: 40px;
 }
 
-.Quantity, .Price {
-	font-size: 12px;
-	font-weight: 400;
+.Quantity,
+.Price {
+  font-size: 12px;
+  font-weight: 400;
 }

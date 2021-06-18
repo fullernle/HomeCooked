@@ -33,18 +33,18 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state);
 
     this.props.login(user).then(() => {
-			if (this.props.errors.length < 1) {
+      if (this.props.errors.length < 1) {
         this.props.closeModal();
-      } 
-		})
-
-    
+        this.props.history.push("/homecooks");
+      }
+    });
   }
 
   demoUser() {
     let demoUser = { email: "test@test.com", password: "test123" };
     this.props.login(demoUser).then(() => {
       this.props.closeModal();
+			this.props.history.push("/homecooks");
     });
   }
 
@@ -71,7 +71,7 @@ class LoginForm extends React.Component {
           </header>
 
           {this.renderErrors()}
-					{this.props.success}
+          {this.props.success}
           <div className={styles.Form}>
             <label>
               <span className={styles.ModalInput}>Email:</span>
