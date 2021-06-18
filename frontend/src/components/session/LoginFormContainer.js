@@ -9,7 +9,7 @@ import styles from "./SessionForm.module.scss";
 const mapStateToProps = (state) => {
   return {
     errors: state.errors.session,
-		formType: "Sign In"
+    formType: "Sign In",
   };
 };
 
@@ -28,7 +28,11 @@ const mapDispatchToProps = (dispatch) => {
         Register
       </button>
     ),
-    closeModal: () => dispatch(closeModal()),
+    closeModal: () => {
+      dispatch(closeModal());
+      dispatch(resetSessionErrors());
+    },
+    resetSessionErrors: () => dispatch(resetSessionErrors()),
   };
 };
 

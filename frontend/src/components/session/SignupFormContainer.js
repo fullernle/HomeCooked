@@ -28,7 +28,15 @@ const mapDispatchToProps = (dispatch) => {
         Sign In
       </button>
     ),
-    closeModal: () => dispatch(closeModal()),
+		openModal: () => {
+			dispatch(resetSessionErrors());
+			dispatch(openModal("login", "Account created! Please log in"));
+		},
+
+    closeModal: () => {
+      dispatch(closeModal());
+      dispatch(resetSessionErrors());
+    },
   };
 };
 

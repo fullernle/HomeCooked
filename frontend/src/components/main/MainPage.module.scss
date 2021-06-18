@@ -66,6 +66,10 @@
   }
 }
 
+
+.Link:active {
+	background-color: $accent-color;
+}
 // .Background {
 // 	display: flex;
 // 	align-items: center;
@@ -164,6 +168,6 @@
 }
 
 .Footer {
-  margin-top: 24px;
   color: $black;
+	margin-bottom: 16px;
 }

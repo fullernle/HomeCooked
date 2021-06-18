@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fab } from "@fortawesome/free-brands-svg-icons";
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -25,13 +24,10 @@ class Navbar extends React.Component {
         <>
           <div className={styles.NavBttnsWrapper}>
             <div className={styles.Cart}>
-              <img
-                className={styles.CartIcon}
-                src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
-              />
+              <ShoppingCartOutlinedIcon style={{fill: "#fcf4f0", fontWeight: 300,}}></ShoppingCartOutlinedIcon>
             </div>
             <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout 
+              Logout
             </button>
           </div>
         </>

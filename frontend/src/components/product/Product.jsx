@@ -15,8 +15,7 @@ export default class Product extends Component {
 
           <div className={styles.ProductInfo}>
             <div className={styles.Name}>{product.name}</div>
-            <div className={styles.Quantity}>Quantity: {product.quantity}</div>
-            <div className={styles.Price}>Price: {product.price}</div>
+            <div className={styles.Price}>${product.price}</div>
 						<button className= {styles.CartBttn}>Add to Cart</button>
           </div>
         </div>

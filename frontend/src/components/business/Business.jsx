@@ -3,6 +3,13 @@ import { fetchBusinessProducts } from "../../util/BusinessUtil";
 import styles from "./Business.module.scss";
 import Product from "../product/Product";
 import StarIcon from "@material-ui/icons/Star";
+import { styled } from "@material-ui/core/styles";
+
+const MyStar = styled(StarIcon)({
+  color: "#fcf4f0",
+  width: "2vh",
+  backgroundColor: "transparent",
+});
 
 export default class Business extends Component {
   constructor(props) {
@@ -62,44 +69,49 @@ export default class Business extends Component {
       let endTime = timeConverter(end);
 
       return (
-        <div className={styles.Wrapper}>
-          <div
-            style={{ backgroundImage: `url(${banner})` }}
-            className={styles.Banner}
-          ></div>
+        <div>
           <div className={styles.Overlay}></div>
+          <div className={styles.Wrapper}>
+            <div
+              style={{ backgroundImage: `url(${banner})` }}
+              className={styles.Banner}
+            ></div>
 
-          <div className={styles.HeaderWrapper}>
-            <div className={styles.Header}>
-              <h1 className={styles.HeaderTitle}>{business.name}</h1>
-              <h3 className={styles.HeaderDetails}>
-                {business.categories[0].title}
-              </h3>
-              <h3 className={styles.Price}>{business.price}</h3>
-              <div className={styles.Stars}>
-                {Array(business.rating).fill(<StarIcon className="star" />)}
+            <div className={styles.HeaderWrapper}>
+              <div className={styles.Header}>
+                <h1 className={styles.HeaderTitle}>{business.name}</h1>
+                <h3 className={styles.HeaderDetails}>
+                  <div className={styles.Categories}>
+                    {business.categories[0].title}
+                  </div>
+                </h3>
+                <div className={styles.SubDetails}>
+                  <div className={styles.Rating}>
+                    {Array(Math.floor(business.rating)).fill(<MyStar></MyStar>)}
+                  </div>
+                  <div className={styles.Price}>{business.price}</div>
+                </div>
+              </div>
+              <div className={styles.InfoWrapper}>
+                <div>
+                  <h1 className={styles.BusinessInfo}>Business Info</h1>
+                  <h3 className={styles.BusinessLocation}>
+                    {business.location.display_address}
+                  </h3>
+                  <h3 className={styles.BusinessNumber}>
+                    {business.display_phone}
+                  </h3>
+                  <h3 className={styles.BusinessHours}>
+                    7 Days A Week {startTime}-{endTime}
+                  </h3>
+                </div>
               </div>
             </div>
-            <div className={styles.InfoWrapper}>
-              <div>
-                <h1 className={styles.BusinessInfo}>Business Info</h1>
-                <h3 className={styles.BusinessLocation}>
-                  {business.location.display_address}
-                </h3>
-                <h3 className={styles.BusinessNumber}>
-                  {business.display_phone}
-                </h3>
-                <h3 className={styles.BusinessHours}>
-                  7 Days A Week {startTime}-{endTime}
-                </h3>
-              </div>
+            <div className={styles.ProductWrapper}>
+              {products.map((product) => {
+                return <Product product={product} />;
+              })}
             </div>
-          </div>
-
-          <div className={styles.ProductWrapper}>
-            {products.map((product) => {
-              return <Product product={product} />;
-            })}
           </div>
         </div>
       );

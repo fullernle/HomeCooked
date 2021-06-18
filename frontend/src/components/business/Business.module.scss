@@ -13,7 +13,7 @@
 .HeaderWrapper {
   display: flex;
   flex-direction: row;
-  margin-bottom: 128px;
+  margin-bottom: 118px;
   justify-content: space-between;
 }
 .Banner {
@@ -31,12 +31,13 @@
 }
 
 .Overlay {
-  position: absolute; /* Sit on top of the page content */
+  position: fixed; /* Sit on top of the page content */
   width: 100%; /* Full width (cover the whole page) */
   height: 100vh; /* Full height (cover the whole page) */
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.185); /* Black background with opacity */
   z-index: -99; /* Specify a stack order in case you're using a different order for other elements */
 }
@@ -51,7 +52,7 @@
 
 .HeaderTitle {
   font-size: 32px;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .HeaderDetails {
@@ -59,7 +60,11 @@
   font-weight: 500;
   margin-top: 12px;
   margin-left: 8px;
+  margin-right: 8px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
 }
 
 .ProductWrapper {
@@ -72,17 +77,41 @@
   width: 100%;
 }
 
-.Price {
-  font-size: 24px;
-  text-align: center;
-  margin-top: 4px;
+.SubDetails {
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
 }
 
-.Stars {
-  font-size: 24px;
-  text-align: center;
-  margin-top: 4px;
+.Price {
+  font-size: 16px;
+	height: 27px;
+	display: flex;
+	font-weight: 500;
+	justify-content: center;
+	align-items: center;
+  width: fit-content;
+	padding: 0 12px;
+	border-radius: 24px;
+	background-color: $accent-color;
+	transition: all 100ms;
+	margin-left: 8px;
 }
+
+.Rating {
+	display: flex;
+	justify-content: center;
+  width: fit-content;
+	padding: 0 12px;
+	border-radius: 24px;
+	background-color: $main-color;
+	transition: all 100ms;
+}
+
+.Rating:hover {
+	transform:scale(1.02)
+}
+
 
 .InfoWrapper {
   font-size: 32px;

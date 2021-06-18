@@ -40,9 +40,13 @@
   transform: scale(1.05);
 }
 
+.CartBttn:active {
+	background-color: $accent-color;
+}
+
 .Name {
-	font-size: 24px;
 	margin-bottom: 4px;
+	max-height: 40px;
 }
 
 .Quantity, .Price {

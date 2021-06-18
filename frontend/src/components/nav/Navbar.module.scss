@@ -13,11 +13,16 @@
 .NavBar {
   display: flex;
   width: 100%;
-  background-color: $main-color;
   height: 80px;
   padding: 0px 12px;
   justify-content: space-between;
   align-items: center;
+	max-width: 1400px;
+	margin:auto;
+}
+
+.NavBar .Logo {
+	color: $main-color;
 }
 .TransNavBar {
   display: flex;
@@ -59,7 +64,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-	background-color: $main-color;
+	background-color: $accent-color;
 }
 
 .CartIcon {
@@ -70,8 +75,12 @@
   cursor: pointer;
 }
 .Cart:hover {
-  background-color: $main-color-hover;
+  background-color: $accent-color-hover;
   transform: scale(1.05);
+}
+
+.Cart:active {
+	background-color: $main-color;
 }
 
 .NavBttnsWrapper {
