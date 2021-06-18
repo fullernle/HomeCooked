@@ -66,7 +66,7 @@
   font-size: 24px;
   font-weight: 500;
   margin-top: 8px;
-  margin-left: 8px;
+	margin-left: 2px;
   margin-right: 8px;
   text-align: center;
   display: flex;
@@ -120,10 +120,12 @@
 
 .Categories {
 	font-size: 16px;
-	font-style: italic;
+	// font-style: italic;
+	font-weight: 300;
 }
 .InfoWrapper {
 	margin-top:8px;
+	margin-left: 2px;
   display: flex;
 	flex-direction: column;
 	// background-color: $font-color;
