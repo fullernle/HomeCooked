@@ -7,7 +7,8 @@ import {
 import Cart from "./Cart";
 
 const mSTP = (state, ownProps) => ({
-  cart: state.carts[ownProps.match.params.id],
+	user: state.session.user,
+  cart: state.carts.user.id,
 });
 
 const mDTP = (dispatch) => ({

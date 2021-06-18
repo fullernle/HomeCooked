@@ -14,17 +14,11 @@ export default class Product extends Component {
           ></div>
 
           <div className={styles.ProductInfo}>
-<<<<<<< HEAD
-            <div className={styles.Name}>{product.name}</div>
-            <div className={styles.Price}>Price: {product.price}</div>
-						<button className= {styles.CartBttn}>Add to Cart</button>
-=======
             <div>
               <div className={styles.Name}>{product.name}</div>
               <div className={styles.Price}>${product.price}</div>
             </div>
             <button className={styles.CartBttn}>Add to Cart</button>
->>>>>>> style-search
           </div>
         </div>
       </>
