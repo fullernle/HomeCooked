@@ -11,7 +11,6 @@ export default class Business extends Component {
   }
 
   getImage(productId) {
-    console.log(productId);
     return this.props.products.find((x) => x._id === productId).photos[0];
   }
   render() {
@@ -21,7 +20,6 @@ export default class Business extends Component {
       if (this.props.products.length < 1) {
         return null;
       } else {
-        console.log(this.props.products);
         return (
           <div className={styles.Wrapper}>
             <div className={styles.List}>

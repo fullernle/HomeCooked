@@ -7,6 +7,7 @@ import MainPageContainer from "./main/MainPageContainer";
 import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";
 import FamilyStyle from "./familystyle/FamilyStyle";
+import Search from "./nav/Search"
 
 const App = () => (
   <div>
@@ -15,7 +16,7 @@ const App = () => (
           <NavBarContainer />
         </nav>
         <Switch>
-					<Route exact path="/familystyle" component={FamilyStyle} />
+					<Route exact path="/familystyle" component={Search} />
 					<Route exact path="/homecooks" component={BusinessesContainer} />
 					<Route exact path="/homecook/:id" component={BusinessContainer} />
           <Route exact path="/" component={MainPageContainer} />

@@ -18,7 +18,7 @@ const MyStar = styled(StarIcon)({
   backgroundColor: "transparent",
 });
 
-function MapBox() {
+function MapBox(props) {
   const [businesses, setBusinesses] = useState([]);
   const [currentBusinessId, setCurrentBusinessId] = useState(null);
   const [viewport, setViewport] = useState({
@@ -45,9 +45,15 @@ function MapBox() {
     };
     getBusinesses();
   }, []);
-
+  // filterBusinesses = (business) =>{
+  //   if (props.query === "") {
+  //     return business;
+  //     else if(businiess)
+  //   }
+  // };
+  // console.log(props)
   return (
-    <div style={{ height: "100vh", width: '60vw' }}>
+    <div style={{ height: "100vh", width: "60vw" }}>
       <MapGL
         {...viewport}
         mapboxApiAccessToken={MAPBOX_TOKEN}
@@ -56,63 +62,79 @@ function MapBox() {
         mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
         onViewportChange={(viewport) => setViewport(viewport)}
       >
-        {businesses.map((biz) => (
-          <>
-            <Marker
-              latitude={biz.coordinates.latitude}
-              longitude={biz.coordinates.longitude}
-              offsetLeft={-3.5 * viewport.zoom}
-              offsetTop={-3 * viewport.zoom}
-              transitionDuration="50"
-            >
-              <RoomIcon
-                className={styles.Icon}
-                style={{ fontSize: 3 * viewport.zoom }}
-                onClick={() =>
-                  handleMarkerClick(
-                    biz._id,
-                    biz.coordinates.latitude,
-                    biz.coordinates.longitude
-                  )
-                }
-              />
-            </Marker>
-            {biz._id === currentBusinessId && (
-              <Popup
-                key={biz._id}
+        {businesses
+          .filter((biz) => {
+            if (props.query === "") {
+              return true;
+            } else if (
+              biz.categories[0].title
+                .toLowerCase()
+                .includes(props.query.toLowerCase())
+            ) {
+              return true;
+            }
+          })
+          .map((biz) => (
+            <>
+              <Marker
                 latitude={biz.coordinates.latitude}
                 longitude={biz.coordinates.longitude}
-                closeButton={true}
-                closeOnClick={false}
-                onClose={() => setCurrentBusinessId(null)}
-                anchor="left"
-                className={styles.PopupContainer}
+                offsetLeft={-3.5 * viewport.zoom}
+                offsetTop={-3 * viewport.zoom}
+                transitionDuration="50"
               >
-                <div className={styles.Popup}>
-									<div className={styles.PopupHeader}>
-          	        <Link to={`/homecook/${biz._id}`} className={styles.Name}>{biz.name}</Link>
-										<div className={styles.Category}>{biz.categories[0].title}</div>
-									</div>
-                  {/* <label>Reviews</label> */}
-                  <div className={styles.SmallDetails}>
-                    <div className={styles.Price}>{biz.price}</div>
-                    <div className={styles.Ratings}>
-                      <div className={styles.Rating}>
-                        {Array(Math.floor(biz.rating)).fill(<MyStar />)}
-                      </div>
-
-                      <div className={styles.ReviewCount}>
-                        ({biz.review_count})
+                <RoomIcon
+                  className={styles.Icon}
+                  style={{ fontSize: 3 * viewport.zoom }}
+                  onClick={() =>
+                    handleMarkerClick(
+                      biz._id,
+                      biz.coordinates.latitude,
+                      biz.coordinates.longitude
+                    )
+                  }
+                />
+              </Marker>
+              {biz._id === currentBusinessId && (
+                <Popup
+                  key={biz._id}
+                  latitude={biz.coordinates.latitude}
+                  longitude={biz.coordinates.longitude}
+                  closeButton={true}
+                  closeOnClick={false}
+                  onClose={() => setCurrentBusinessId(null)}
+                  anchor="left"
+                  className={styles.PopupContainer}
+                >
+                  <div className={styles.Popup}>
+                    <div className={styles.PopupHeader}>
+                      <Link to={`/homecook/${biz._id}`} className={styles.Name}>
+                        {biz.name}
+                      </Link>
+                      <div className={styles.Category}>
+                        {biz.categories[0].title}
                       </div>
                     </div>
-                  </div>
-                  {/* <div>{biz.location.display_address}</div>
+                    {/* <label>Reviews</label> */}
+                    <div className={styles.SmallDetails}>
+                      <div className={styles.Price}>{biz.price}</div>
+                      <div className={styles.Ratings}>
+                        <div className={styles.Rating}>
+                          {Array(Math.floor(biz.rating)).fill(<MyStar />)}
+                        </div>
+
+                        <div className={styles.ReviewCount}>
+                          ({biz.review_count})
+                        </div>
+                      </div>
+                    </div>
+                    {/* <div>{biz.location.display_address}</div>
                   <div>{biz.display_phone}</div> */}
-                </div>
-              </Popup>
-            )}
-          </>
-        ))}
+                  </div>
+                </Popup>
+              )}
+            </>
+          ))}
       </MapGL>
     </div>
   );
