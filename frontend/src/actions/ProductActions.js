@@ -27,6 +27,6 @@ export const fetchProduct = (productId) => (dispatch) =>
 
 export const fetchProducts = () => (dispatch) =>
   APIUtil.fetchProducts().then(
-    (data) => dispatch(receiveProducts(data)),
+    (data) => dispatch(receiveProducts(data.data)),
     (err) => dispatch(receiveErrors(err))
   );
