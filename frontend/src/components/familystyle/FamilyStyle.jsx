@@ -7,8 +7,8 @@ export default class FamilyStyle extends Component {
   render() {
     return (
       <div className={styles.Wrapper}>
-          <MapContainer />
 					<BusinessesContainer />
+          <MapContainer />
       </div>
     );
   }
