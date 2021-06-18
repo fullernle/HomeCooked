@@ -3,16 +3,20 @@ const router = express.Router();
 const Cart = require("../../controllers/carts/carts");
 const passport = require("passport");
 
-router.get("/", passport.authenticate("jwt", { session: false }), Cart.getCart);
 router.get(
   "/:userId",
   passport.authenticate("jwt", { session: false }),
   Cart.getCart
 );
 router.patch(
-  "/:cartId/update",
+  "/:cartId/add",
   passport.authenticate("jwt", { session: false }),
-  Cart.updateCart
+  Cart.addToCart
+);
+router.patch(
+  "/:cartId/substract",
+  passport.authenticate("jwt", { session: false }),
+  Cart.subtractFromCart
 );
 module.exports = router;
 

@@ -1,11 +1,10 @@
 import * as React from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
 import { useEffect, useState } from "react";
-import StarIcon from "@material-ui/icons/Star";
-import RoomIcon from "@material-ui/icons/Room";
+import StarIcon  from "@material-ui/icons/Star";
+import RestaurantIcon from "@material-ui/icons/Restaurant";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
-import "./map.css";
 
 const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
 
@@ -15,9 +14,9 @@ function MapBox() {
   const [viewport, setViewport] = useState({
     width: 400,
     height: 400,
-    latitude: 37.77,
-    longitude: -122.43,
-    zoom: 11.5,
+    latitude: 37.8,
+    longitude: -122.35,
+    zoom: 9.5,
   });
 
   const handleMarkerClick = (id, latitude, longitude) => {
@@ -53,12 +52,14 @@ function MapBox() {
               latitude={biz.coordinates.latitude}
               longitude={biz.coordinates.longitude}
               offsetLeft={-3.5 * viewport.zoom}
-              offsetTop={-3 * viewport.zoom}
-              transitionDuration="50"
+              offsetTop={-7 * viewport.zoom}
             >
-              <RoomIcon
-                className="icon"
-                style={{ fontSize: 3 * viewport.zoom }}
+              <RestaurantIcon
+                style={{
+                  fontSize: 7 * viewport.zoom,
+                  color: "slateblue",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   handleMarkerClick(
                     biz._id,
@@ -78,16 +79,15 @@ function MapBox() {
                 onClose={() => setCurrentBusinessId(null)}
                 anchor="left"
               >
-                <div className="popup">
-                  <h4 className="name">{biz.name}</h4>
-                  <label>Reviews</label>
+                <div className="card">
+                  <label>Place</label>
+                  <h4 className="place">{biz.name}</h4>
+                  <label>Review</label>
+                  <p className="desc">{biz.address}</p>
+                  <label>Rating</label>
                   <div className="stars">
                     {Array(biz.rating).fill(<StarIcon className="star" />)}
-                    {biz.review_count}
                   </div>
-                  <div>{biz.price}</div>
-                  <div>{biz.location.display_address}</div>
-                  <div>{biz.display_phone}</div>
                 </div>
               </Popup>
             )}

@@ -10,14 +10,14 @@ const CartSchema = new Schema({
     {
       type: Schema.Types.Object,
       ref: "Product",
-      quantity: Number
     }
   ],
   totalQuantity: {
     type: Number
   },
   totalPrice: {
-    type: Number
+    type: Number,
+    default: 0
   }
 }, 
   { timestamps: true }
