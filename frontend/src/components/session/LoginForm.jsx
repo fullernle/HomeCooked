@@ -35,7 +35,7 @@ class LoginForm extends React.Component {
     this.props.login(user).then(() => {
       if (this.props.errors.length < 1) {
         this.props.closeModal();
-        this.props.history.push("/homecooks");
+        // this.props.history.push("/homecooks");
       }
     });
   }
@@ -44,7 +44,7 @@ class LoginForm extends React.Component {
     let demoUser = { email: "test@test.com", password: "test123" };
     this.props.login(demoUser).then(() => {
       this.props.closeModal();
-			this.props.history.push("/homecooks");
+			// this.props.history.push("/homecooks");
     });
   }
 

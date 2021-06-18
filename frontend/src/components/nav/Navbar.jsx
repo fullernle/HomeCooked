@@ -14,8 +14,8 @@ class Navbar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
-    this.props.logout()
-		// this.props.history.push("/");
+    this.props.logout();
+    // this.props.history.push("/");
   }
 
   // Selectively render links dependent on whether the user is logged in
@@ -25,7 +25,9 @@ class Navbar extends React.Component {
         <>
           <div className={styles.NavBttnsWrapper}>
             <div className={styles.Cart}>
-              <ShoppingCartOutlinedIcon style={{fill: "#fcf4f0", fontWeight: 300,}}></ShoppingCartOutlinedIcon>
+              <ShoppingCartOutlinedIcon
+                style={{ fill: "#fcf4f0", fontWeight: 300 }}
+              ></ShoppingCartOutlinedIcon>
             </div>
             <button className={styles.NavBttn} onClick={this.logoutUser}>
               Logout
@@ -75,9 +77,14 @@ class Navbar extends React.Component {
   }
 
   render() {
-    return this.props.location.pathname === "/homecooks"
-      ? this.normalNav()
-      : this.transNav();
+    return (
+      <>
+        {this.props.location.pathname === "/homecooks" ||
+        this.props.location.pathname === "/familystyle"
+          ? this.normalNav()
+          : this.transNav()}
+      </>
+    );
   }
 }
 

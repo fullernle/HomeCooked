@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import styles from "./Business.module.scss";
-import {Link } from "react-router-dom"
+import styles from "./Businesses.module.scss";
+import { Link } from "react-router-dom";
 
 export default class Business extends Component {
   componentDidMount() {
@@ -12,23 +12,17 @@ export default class Business extends Component {
     } else {
       return (
         <div className={styles.Wrapper}>
-          <div className={styles.Banner}></div>
-
-          <div>
-            <ul>
-              {this.props.businesses.map((business) => {
-                return (
-                  <li>
-                    <Link to={`/homecook/${business._id}`}>{business.name}</Link>
-                  </li>
-                );
-              })}
-            </ul>
+          <div className={styles.List}>
+            {this.props.businesses.map((business) => {
+              return (
+                <Link className={styles.NavLink} to={`/homecook/${business._id}`}>
+                  {business.name}
+                </Link>
+              );
+            })}
           </div>
         </div>
       );
     }
   }
 }
-
-
