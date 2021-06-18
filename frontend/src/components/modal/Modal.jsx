@@ -5,7 +5,7 @@ import LoginFormContainer from "../session/LoginFormContainer";
 import SignupFormContainer from "../session/SignupFormContainer";
 import styles from "./Modal.module.scss"
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, closeModal}) {
   if (!modal) {
     return null;
   }

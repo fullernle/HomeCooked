@@ -16,15 +16,10 @@ export default class MainPage extends Component {
         <div className={styles.Overlay}></div>
         <div className={styles.Underlay}></div>
         <div className={styles.MainPage}>
-          {this.props.isLoggedIn ? (
-            <h1 className={styles.Header}>Welcome {loggedIn}</h1>
-          ) : (
-            ""
-          )}
           <h1 className={styles.Header}>Homecooked meals,</h1>
           <h1 className={styles.Header}>delivered to your door!</h1>
 
-          <Link to="/familystyle" className={styles.Link}>
+          <Link to="/homecooks" className={styles.Link}>
             Welcome Home Sunny!
           </Link>
 
