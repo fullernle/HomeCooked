@@ -31,9 +31,9 @@ module.exports = {
   },
 
   addToCart: async (req, res) => {
-    console.log("---------------------------");
-    console.log(req.params);
-    console.log(req.body);
+    // console.log("---------------------------");
+    // console.log(req.params);
+    // console.log(req.body);
 
     let cart = await Cart.findById(req.params.cartId);
 
@@ -47,14 +47,15 @@ module.exports = {
     cart.totalQuantity = cart.products.length;
     cart.totalPrice = currentTotal;
     cart.save();
-    console.log(cart);
+    // console.log(cart);
 
     res.send(cart);
   },
+
   subtractFromCart: async (req, res) => {
-    console.log("---------------------------");
-    console.log(req.params);
-    console.log(req.body);
+    // console.log("---------------------------");
+    // console.log(req.params);
+    // console.log(req.body);
 
     let cart = await Cart.findById(req.params.cartId);
 
@@ -68,7 +69,7 @@ module.exports = {
     cart.totalQuantity = cart.products.length;
     cart.totalPrice = currentTotal;
     cart.save();
-    console.log(cart);
+    // console.log(cart);
 
     res.send(cart);
   },
