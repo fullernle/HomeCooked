@@ -69,7 +69,7 @@ export default class Business extends Component {
       let endTime = timeConverter(end);
 
       return (
-        <div>
+        <div className={styles.BusinessContent}>
           <div className={styles.Overlay}></div>
           <div className={styles.Wrapper}>
             <div
@@ -91,6 +91,22 @@ export default class Business extends Component {
                   </div>
                   <div className={styles.Price}>{business.price}</div>
                 </div>
+                <div className={styles.BusinessDetails}>
+                  <div className={styles.InfoWrapper}>
+                    {/* <div className={styles.BusinessInfo}>Details:</div> */}
+                    {/* <div className={styles.BusinessLocation}>
+                    {business.location.display_address}
+                  </div> */}
+                    <div className={styles.BusinessNumber}>
+                      {business.display_phone}
+                    </div>
+                    {/* <div className={styles.HoursTitle}>Hours:</div> */}
+                    <div className={styles.BusinessHours}>
+                      {/* 7 Days A Week */}
+                      {startTime}-{endTime}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -99,26 +115,6 @@ export default class Business extends Component {
                 {products.map((product) => {
                   return <Product product={product} />;
                 })}
-              </div>
-
-              <div className={styles.BusinessDetails}>
-                <div className={styles.InfoWrapper}>
-                  {/* <div className={styles.BusinessInfo}>Details:</div> */}
-                  {/* <div className={styles.BusinessLocation}>
-                    {business.location.display_address}
-                  </div> */}
-                  <div className={styles.BusinessNumber}>
-                    {business.display_phone}
-                  </div>
-									<div className={styles.HoursTitle}>
-										Hours:
-									</div>
-                  <div className={styles.BusinessHours}>
-                    7 Days A Week 
-										<br />
-										{startTime}-{endTime}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

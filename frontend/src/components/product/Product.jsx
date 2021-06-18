@@ -6,7 +6,7 @@ export default class Product extends Component {
 
     let photo = product.photos[0];
     return (
-      <div>
+      <>
         <div className={styles.Product}>
           <div
             style={{ backgroundImage: `url(${photo})` }}
@@ -21,7 +21,7 @@ export default class Product extends Component {
             <button className={styles.CartBttn}>Add to Cart</button>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

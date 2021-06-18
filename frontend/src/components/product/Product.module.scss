@@ -1,9 +1,11 @@
 @import "../variables.scss";
 
+
 .Product {
   display: flex;
   background-color: $accent-color;
   margin: 4px;
+	// flex: 0 0 auto;
 }
 
 .Photo {
@@ -18,7 +20,7 @@
   justify-content: space-between;
   padding: 8px;
   height: 100px;
-  width: 160px;
+  width: 140px;
   background-color: $font-color;
 }
 
@@ -28,7 +30,7 @@
   border-radius: 24px;
   height: 32px;
   font-size: 12px;
-  width: 100px;
+  width: 92px;
   border: none;
   transition: 100ms;
   align-self: flex-end;
