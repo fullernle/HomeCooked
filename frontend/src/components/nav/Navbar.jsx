@@ -57,7 +57,7 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
+          {this.props.location.pathname === "/familystyle" ? <Search /> : null}
           {this.getLinks()}
         </header>
       </div>
