@@ -10,8 +10,13 @@ router.get(
   Cart.getCart
 );
 router.patch(
-  "/:cartId/update",
+  "/:cartId/add",
   passport.authenticate("jwt", { session: false }),
-  Cart.updateCart
+  Cart.addToCart
+);
+router.patch(
+  "/:cartId/substract",
+  passport.authenticate("jwt", { session: false }),
+  Cart.subtractFromCart
 );
 module.exports = router;
