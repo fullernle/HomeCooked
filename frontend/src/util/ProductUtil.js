@@ -9,7 +9,7 @@ export const fetchProducts = () => {
 };
 
 
-export const filterProducts= (productIds, products) => {
+export const filterProducts = (productIds, products) => {
     let productsArray = [];
     console.log(productIds);
     productIds.forEach((id) => {

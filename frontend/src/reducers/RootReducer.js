@@ -4,6 +4,7 @@ import session from "./SessionReducer";
 import ui from "./UiReducer";
 import businesses from "./BusinessReducer";
 import products from "./ProductReducer";
+import reviews from './ReviewReducer';
 
 const RootReducer = combineReducers({
   businesses,
@@ -11,6 +12,7 @@ const RootReducer = combineReducers({
   session,
   errors,
   ui,
+  reviews,
 });
 
 export default RootReducer;
