@@ -1,0 +1,90 @@
+@import "../variables.scss";
+.Popup {
+  background-color: transparent;
+  /* position: absolute; */
+  width: 200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  /* z-index: 100; */
+} 
+
+.Icon {
+  font-size: 3;
+  color: $accent-color;
+  cursor: pointer;
+}
+
+.Name {
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	color: $black;
+}
+
+.Ratings {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+}
+.SmallDetails {
+	display: flex;
+	align-items: center;
+	margin-top: 4px;
+	// justify-content: space-between;
+}
+
+.ReviewCount {
+	font-size: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 8px;
+}
+
+.Price {
+  font-size: 12px;
+	height: 20px;
+	display: flex;
+	font-weight: 500;
+	justify-content: center;
+	align-items: center;
+  width: fit-content;
+	padding: 0 12px;
+	border-radius: 24px;
+	background-color: $tertiary-color;
+	color: $font-color;
+	transition: all 100ms;
+	// margin-left: 8px;
+}
+
+.Rating {
+	display: flex;
+	justify-content: center;
+  width: fit-content;
+	padding-left: 8px;
+	// padding: 0 12px;
+	border-radius: 24px;
+	// background-color: $tertiary-color;
+	transition: all 100ms;
+}
+
+.Rating:hover {
+	transform:scale(1.02)
+}
+
+.PopupContainer {
+	border-radius: 24px;
+}
+
+.PopupHeader {
+	display: flex;
+	flex-direction: column;
+}
+
+.Category {
+	margin-top: 4px;
+	font-size: 10px;
+	font-style: italic;
+}

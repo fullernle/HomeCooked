@@ -10,16 +10,15 @@ class SignupForm extends React.Component {
       username: "",
       password: "",
       password2: "",
-      errors: {},
     };
 
+    this.handleEnter = this.handleEnter.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.clearedErrors = false;
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
-      this.props.history.push("/login");
+      this.props.openModal();
     }
 
     this.setState({ errors: nextProps.errors });
@@ -32,29 +31,32 @@ class SignupForm extends React.Component {
       });
   }
 
+  handleEnter(e) {
+    if (e.key === "Enter") this.handleSubmit(e);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    let user = {
-      email: this.state.email,
-      username: this.state.username,
-      password: this.state.password,
-      password2: this.state.password2,
-    };
+    const user = Object.assign({}, this.state);
 
-    this.props.signup(user, this.props.history);
+    this.props.signup(user);
   }
 
   renderErrors() {
     return (
       <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
+        {Object.values(this.props.errors).map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
   }
 
   render() {
+    if (this.props.isSignedIn) {
+			console.log("signed in");
+      this.props.openModal();
+    }
     return (
       <div className="signup-form-container">
         <div onClick={this.props.closeModal} className={styles.CloseX}>
@@ -69,45 +71,45 @@ class SignupForm extends React.Component {
           {this.renderErrors()}
           <div className={styles.Form}>
             <label>
-              {/* <span className={styles.ModalInput}>Email:</span> */}
               <input
                 className={styles.FormInput}
                 type="text"
                 value={this.state.email}
                 onChange={this.update("email")}
                 placeholder="Email"
+                onKeyPress={this.handleEnter}
               />
             </label>
 
             <label>
-              {/* <span className={styles.ModalInput}>Username:</span> */}
               <input
                 type="text"
                 value={this.state.username}
                 onChange={this.update("username")}
                 className={styles.FormInput}
-								placeholder="Username"
+                placeholder="Username"
+                onKeyPress={this.handleEnter}
               />
             </label>
 
             <label>
-              {/* <span className={styles.ModalInput}>Password:</span> */}
               <input
                 className={styles.FormInput}
                 type="password"
                 value={this.state.password}
                 onChange={this.update("password")}
                 placeholder="Password"
+                onKeyPress={this.handleEnter}
               />
             </label>
             <label>
-              {/* <span className={styles.ModalInput}>Confirm Password:</span> */}
               <input
                 className={styles.FormInput}
                 type="password"
                 value={this.state.password2}
                 onChange={this.update("password2")}
                 placeholder="Confirm Password"
+                onKeyPress={this.handleEnter}
               />
             </label>
             <br />

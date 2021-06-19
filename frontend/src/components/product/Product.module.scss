@@ -1,0 +1,57 @@
+@import "../variables.scss";
+
+
+.Product {
+  display: flex;
+  background-color: $accent-color;
+  margin: 4px;
+	// flex: 0 0 auto;
+}
+
+.Photo {
+  background-size: cover;
+  height: 116px;
+  width: 200px;
+}
+
+.ProductInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  height: 100px;
+  width: 140px;
+  background-color: $font-color;
+}
+
+.CartBttn {
+  background: rgb(54, 52, 52);
+  color: $font-color;
+  border-radius: 24px;
+  height: 32px;
+  font-size: 12px;
+  width: 92px;
+  border: none;
+  transition: 100ms;
+  align-self: flex-end;
+}
+
+.CartBttn:hover {
+  background-color: rgb(46, 46, 46);
+  transform: scale(1.05);
+}
+
+.CartBttn:active {
+  background-color: $accent-color;
+}
+
+.Name {
+  margin-bottom: 4px;
+  max-height: 40px;
+}
+
+.Quantity,
+.Price {
+  font-size: 12px;
+  font-weight: 400;
+}

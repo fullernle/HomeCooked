@@ -1,54 +1,91 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
-
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import Search from "./Search";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
+    this.transNav = this.transNav.bind(this);
+    this.normalNav = this.normalNav.bind(this);
   }
 
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    // this.props.history.push("/");
   }
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
     if (this.props.loggedIn) {
       return (
-          <button className={styles.NavBttn} onClick={this.logoutUser}>
-            Logout
-          </button>
+        <>
+          <div className={styles.NavBttnsWrapper}>
+            <div className={styles.Cart}>
+              <ShoppingCartOutlinedIcon
+                style={{ fill: "#fcf4f0", fontWeight: 300 }}
+              ></ShoppingCartOutlinedIcon>
+            </div>
+            <button className={styles.NavBttn} onClick={this.logoutUser}>
+              Logout
+            </button>
+          </div>
+        </>
       );
     } else {
       return (
-				<button className={styles.NavBttn} onClick={() => this.props.openModal("login")}>
-					Sign In
-				</button>
-        
+        <>
+          <div className={styles.NavBttnsWrapper}>
+            <button
+              className={styles.NavBttn}
+              onClick={() => this.props.openModal("login")}
+            >
+              Sign In
+            </button>
+          </div>
+        </>
       );
     }
   }
-/* <div className={styles.LinkContainer}>
-		<Link className={styles.NavLinks} to={"/signup"}>Signup</Link>
-		<Link className={styles.NavLinks} to={"/login"}>Login</Link>
-	</div> */
-  render() {
-		let nav = styles.NavBar; 
-		if (this.props.location.pathname === "/") {
-			nav = styles.TransNavBar
-		}
-
+  transNav() {
     return (
       <div className={styles.NavWrapper}>
-				<header className={nav}>
-					<div></div>
-					<Link to="/" className={styles.Logo}>HomeCooked</Link>
-					{this.getLinks()}
-				</header>
+        <header className={styles.TransNavBar}>
+          <Link to="/" className={styles.Logo}>
+            HomeCooked
+          </Link>
+          {this.props.location.pathname === "/familystyle" ? <Search /> : null}
+          {this.getLinks()}
+        </header>
       </div>
+    );
+  }
+
+  normalNav() {
+    return (
+      <div className={styles.NavWrapper}>
+        <header className={styles.NavBar}>
+          <Link to="/" className={styles.Logo}>
+            HomeCooked
+          </Link>
+          <Search />
+          {this.getLinks()}
+        </header>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <>
+        {this.props.location.pathname === "/homecooks" ||
+        this.props.location.pathname === "/familystyle"
+          ? this.normalNav()
+          : this.transNav()}
+      </>
     );
   }
 }
