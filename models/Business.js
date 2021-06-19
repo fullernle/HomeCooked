@@ -81,6 +81,10 @@ const BusinessSchema = new Schema({
       ref: "Product",
     },
   ],
+  reviews: [{
+    type: Schema.Types.Object,
+    ref: "Review"
+  }]
 });
 
 module.exports = Business = mongoose.model("Business", BusinessSchema);
