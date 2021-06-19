@@ -20,4 +20,9 @@ module.exports = {
 
     return res.send(businessById);
   },
+
+  fetchAllReviews : async (req, res) => {
+    const reviews = await Review.find()
+    return res.send(reviews)
+  },
 }
