@@ -74,7 +74,6 @@ module.exports = {
 
   subtractFromCart: async (req, res) => {
     // let cart = await Cart.findById(req.params.cartId);
-		console.log("WHAT")
     const userId = req.params.userId;
     let objectUserId = mongoose.Types.ObjectId(userId);
     let cart = await Cart.findOne({ userId: objectUserId });

@@ -5,7 +5,6 @@ export default class Cart extends Component {
   constructor(props) {
     super(props);
 
-    console.log(this.props);
     this.state = {};
 
     this.increaseQuantity = this.increaseQuantity.bind(this);
@@ -34,7 +33,6 @@ export default class Cart extends Component {
 
   updateBE() {
     let cart = Object.assign({}, this.state);
-    console.log(cart);
     this.props.updateCart(cart.userId, cart);
   }
 

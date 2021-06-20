@@ -3,7 +3,6 @@ const Product = require("../../models/Product");
 
 module.exports = {
   create: async (req, res) => {
-    console.log(req.params);
     business = req.params;
     id = business.id;
     const { name, price, category, quantity } = req.body;

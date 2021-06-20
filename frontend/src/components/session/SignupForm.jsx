@@ -54,7 +54,6 @@ class SignupForm extends React.Component {
 
   render() {
     if (this.props.isSignedIn) {
-			console.log("signed in");
       this.props.openModal();
     }
     return (
