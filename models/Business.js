@@ -7,11 +7,11 @@ const BusinessSchema = new Schema({
   },
   coordinates: {
     latitude: {
-      type: Number
+      type: Number,
       // required: true,
     },
     longitude: {
-      type: Number
+      type: Number,
       // required: true,
     },
   },

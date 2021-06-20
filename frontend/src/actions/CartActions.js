@@ -19,8 +19,8 @@ export const fetchCart = (userId) => (dispatch) =>
     (err) => dispatch(receiveErrors(err.response.data))
   );
 
-export const addToCart = (product) => (dispatch) =>
-  APIUtil.addToCart(product).then(
+export const addToCart = (userId, product) => (dispatch) =>
+  APIUtil.addToCart(userId, product).then(
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );

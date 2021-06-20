@@ -31,13 +31,12 @@ module.exports = {
   },
 
   addToCart: async (req, res) => {
-    // console.log("---------------------------");
-    // console.log(req.params);
-    // console.log(req.body);
+    // let cart = await Cart.findById(req.params.cartId);
+    const userId = req.params.userId;
+    let objectUserId = mongoose.Types.ObjectId(userId);
+    let cart = await Cart.findOne({ userId: objectUserId });
 
-    let cart = await Cart.findById(req.params.cartId);
-
-    let product = req.body.product;
+    let product = req.body;
     let price = Number.parseInt(product.price);
     let currentTotal = cart.totalPrice;
 
@@ -47,19 +46,18 @@ module.exports = {
     cart.totalQuantity = cart.products.length;
     cart.totalPrice = currentTotal;
     cart.save();
-    // console.log(cart);
 
     res.send(cart);
   },
 
   subtractFromCart: async (req, res) => {
-    // console.log("---------------------------");
-    // console.log(req.params);
-    // console.log(req.body);
+    // let cart = await Cart.findById(req.params.cartId);
 
-    let cart = await Cart.findById(req.params.cartId);
+    const userId = req.params.userId;
+    let objectUserId = mongoose.Types.ObjectId(userId);
+    let cart = await Cart.findOne({ userId: objectUserId });
 
-    let product = req.body.product;
+    let product = req.body;
     let price = Number.parseInt(product.price);
     let currentTotal = cart.totalPrice;
 
@@ -69,7 +67,6 @@ module.exports = {
     cart.totalQuantity = cart.products.length;
     cart.totalPrice = currentTotal;
     cart.save();
-    // console.log(cart);
 
     res.send(cart);
   },

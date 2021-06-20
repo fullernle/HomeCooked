@@ -11,7 +11,6 @@ export default class Business extends Component {
   }
 
   getImage(productId) {
-    console.log(productId);
     return this.props.products.find((x) => x._id === productId).photos[0];
   }
   render() {
@@ -45,7 +44,11 @@ export default class Business extends Component {
                         <p>{business.location.display_address[1]}</p>
                       </div>
                       <p className={styles.PhotoWrapper}>
-                        <img className={styles.Photo} src={this.getImage(business.products[0])} alt="" />
+                        <img
+                          className={styles.Photo}
+                          src={this.getImage(business.products[0])}
+                          alt=""
+                        />
                       </p>
                     </div>
                   </>

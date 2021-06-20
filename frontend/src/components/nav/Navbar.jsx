@@ -27,7 +27,7 @@ class Navbar extends React.Component {
         return (
           <>
             <div className={styles.NavBttnsWrapper}>
-              <Link to={`/carts/${this.props.userId}`} className={styles.Cart}>
+              <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
                 <img
                   className={styles.CartIcon}
                   src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
@@ -63,7 +63,7 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
+          {/* <Search /> */}
           {this.getLinks()}
         </header>
       </div>
@@ -77,7 +77,7 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
+          {/* <Search /> */}
           {this.getLinks()}
         </header>
       </div>

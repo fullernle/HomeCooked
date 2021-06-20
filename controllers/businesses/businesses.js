@@ -16,16 +16,10 @@ module.exports = {
   },
 
   find: async (req, res) => {
-    console.log(req);
-    console.log(req.params);
-    console.log(req.body);
     const business = await Business.find();
     return res.send(business);
   },
   findBusiness: async (req, res) => {
-    console.log(req);
-    console.log(req.params);
-    console.log(req.body);
     const { id } = req.params;
     const business = await Business.findById(id);
 

@@ -1,17 +1,25 @@
 import React, { Component } from "react";
 
 export default class Cart extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      cart: null,
+    };
+  }
   componentDidMount() {
-    this.props.fetchCart(this.props.match.params.userId);
+    this.props.fetchCart(this.props.match.params.userId).then((res) => {
+      this.setState({
+        cart: res.cart,
+      });
+    });
   }
   render() {
-    if (!this.props.cart) {
+    if (!this.state.cart) {
       return null;
     } else {
-			console.log(this.props.cart);
-      return <div>
-
-			</div>;
+      return <div>hello</div>;
     }
   }
 }

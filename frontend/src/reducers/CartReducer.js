@@ -7,7 +7,7 @@ export default function (state = {}, action) {
   switch (action.type) {
     case RECEIVE_CURRENT_CART:
 			let cart = action.cart 
-			newState[cart._id] = cart;
+			newState[cart.userId] = cart;
       return newState;
 
     default:

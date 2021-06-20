@@ -8,6 +8,7 @@ import jwt_decode from "jwt-decode";
 import { setAuthToken } from "./util/SessionApiUtil";
 import { logout } from "./actions/SessionActions";
 import axios from "axios";
+import { fetchCart } from "./actions/CartActions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -19,13 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Decode the token to obtain the user's information
     const decodedUser = jwt_decode(localStorage.jwtToken);
-
+		
     // Create a preconfigured state we can immediately add to our store
-    const preloadedState = {
+    let preloadedState = {
       session: { isAuthenticated: true, user: decodedUser },
     };
 
     store = configureStore(preloadedState);
+		store.dispatch(fetchCart(decodedUser.id))
 
     const currentTime = Date.now() / 1000;
 

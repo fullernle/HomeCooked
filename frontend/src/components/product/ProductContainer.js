@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
-import { fetchProduct } from "../../actions/ProductActions";
+import { addToCart } from "../../actions/CartActions";
 import Product from "./Product"
 
 
 const mSTP = (state, ownProps) => ({
-  product: state.products[ownProps.match.params.id],
+	session: state.session
 });
 
 const mDTP = (dispatch) => ({
-  fetchProduct: (productId) => dispatch(fetchProduct(productId)),
+	addToCart: (cartId, product) => dispatch(addToCart(cartId, product))
 });
 
 

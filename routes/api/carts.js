@@ -9,12 +9,12 @@ router.get(
   Cart.getCart
 );
 router.patch(
-  "/:cartId/add",
+  "/:userId/add",
   passport.authenticate("jwt", { session: false }),
   Cart.addToCart
 );
 router.patch(
-  "/:cartId/subtract",
+  "/:userId/subtract",
   passport.authenticate("jwt", { session: false }),
   Cart.subtractFromCart
 );
