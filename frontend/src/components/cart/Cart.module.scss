@@ -1,6 +1,8 @@
+@import "../variables.scss";
+
 .Wrapper {
-	max-width: 1400px;
-	margin: 0 auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .Header {
@@ -22,45 +24,129 @@
 }
 
 .Item {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .List {
-	max-width: 1400px;
-	margin: 0 auto;
-	overflow: auto;
-	padding: 5px;
+  display: flex;
+  flex-direction: column;
+  // align-content: left;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 5px;
 }
 
 .ProductList {
-	width: 60%;
-	margin: 0 40px;
+  width: 60%;
+  margin: 0 40px;
 }
 
 .Totals {
-	display: flex;
-	width: 60%;
-	max-width: 1400px;
-	margin: 0 auto;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end
+  display: flex;
+  width: 60%;
+  max-width: 1400px;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .Item {
   display: flex;
   justify-content: space-between;
-	margin: 4px 0;
-	box-shadow: 0px 0px .1px 1px rgba(0, 0, 0, .10);
-	// border-radius: 10px;
-	// background-color: rgba(80, 80, 80, 0.131);
+  margin: 4px 0;
+  box-shadow: 0px 0px 0.1px 1px rgba(0, 0, 0, 0.1);
+  // border-radius: 10px;
+  // background-color: rgba(80, 80, 80, 0.131);
   background-color: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.Name {
-	max-width: 150px;
+.Name, .HeaderName {
+  // max-width: 150px;
+	width: 40%;
+}
+
+
+.Checkout {
+  margin: 0;
+  width: 100px;
+  height: 34px;
+  transition: 200ms;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  color: $font-color;
+	margin-top: 8px;
+}
+
+.Update {
+  margin: 0;
+  width: 100px;
+  height: 24px;
+	font-size: 12px;
+  transition: 200ms;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: $accent-color;
+  color: $font-color;
+  margin-top: 10px;
+	margin-left: 40px;
+
+}
+
+.Update:hover, .Checkout:hover {
+  background-color: $accent-color-hover;
+  transform: scale(1.05);
+}
+
+.QuantityBttn {
+  width: 20px;
+  background-color: $tertiary-color;
+  color: $font-color;
+	margin-right: 18px;
+}
+
+.QuantityBttn:hover {
+	background-color: $tertiary-color-hover;
+}
+
+.Quantity, .HeaderQuantity {
+	width: 20%;
+}
+
+.Price, .HeaderPrice{
+	width: 20%;
+}
+
+.ProductTotal, .HeaderProductTotal {
+	width: 20%;
+}
+
+.ProductHeaders > span {
+	font-size: 18px;
+}
+
+.ProductHeaders {
+	display: flex;
+	width: 60%;
+	margin: 0 40px;
+	margin-bottom: 12px;
+}
+
+.ProductCount {
+	width: 30px;
+}
+
+.Quantity {
+	display:flex;
+	// justify-content: space-between;
 }

@@ -12,6 +12,8 @@ export default class Cart extends Component {
     this.decreaseQuantity = this.decreaseQuantity.bind(this);
     this.displayProducts = this.displayProducts.bind(this);
     this.productTotal = this.productTotal.bind(this);
+    this.updateCart = this.updateCart.bind(this);
+    this.updateBE = this.updateBE.bind(this);
   }
 
   componentDidMount() {
@@ -30,38 +32,41 @@ export default class Cart extends Component {
     return false;
   }
 
+  updateBE() {
+    let cart = Object.assign({}, this.state);
+    console.log(cart);
+    this.props.updateCart(cart.userId, cart);
+  }
+
+  updateCart(e) {
+    e.preventDefault();
+    let products = this.state.products;
+    let totalPrice = 0;
+    let totalQuantity = products.length;
+
+    products.forEach((product) => (totalPrice += parseInt(product.price)));
+
+    this.setState(
+      {
+        totalPrice,
+        totalQuantity,
+      },
+      this.updateBE
+    );
+  }
+
   increaseQuantity(product) {
     let products = this.state.products;
     products.push(product);
-    let price = parseInt(product.price);
-    let totalPrice = this.state.totalPrice;
-    let totalQuantity = this.state.totalQuantity;
 
     this.setState({ products });
-    totalPrice += price;
-    console.log(totalPrice);
-    this.setState({ totalPrice });
-
-    totalQuantity += 1;
-    this.setState({ totalQuantity });
-    this.props.addToCart(this.state.userId, product);
   }
 
   decreaseQuantity(product) {
     let products = this.state.products;
     let i = products.indexOf(product);
-    let price = product.price;
-    let totalPrice = parseInt(this.state.totalPrice);
-    let totalQuantity = this.state.totalQuantity;
     products.splice(i, 1);
     this.setState({ products });
-
-    totalPrice -= price;
-    this.setState({ totalPrice });
-
-    totalQuantity -= 1;
-    this.setState({ totalQuantity });
-    this.props.subtractFromCart(this.state.userId, product);
   }
 
   productTotal(currProduct) {
@@ -109,6 +114,7 @@ export default class Cart extends Component {
           <div className={styles.Name}>{product.name}</div>
           <div className={styles.Quantity}>
             <button
+              className={styles.QuantityBttn}
               onClick={(e) => {
                 e.preventDefault();
                 this.decreaseQuantity(product);
@@ -116,8 +122,11 @@ export default class Cart extends Component {
             >
               -
             </button>
-            {this.countProduct(product)}
+            <span className={styles.ProductCount}>
+              {this.countProduct(product)}
+            </span>
             <button
+              className={styles.QuantityBttn}
               onClick={(e) => {
                 e.preventDefault();
                 this.increaseQuantity(product);
@@ -147,11 +156,21 @@ export default class Cart extends Component {
           <span className={styles.TopBorder}></span>
           <div className={styles.Wrapper}>
             <header className={styles.Header}>
-              <h1>Your Cart</h1>
+              {/* <h1>Your Cart</h1> */}
             </header>
 
             <div className={styles.List}>
+              <div className={styles.ProductHeaders}>
+                <span className={styles.HeaderName}>Product</span>
+                <span className={styles.HeaderQuantity}>Quantity</span>
+                <span className={styles.HeaderPrice}>Price Per Item</span>
+                <span className={styles.HeaderProductTotal}>Product Total</span>
+              </div>
               <div className={styles.ProductList}>{this.displayProducts()}</div>
+              <button className={styles.Update} onClick={this.updateCart}>
+                Update Cart
+              </button>
+              {/* <button>Clear cart</button> */}
             </div>
 
             <div className={styles.Totals}>
@@ -162,6 +181,8 @@ export default class Cart extends Component {
               <div className={styles.TotalPrice}>
                 Total Price: ${this.state.totalPrice}
               </div>
+
+              <button className={styles.Checkout}>Checkout</button>
             </div>
           </div>
         </>

@@ -30,6 +30,28 @@ module.exports = {
     }
   },
 
+	updateCart: async(req, res) => {
+		const userId = req.params.userId;
+		let objectUserId = mongoose.Types.ObjectId(userId);
+
+		try {
+			let cart = await Cart.findOne({userId: objectUserId});
+
+			let currCart = req.body;
+
+			cart.products = currCart.products;
+			cart.totalQuantity = currCart.totalQuantity;
+			cart.totalPrice = currCart.totalPrice;
+			cart.save();
+
+			return res.send(cart);
+
+		} catch (error) {
+			return console.log(error)
+		}
+		
+	},
+
   addToCart: async (req, res) => {
     // let cart = await Cart.findById(req.params.cartId);
     const userId = req.params.userId;

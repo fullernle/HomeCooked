@@ -11,3 +11,7 @@ export const addToCart = (userId, product) => {
 export const subtractFromCart = (userId, product) => {
   return axios.patch(`/api/carts/${userId}/subtract`, product);
 };
+
+export const updateCart = (userId, cart) => {
+  return axios.patch(`/api/carts/${userId}`, cart);
+};

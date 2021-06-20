@@ -18,7 +18,9 @@ router.patch(
   passport.authenticate("jwt", { session: false }),
   Cart.subtractFromCart
 );
+router.patch(
+  "/:userId",
+  passport.authenticate("jwt", { session: false }),
+  Cart.updateCart
+);
 module.exports = router;
-
-
-

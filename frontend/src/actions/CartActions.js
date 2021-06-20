@@ -30,3 +30,9 @@ export const subtractFromCart = (userId, product) => (dispatch) =>
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
+
+export const updateCart = (userId, cart) => (dispatch) =>
+  APIUtil.updateCart(userId, cart).then(
+    (cart) => dispatch(receiveCurrentCart(cart.data)),
+    (err) => dispatch(receiveErrors(err.response.data))
+  );
