@@ -9,7 +9,6 @@ import BusinessesContainer from "./business/BusinessesContainer";
 import FamilyStyle from "./familystyle/FamilyStyle";
 import CartContainer from "./cart/CartContainer"
 
-import MapBoxContainer from "./map/map_container"
 
 const App = () => (
   <div>
