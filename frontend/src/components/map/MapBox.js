@@ -10,7 +10,7 @@ import styles from "./Map.module.scss";
 import { styled } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
-const MAPBOX_TOKEN = require("../../config/mapToken").mapBoxToken;
+const mapToken = require("../../config/mapToken").mapBoxToken;
 
 const MyStar = styled(StarIcon)({
   color: "rgb(248, 38, 38)",
@@ -50,7 +50,7 @@ function MapBox() {
     <div style={{ height: "100vh", width: '60vw' }}>
       <MapGL
         {...viewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
+        mapboxApiAccessToken= {mapToken}
         width="100%"
         height="100%"
         mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
