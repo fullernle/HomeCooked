@@ -10,7 +10,7 @@ import styles from "./Map.module.scss";
 import { styled } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
-const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
+const MAPBOX_TOKEN = require("../../config/mapToken").mapBoxToken;
 
 const MyStar = styled(StarIcon)({
   color: "rgb(248, 38, 38)",
