@@ -10,5 +10,7 @@ router.get("/test", (req, res) =>
 router.post("/:id", Product.create);
 // router.get("/:id/business", Product.businessByProduct);
 router.get("/", Product.find);
+router.patch("/:id/sub", Product.subtractQuantity);
+router.patch("/:id/add", Product.addQuantity);
 
 module.exports = router;

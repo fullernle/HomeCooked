@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
       this.props.openModal();
     }
     return (
-      <div className="signup-form-container">
+      <div className={styles.SignupFormWrapper}>
         <div onClick={this.props.closeModal} className={styles.CloseX}>
           x
         </div>

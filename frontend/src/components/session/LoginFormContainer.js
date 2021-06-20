@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm";
 import { resetSessionErrors } from "../../actions/SessionActions";
 import { openModal, closeModal } from "../../actions/ModalActions";
 import styles from "./SessionForm.module.scss";
+import { fetchCart } from "../../actions/CartActions";
 
 const mapStateToProps = (state) => {
   return {
@@ -33,6 +34,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(resetSessionErrors());
     },
     resetSessionErrors: () => dispatch(resetSessionErrors()),
+		fetchCart: (userId) => dispatch(fetchCart(userId))
   };
 };
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { fetchBusinessProducts } from "../../util/BusinessUtil";
 import styles from "./Business.module.scss";
 import Product from "../product/Product";
+import ProductContainer from "../product/ProductContainer";
 import StarIcon from "@material-ui/icons/Star";
 import { styled } from "@material-ui/core/styles";
 
@@ -25,6 +26,7 @@ export default class Business extends Component {
     fetchBusinessProducts(this.props.match.params.id).then((products) => {
       this.setState({ products: products.data });
     });
+		
   }
 
   render() {
@@ -113,7 +115,7 @@ export default class Business extends Component {
             <div className={styles.Content}>
               <div className={styles.ProductWrapper}>
                 {products.map((product) => {
-                  return <Product product={product} />;
+                  return <ProductContainer product={product} />;
                 })}
               </div>
             </div>
