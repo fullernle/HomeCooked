@@ -1,0 +1,66 @@
+.Wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.Header {
+  margin-bottom: 32px;
+}
+
+.TopBorder {
+  display: block;
+  border-top: solid rgba(126, 126, 126, 0.618) 2px;
+  width: 100vw;
+  margin-bottom: 32px;
+}
+
+.Header > h1 {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 24px;
+}
+
+.Item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.List {
+	max-width: 1400px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 5px;
+}
+
+.ProductList {
+	width: 60%;
+	margin: 0 40px;
+}
+
+.Totals {
+	display: flex;
+	width: 60%;
+	max-width: 1400px;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end
+}
+
+.Item {
+  display: flex;
+  justify-content: space-between;
+	margin: 4px 0;
+	box-shadow: 0px 0px .1px 1px rgba(0, 0, 0, .10);
+	// border-radius: 10px;
+	// background-color: rgba(80, 80, 80, 0.131);
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Name {
+	max-width: 150px;
+}

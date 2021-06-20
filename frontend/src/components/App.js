@@ -19,7 +19,7 @@ const App = () => (
         </nav>
         <Switch>
 					<Route exact path="/familystyle" component={FamilyStyle} />
-					<Route exact path="/carts/:userId" component={CartContainer} />
+					<ProtectedRoute exact path="/carts/:userId" component={CartContainer} />
 					<Route exact path="/homecooks" component={BusinessesContainer} />
 					<Route exact path="/homecook/:id" component={BusinessContainer} />
           <Route exact path="/" component={MainPageContainer} />

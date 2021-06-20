@@ -52,18 +52,19 @@ module.exports = {
 
   subtractFromCart: async (req, res) => {
     // let cart = await Cart.findById(req.params.cartId);
-
+		console.log("WHAT")
     const userId = req.params.userId;
     let objectUserId = mongoose.Types.ObjectId(userId);
     let cart = await Cart.findOne({ userId: objectUserId });
 
     let product = req.body;
     let price = Number.parseInt(product.price);
-    let currentTotal = cart.totalPrice;
+    let currentTotal = cart.totalPrice
+		let i = cart.products.indexOf(product);
+	
 
     currentTotal -= price;
-
-    cart.products.pop(product);
+    cart.products.splice(i, 1);
     cart.totalQuantity = cart.products.length;
     cart.totalPrice = currentTotal;
     cart.save();

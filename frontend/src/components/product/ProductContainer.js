@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { addToCart } from "../../actions/CartActions";
 import Product from "./Product"
+import { openModal } from "../../actions/ModalActions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -8,7 +9,8 @@ const mSTP = (state, ownProps) => ({
 });
 
 const mDTP = (dispatch) => ({
-	addToCart: (cartId, product) => dispatch(addToCart(cartId, product))
+	addToCart: (cartId, product) => dispatch(addToCart(cartId, product)),
+	openModal: (modal) => dispatch(openModal(modal))
 });
 
 

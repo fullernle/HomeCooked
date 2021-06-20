@@ -15,6 +15,8 @@ export default class Product extends Component {
     console.log(this.props);
     if (user && Object.keys(user).length > 0) {
       this.props.addToCart(user.id, product);
+    } else {
+      this.props.openModal("requireLogin");
     }
   }
 
@@ -33,7 +35,6 @@ export default class Product extends Component {
             <div>
               <div className={styles.Name}>{product.name}</div>
               <div className={styles.Price}>${product.price}</div>
-
             </div>
             <button onClick={this.addToCart} className={styles.CartBttn}>
               Add to Cart

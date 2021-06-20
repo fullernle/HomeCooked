@@ -25,8 +25,8 @@ export const addToCart = (userId, product) => (dispatch) =>
     (err) => dispatch(receiveErrors(err.response.data))
   );
 
-export const subtractFromCart = (product) => (dispatch) =>
-  APIUtil.fetchCart(product).then(
+export const subtractFromCart = (userId, product) => (dispatch) =>
+  APIUtil.subtractFromCart(userId, product).then(
     (cart) => dispatch(receiveCurrentCart(cart.data)),
     (err) => dispatch(receiveErrors(err.response.data))
   );
