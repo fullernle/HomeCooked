@@ -73,6 +73,13 @@ export default class Business extends Component {
                             alt=""
                           />
                         </p>
+                        <p className={styles.PhotoWrapper}>
+                          <img
+                            className={styles.Photo}
+                            src={this.getImage(business.products[0])}
+                            alt=""
+                          />
+                        </p>
                       </div>
                     </>
                   );

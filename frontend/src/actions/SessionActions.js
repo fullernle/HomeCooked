@@ -1,5 +1,6 @@
 import * as APIUtil from "../util/SessionApiUtil";
 import jwt_decode from "jwt-decode";
+import { fetchCart } from "./CartActions";
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
@@ -45,6 +46,7 @@ export const login = (user) => (dispatch) =>
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
       dispatch(receiveCurrentUser(decoded));
+			dispatch(fetchCart(decoded.id))
     })
     .catch((err) => {
       dispatch(receiveErrors(err.response.data));

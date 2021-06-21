@@ -18,17 +18,6 @@ const ProductSchema = new Schema({
     type: String,
     required: true,
   },
-
-  category: {
-    type: String,
-    required: true,
-  },
-
-  quantity: {
-    type: Number,
-    required: true,
-  },
-  
   photos: [{ type: String }]
 });
 

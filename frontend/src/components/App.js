@@ -7,21 +7,22 @@ import MainPageContainer from "./main/MainPageContainer";
 import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";
 import FamilyStyle from "./familystyle/FamilyStyle";
-import Search from "./nav/Search"
+import CartContainer from "./cart/CartContainer";
 
 const App = () => (
   <div>
     <Modal />
-        <nav>
-          <NavBarContainer />
-        </nav>
-        <Switch>
-					<Route exact path="/familystyle" component={Search} />
-					<Route exact path="/homecooks" component={BusinessesContainer} />
-					<Route exact path="/homecook/:id" component={BusinessContainer} />
-          <Route exact path="/" component={MainPageContainer} />
-					<Redirect to="/" />
-        </Switch>
+    <nav>
+      <NavBarContainer />
+    </nav>
+    <Switch>
+      <Route exact path="/familystyle" component={FamilyStyle} />
+      <ProtectedRoute exact path="/carts/:userId" component={CartContainer} />
+      <Route exact path="/homecooks" component={BusinessesContainer} />
+      <Route exact path="/homecook/:id" component={BusinessContainer} />
+      <Route exact path="/" component={MainPageContainer} />
+      <Redirect to="/" />
+    </Switch>
   </div>
 );
 

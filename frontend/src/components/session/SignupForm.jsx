@@ -54,11 +54,10 @@ class SignupForm extends React.Component {
 
   render() {
     if (this.props.isSignedIn) {
-			console.log("signed in");
       this.props.openModal();
     }
     return (
-      <div className="signup-form-container">
+      <div className={styles.SignupFormWrapper}>
         <div onClick={this.props.closeModal} className={styles.CloseX}>
           x
         </div>

@@ -14,27 +14,31 @@ class Navbar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
-    this.props.logout();
-    // this.props.history.push("/");
+    this.props.logout()
   }
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
     if (this.props.loggedIn) {
-      return (
-        <>
-          <div className={styles.NavBttnsWrapper}>
-            <div className={styles.Cart}>
-              <ShoppingCartOutlinedIcon
-                style={{ fill: "#fcf4f0", fontWeight: 300 }}
-              ></ShoppingCartOutlinedIcon>
+      if (!this.props.user) {
+        return null;
+      } else {
+        return (
+          <>
+            <div className={styles.NavBttnsWrapper}>
+              <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
+                <img
+                  className={styles.CartIcon}
+                  src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
+                />
+              </Link>
+              <button className={styles.NavBttn} onClick={this.logoutUser}>
+                Logout
+              </button>
             </div>
-            <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout
-            </button>
-          </div>
-        </>
-      );
+          </>
+        );
+      }
     } else {
       return (
         <>
@@ -50,6 +54,7 @@ class Navbar extends React.Component {
       );
     }
   }
+	
   transNav() {
     return (
       <div className={styles.NavWrapper}>
@@ -57,7 +62,6 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
           {this.getLinks()}
         </header>
       </div>
@@ -71,7 +75,8 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
+          {/* <Search /> */}
+          {this.props.location.pathname === "/familystyle" ? <Search /> : null}
           {this.getLinks()}
         </header>
       </div>
@@ -82,7 +87,8 @@ class Navbar extends React.Component {
     return (
       <>
         {this.props.location.pathname === "/homecooks" ||
-        this.props.location.pathname === "/familystyle"
+        this.props.location.pathname === "/familystyle" || 
+				this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}
       </>
