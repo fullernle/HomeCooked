@@ -53,7 +53,6 @@ function MapBox() {
         mapboxApiAccessToken={mapToken}
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
         onViewportChange={(viewport) => setViewport(viewport)}
       >
         {businesses.map((biz) => (
