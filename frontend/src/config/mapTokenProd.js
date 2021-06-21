@@ -1,3 +1,3 @@
 module.exports = {
-  mapBoxToken: process.env.MAPBOX_TOKEN,
+  mapBoxToken: process.env.REACT_APP_MAPBOX_TOKEN,
 };
