@@ -47,12 +47,13 @@ function MapBox() {
   }, []);
 
   return (
-    <div style={{ height: "100vh", width: '60vw' }}>
+    <div style={{ height: "100vh", width: "60vw" }}>
       <MapGL
         {...viewport}
         mapboxApiAccessToken={mapToken}
         width="100%"
         height="100%"
+        mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
         onViewportChange={(viewport) => setViewport(viewport)}
       >
         {businesses.map((biz) => (
@@ -88,10 +89,14 @@ function MapBox() {
                 className={styles.PopupContainer}
               >
                 <div className={styles.Popup}>
-									<div className={styles.PopupHeader}>
-          	        <Link to={`/homecook/${biz._id}`} className={styles.Name}>{biz.name}</Link>
-										<div className={styles.Category}>{biz.categories[0].title}</div>
-									</div>
+                  <div className={styles.PopupHeader}>
+                    <Link to={`/homecook/${biz._id}`} className={styles.Name}>
+                      {biz.name}
+                    </Link>
+                    <div className={styles.Category}>
+                      {biz.categories[0].title}
+                    </div>
+                  </div>
                   {/* <label>Reviews</label> */}
                   <div className={styles.SmallDetails}>
                     <div className={styles.Price}>{biz.price}</div>
