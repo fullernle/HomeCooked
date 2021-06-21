@@ -47,7 +47,7 @@ function MapBox() {
   }, []);
 
   return (
-    <div style={{ height: "100vh", width: "50vw" }}>
+    <div style={{ height: "100vh", width: "60vw" }}>
       <MapGL
         {...viewport}
         mapboxApiAccessToken={mapToken}
