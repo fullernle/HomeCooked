@@ -75,8 +75,6 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          {/* <Search /> */}
-          {this.props.location.pathname === "/familystyle" ? <Search /> : null}
           {this.getLinks()}
         </header>
       </div>
@@ -87,7 +85,7 @@ class Navbar extends React.Component {
     return (
       <>
         {this.props.location.pathname === "/homecooks" ||
-        this.props.location.pathname === "/familystyle" || 
+        this.props.location.pathname === "/search" || 
 				this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}
