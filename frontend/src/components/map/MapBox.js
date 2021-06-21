@@ -1,6 +1,6 @@
 import * as React from "react";
 import MapGL, { Marker, Popup } from "react-map-gl";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import StarIcon from "@material-ui/icons/Star";
 import RoomIcon from "@material-ui/icons/Room";
 import { withRouter } from "react-router-dom";
@@ -17,7 +17,13 @@ const MyStar = styled(StarIcon)({
   width: "2vh",
   backgroundColor: "transparent",
 });
-
+export function useForceUpdate() {
+  const [, setTick] = useState(0);
+  const update = useCallback(() => {
+    setTick((tick) => tick + 1);
+  }, []);
+  return update;
+}
 function MapBox(props) {
   const [businesses, setBusinesses] = useState([]);
   const [currentBusinessId, setCurrentBusinessId] = useState(null);
@@ -52,6 +58,8 @@ function MapBox(props) {
   //   }
   // };
   // console.log(props)
+  const forceUpdate = useForceUpdate();
+
   return (
     <div style={{ height: "100vh", width: "60vw" }}>
       <MapGL
