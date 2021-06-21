@@ -76,7 +76,7 @@ export default class Business extends Component {
                         <p className={styles.PhotoWrapper}>
                           <img
                             className={styles.Photo}
-                            src={this.getImage(business.products[0])}
+                            src={this.getImage(business.products[1])}
                             alt=""
                           />
                         </p>

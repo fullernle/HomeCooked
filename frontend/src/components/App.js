@@ -8,6 +8,7 @@ import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";
 import FamilyStyle from "./familystyle/FamilyStyle";
 import CartContainer from "./cart/CartContainer";
+import Search from "./nav/Search"
 
 const App = () => (
   <div>
@@ -16,6 +17,7 @@ const App = () => (
       <NavBarContainer />
     </nav>
     <Switch>
+      <Route exact path="/search" component={Search} />
       <Route exact path="/familystyle" component={FamilyStyle} />
       <ProtectedRoute exact path="/carts/:userId" component={CartContainer} />
       <Route exact path="/homecooks" component={BusinessesContainer} />
