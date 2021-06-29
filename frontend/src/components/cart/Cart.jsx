@@ -87,7 +87,8 @@ export default class Cart extends Component {
       flags[products[i].name] = true;
       unique.push(products[i]);
     }
-
+		
+		unique.sort((a, b) => parseInt(a.price) - parseInt(b.price));
     return unique;
   }
 
@@ -134,9 +135,6 @@ export default class Cart extends Component {
             </button>
           </div>
           <div className={styles.Price}>${product.price}</div>
-          <div className={styles.ProductTotal}>
-            ${this.productTotal(product)}
-          </div>
         </div>
       );
     });
@@ -162,7 +160,6 @@ export default class Cart extends Component {
                 <span className={styles.HeaderName}>Product</span>
                 <span className={styles.HeaderQuantity}>Quantity</span>
                 <span className={styles.HeaderPrice}>Price Per Item</span>
-                <span className={styles.HeaderProductTotal}>Product Total</span>
               </div>
               <div className={styles.ProductList}>{this.displayProducts()}</div>
               <button className={styles.Update} onClick={this.updateCart}>
