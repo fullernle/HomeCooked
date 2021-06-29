@@ -87,8 +87,8 @@ export default class Cart extends Component {
       flags[products[i].name] = true;
       unique.push(products[i]);
     }
-		
-		unique.sort((a, b) => parseInt(a.price) - parseInt(b.price));
+
+		unique.sort((a, b) => parseInt(b.price) - parseInt(a.price));
     return unique;
   }
 
