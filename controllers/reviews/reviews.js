@@ -4,7 +4,9 @@ const Review = require('../../models/Review');
 module.exports = {
   create : async (req, res) => {
     business = req.params;
-    id = business.id;
+    id = business.businessId;
+    console.log(id)
+    // console.log(business)
     // console.log(req.params)
     const { body } = req.body;
     const review = await Review.create({
@@ -14,11 +16,12 @@ module.exports = {
     await review.save();
 
     const businessById = await Business.findById(id);
+    console.log(businessById);
 
     businessById.reviews.push(review);
     await businessById.save();
 
-    return res.send(businessById);
+    return res.send(review);
   },
 
   fetchAllReviews : async (req, res) => {

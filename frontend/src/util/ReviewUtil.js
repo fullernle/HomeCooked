@@ -9,7 +9,7 @@ export const fetchReviews = () => {
 }
 
 export const postReview = (data) => {
-  return axios.post(`/api/reviews/:id`, data)
+  return axios.post(`/api/reviews/_id`, data)
 }
 
 export const filterReviews = (reviewIds, reviews) => {
@@ -20,3 +20,12 @@ export const filterReviews = (reviewIds, reviews) => {
 
   return reviewArray;
 }
+
+// ---------------------------------------------------------
+// change backend routes
+
+export const createReview = (businessId, data) => {
+  return axios.post(`api/business/${businessId}/review`, data);
+}
+
+// business/businessId/review

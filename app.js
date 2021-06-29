@@ -35,7 +35,7 @@ mongoose
 app.use("/api/businesses", businesses);
 app.use("/api/users", users);
 app.use("/api/products", products);
-app.use("/api/reviews", reviews);
+app.use("/api/business", reviews);
 
 app.use(passport.initialize());
 require("./config/passport")(passport);

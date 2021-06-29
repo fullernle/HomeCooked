@@ -4,7 +4,7 @@ import styles from "./Business.module.scss";
 import Product from "../product/Product";
 import StarIcon from "@material-ui/icons/Star";
 import { styled } from "@material-ui/core/styles";
-import Reviews from '../review/Reviews'; 
+import ReviewsContainer from '../review/ReviewsContainer'; 
 
 const MyStar = styled(StarIcon)({
   color: "#fcf4f0",
@@ -120,7 +120,7 @@ export default class Business extends Component {
             </div>
           </div>
 
-          <Reviews />
+          <ReviewsContainer businessId={this.props.match.params.id} />
         </div>
       );
     }

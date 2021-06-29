@@ -1,14 +1,34 @@
 import { connect } from "react-redux";
-import { fetchReviews, postReview } from '../../actions/ReviewActions';
+import { fetchReviews, createReview } from '../../actions/ReviewActions';
 import Reviews from './Reviews';
 
 const mSTP = (state, ownProps) => ({
-  reviews: state.reviews[ownProps.match.params.id]
+  reviews: state.reviews 
 })
 
 const mDTP = (dispatch) => ({
   fetchReviews: (reviewsId) => dispatch(fetchReviews(reviewsId)),
-  postReview: (data) => dispatch(postReview(data)),
+  createReview: (businessId, review) => dispatch(createReview(businessId, review)),
 });
 
 export default connect(mSTP, mDTP)(Reviews);
+
+// ------------------------------------------------
+
+// import { connect } from 'react-redux';
+// import { withRouter } from 'react-router-dom';
+// import ReviewForm from './review_form';
+// import { postReview, fetchProduct } from '../../actions/product_actions';
+// import { selectProduct } from '../../reducers/selectors';
+
+// const mapState = ({entities, session}, ownProps) => ({
+//   userId: session.id,
+//   product: selectProduct(entities, ownProps.match.params.productId)
+// });
+
+// const mapDispatch = dispatch => ({
+//   postReview: review => dispatch(postReview(review)),
+//   fetchProduct: productId => dispatch(fetchProduct(productId))
+// });
+
+// export default withRouter(connect(mapState, mapDispatch)(ReviewForm));
