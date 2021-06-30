@@ -51,6 +51,7 @@ class LoginForm extends React.Component {
   renderErrors() {
     return (
       <ul>
+				{console.log(this.props.errors)}
         {Object.values(this.props.errors).map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -59,6 +60,8 @@ class LoginForm extends React.Component {
   }
 
   render() {
+		
+		const { errors } = this.props;
     return (
       <div className={styles.LoginFormWrapper}>
         <div onClick={this.props.closeModal} className={styles.CloseX}>
@@ -70,11 +73,17 @@ class LoginForm extends React.Component {
             <span>{this.props.otherForm}</span>
           </header>
 
-          {this.renderErrors()}
+          {/* {this.renderErrors()} */}
           {this.props.success}
           <div className={styles.Form}>
             <label>
               <span className={styles.ModalInput}>Email:</span>
+              {errors.email ? (
+                <span className={styles.Errors}>
+                  <br />
+                  {errors.email}{" "}
+                </span>
+              ) : null}
               <br />
               <input
                 className={styles.FormInput}
@@ -88,6 +97,12 @@ class LoginForm extends React.Component {
             <br />
             <label>
               <span className={styles.ModalInput}>Password:</span>
+              {errors.password ? (
+                <span className={styles.Errors}>
+                  <br />
+                  {errors.password}{" "}
+                </span>
+              ) : null}
               <br />
               <input
                 className={styles.FormInput}
