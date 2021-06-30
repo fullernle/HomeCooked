@@ -25,12 +25,9 @@ class Navbar extends React.Component {
       } else {
         return (
           <>
-            <div className={styles.NavBttnsWrapper}>
+            <div className={`${styles.NavBttnsWrapper} ${styles.WithLogout}`}>
               <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
-                <img
-                  className={styles.CartIcon}
-                  src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
-                />
+                <i class="fas fa-shopping-cart" style={{color: "black"}}></i>
               </Link>
               <Link to="/search" className={styles.SrchBttn}>
                 Search

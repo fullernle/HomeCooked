@@ -86,16 +86,10 @@
   align-items: center;
   cursor: pointer;
   background-color: $accent-color;
-  margin-right: 8px;
+	text-decoration: none;
 }
 
-.CartIcon {
-  background-color: transparent;
-  height: 24px;
-  width: 24px;
-  border: none;
-  cursor: pointer;
-}
+
 .Cart:hover {
   background-color: $accent-color-hover;
   transform: scale(1.05);
@@ -110,6 +104,10 @@
   align-items: center;
   justify-content: space-between;
 	width: 220px;
+}
+
+.NavBttnsWrapper.WithLogout {
+	width: 350px;
 }
 
 // GitHub Button
