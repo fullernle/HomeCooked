@@ -86,15 +86,10 @@
   align-items: center;
   cursor: pointer;
   background-color: $accent-color;
+	text-decoration: none;
 }
 
-.CartIcon {
-  background-color: transparent;
-  height: 24px;
-  width: 24px;
-  border: none;
-  cursor: pointer;
-}
+
 .Cart:hover {
   background-color: $accent-color-hover;
   transform: scale(1.05);
