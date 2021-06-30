@@ -50,7 +50,10 @@ export default class Business extends Component {
                 .map((business) => {
                   return (
                     <>
-                      <div className={styles.Item}>
+                      <Link
+                        to={`/homecook/${business._id}`}
+                        className={styles.Item}
+                      >
                         <div className={styles.Details}>
                           <Link
                             className={styles.NavLink}
@@ -73,7 +76,7 @@ export default class Business extends Component {
                             alt=""
                           />
                         </p>
-                      </div>
+                      </Link>
                     </>
                   );
                 })}
