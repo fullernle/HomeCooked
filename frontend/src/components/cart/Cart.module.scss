@@ -3,10 +3,7 @@
 .Wrapper {
   max-width: 1400px;
   margin: 0 auto;
-}
-
-.Header {
-  margin-bottom: 32px;
+  display: flex;
 }
 
 .TopBorder {
@@ -16,61 +13,41 @@
   margin-bottom: 32px;
 }
 
-.Header > h1 {
-  font-size: 28px;
-  font-style: italic;
-  font-weight: 400;
-  margin-left: 24px;
-}
-
-.Item {
-  display: flex;
-  justify-content: space-between;
-}
-
 .List {
   display: flex;
+  width: 95%;
   flex-direction: column;
-  // align-content: left;
-  max-width: 1400px;
   margin: 0 auto;
-  overflow: auto;
+  overflow: hidden;
   padding: 5px;
+  font-size: 14px;
 }
 
-.ProductList {
-  width: 60%;
-  margin: 0 40px;
-}
-
-.Totals {
-  display: flex;
-  width: 60%;
+.ListWrapper {
   max-width: 1400px;
-  margin-right: auto;
+  display: flex;
+  width: 70%;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+}
+
+.TotalWrapper {
+  width: 25%;
 }
 
 .Item {
   display: flex;
-  justify-content: space-between;
-  margin: 4px 0;
+  margin: 4px;
   box-shadow: 0px 0px 0.1px 1px rgba(0, 0, 0, 0.1);
-  // border-radius: 10px;
-  // background-color: rgba(80, 80, 80, 0.131);
+  color: hsl(0, 0%, 37%);
+  align-items: center;
   background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-align: center;
 }
 
-.Name, .HeaderName {
-  // max-width: 150px;
-	width: 40%;
+.Name,
+.HeaderName {
+  width: 40%;
 }
-
 
 .Checkout {
   margin: 0;
@@ -83,70 +60,113 @@
   cursor: pointer;
   background-color: $accent-color;
   color: $font-color;
-	margin-top: 8px;
+  margin-top: 8px;
 }
 
 .Update {
   margin: 0;
   width: 100px;
   height: 24px;
-	font-size: 12px;
+  font-size: 12px;
   transition: 200ms;
   border-radius: 24px;
   justify-content: center;
   align-items: center;
+  align-self: flex-end;
   cursor: pointer;
   background-color: $accent-color;
   color: $font-color;
   margin-top: 10px;
-	margin-left: 40px;
-
+  margin-right: 24px;
 }
 
-.Update:hover, .Checkout:hover {
+.Update:hover,
+.Checkout:hover {
   background-color: $accent-color-hover;
   transform: scale(1.05);
+}
+
+.Update:active,
+.Checkout:active {
+  background-color: $main-color;
 }
 
 .QuantityBttn {
   width: 20px;
   background-color: $tertiary-color;
   color: $font-color;
-	margin-right: 18px;
+  // margin-right: 18px;
 }
 
 .QuantityBttn:hover {
-	background-color: $tertiary-color-hover;
+  background-color: $tertiary-color-hover;
 }
 
-.Quantity, .HeaderQuantity {
-	width: 20%;
+.Quantity,
+.HeaderQuantity {
+  width: 20%;
 }
 
-.Price, .HeaderPrice{
-	width: 20%;
+.Price,
+.HeaderPrice {
+  width: 20%;
 }
 
-.ProductTotal, .HeaderProductTotal {
-	width: 20%;
-}
-
-.ProductHeaders > span {
-	font-size: 18px;
+.ProductTotal,
+.HeaderProductTotal {
+  width: 20%;
 }
 
 .ProductHeaders {
-	display: flex;
-	width: 60%;
-	margin: 0 40px;
-	margin-bottom: 12px;
+  display: flex;
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 12px;
+  align-items: center;
+  text-align: center;
+  margin-left: 4.5rem;
 }
 
+.ProductList {
+  width: 100%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 .ProductCount {
-	width: 30px;
+  width: 30px;
 }
 
 .Quantity {
-	display:flex;
-	// justify-content: space-between;
+  display: flex;
+  justify-content: center;
+}
+
+.Photo {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.Totals {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 14px;
+  padding: 8px;
+  box-shadow: 0px 0px 0.1px 1px rgba(0, 0, 0, 0.1);
+  height: 20%;
+  margin-top: 36px;
+}
+
+.Totals > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  width: 100%;
 }

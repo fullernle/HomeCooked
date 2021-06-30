@@ -13,7 +13,9 @@ export default class Product extends Component {
     let { session, product } = this.props;
     let user = session.user;
     if (user && Object.keys(user).length > 0) {
-      this.props.addToCart(user.id, product);
+      this.props.addToCart(user.id, product).then(() => {
+        this.props.openModal("cartItemAdded");
+      });
     } else {
       this.props.openModal("requireLogin");
     }
@@ -36,7 +38,7 @@ export default class Product extends Component {
               <div className={styles.Price}>${product.price}</div>
             </div>
             <button onClick={this.addToCart} className={styles.CartBttn}>
-              Add to Cart
+              Add To Cart
             </button>
           </div>
         </div>

@@ -88,6 +88,7 @@ export default class Cart extends Component {
       unique.push(products[i]);
     }
 
+    unique.sort((a, b) => parseInt(b.price) - parseInt(a.price));
     return unique;
   }
 
@@ -109,6 +110,11 @@ export default class Cart extends Component {
     let list = uniqueProducts.map((product) => {
       return (
         <div className={styles.Item}>
+          <img
+            className={styles.Photo}
+            src={`${product.photos[0]}`}
+            alt="product photo"
+          />
           <div className={styles.Name}>{product.name}</div>
           <div className={styles.Quantity}>
             <button
@@ -134,9 +140,6 @@ export default class Cart extends Component {
             </button>
           </div>
           <div className={styles.Price}>${product.price}</div>
-          <div className={styles.ProductTotal}>
-            ${this.productTotal(product)}
-          </div>
         </div>
       );
     });
@@ -153,34 +156,50 @@ export default class Cart extends Component {
         <>
           <span className={styles.TopBorder}></span>
           <div className={styles.Wrapper}>
-            <header className={styles.Header}>
-              {/* <h1>Your Cart</h1> */}
-            </header>
-
-            <div className={styles.List}>
-              <div className={styles.ProductHeaders}>
-                <span className={styles.HeaderName}>Product</span>
-                <span className={styles.HeaderQuantity}>Quantity</span>
-                <span className={styles.HeaderPrice}>Price Per Item</span>
-                <span className={styles.HeaderProductTotal}>Product Total</span>
+            <div className={styles.ListWrapper}>
+              <div className={styles.List}>
+                <div className={styles.ProductHeaders}>
+                  <span className={styles.HeaderName}>Product</span>
+                  <span className={styles.HeaderQuantity}>Quantity</span>
+                  <span className={styles.HeaderPrice}>Price Per Item</span>
+                </div>
+                <div className={styles.ProductList}>
+                  {this.displayProducts()}
+                </div>
               </div>
-              <div className={styles.ProductList}>{this.displayProducts()}</div>
+
               <button className={styles.Update} onClick={this.updateCart}>
                 Update Cart
               </button>
-              {/* <button>Clear cart</button> */}
             </div>
 
-            <div className={styles.Totals}>
-              <div className={styles.TotalQuantity}>
-                Total Items: {this.state.totalQuantity}
+            <div className={styles.TotalWrapper}>
+              <div className={styles.Totals}>
+                <div className={styles.TotalQuantity}>
+                  <span>Total Items: </span>
+                  <span>{this.state.totalQuantity}</span>
+                </div>
+                <div>
+                  {" "}
+                  <span>Subtotal:</span>{" "}
+                  <span>${this.state.totalPrice.toFixed(2)}</span>
+                </div>
+                <div>
+                  {" "}
+                  <span>Tax:</span> <span>8.70%</span>{" "}
+                </div>
+                <div className={styles.TotalPrice}>
+                  <span>Total:</span>
+                  <span>
+                    $
+                    {(
+                      this.state.totalPrice * 0.087 +
+                      this.state.totalPrice
+                    ).toFixed(2)}
+                  </span>
+                </div>
+                <button className={styles.Checkout}>Checkout</button>
               </div>
-
-              <div className={styles.TotalPrice}>
-                Total Price: ${this.state.totalPrice}
-              </div>
-
-              <button className={styles.Checkout}>Checkout</button>
             </div>
           </div>
         </>

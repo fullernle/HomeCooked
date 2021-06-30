@@ -4,7 +4,9 @@ import { connect } from "react-redux";
 import LoginFormContainer from "../session/LoginFormContainer";
 import SignupFormContainer from "../session/SignupFormContainer";
 import RequireLogin from "../session/RequireLogin";
+import CartItemAdded from "../cart/CartItemAdded";
 import styles from "./Modal.module.scss";
+
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -21,6 +23,9 @@ function Modal({ modal, closeModal }) {
     case "requireLogin":
       component = <RequireLogin />;
       break;
+    case "cartItemAdded":
+      component = <CartItemAdded />;
+			break;
     default:
       return null;
   }
