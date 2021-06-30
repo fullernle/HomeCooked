@@ -4,7 +4,7 @@ import styles from "./Business.module.scss";
 import Product from "../product/Product";
 import StarIcon from "@material-ui/icons/Star";
 import { styled } from "@material-ui/core/styles";
-import ReviewsContainer from '../review/ReviewsContainer'; 
+import ReviewsContainer from "../review/ReviewsContainer";
 
 const MyStar = styled(StarIcon)({
   color: "#fcf4f0",
@@ -18,7 +18,7 @@ export default class Business extends Component {
 
     this.state = {
       products: null,
-      reviews: null
+      reviews: null,
     };
   }
 
@@ -28,15 +28,12 @@ export default class Business extends Component {
       this.setState({ products: products.data });
     });
     this.props.fetchReviews(this.props.match.params.id).then((reviews) => {
-      this.setState({reviews: reviews.reviews});
-    })
-   
-    
+      this.setState({ reviews: reviews.reviews });
+    });
   }
 
   render() {
     if (this.state.products === null || this.state.reviews === null) {
-      
       return null;
     } else {
       let { products } = this.state;
@@ -121,14 +118,14 @@ export default class Business extends Component {
             <div className={styles.Content}>
               <div className={styles.ProductWrapper}>
                 {products.map((product) => {
-                  return <Product product={product}/>;
+                  return <Product product={product} />;
                 })}
               </div>
             </div>
           </div>
-           {
-             this.props.currentUser ? <ReviewsContainer businessId={this.props.match.params.id} /> : null
-           }     
+          {this.props.currentUser ? (
+            <ReviewsContainer businessId={this.props.match.params.id} />
+          ) : null}
           <div className={styles.UserReviewsWrapper}>
             {this.state.reviews.map((review) => {
               return <p>{review.body}</p>;
