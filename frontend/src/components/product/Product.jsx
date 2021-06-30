@@ -10,7 +10,6 @@ export default class Product extends Component {
 
   addToCart(e) {
     e.preventDefault();
-    console.log(this);
     let { session, product } = this.props;
     let user = session.user;
     if (user && Object.keys(user).length > 0) {
