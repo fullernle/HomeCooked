@@ -121,13 +121,14 @@ export default class Business extends Component {
             <div className={styles.Content}>
               <div className={styles.ProductWrapper}>
                 {products.map((product) => {
-                  return <Product product={product} />;
+                  return <Product product={product}/>;
                 })}
               </div>
             </div>
           </div>
-
-          <ReviewsContainer businessId={this.props.match.params.id} />
+           {
+             this.props.currentUser ? <ReviewsContainer businessId={this.props.match.params.id} /> : null
+           }     
           <div className={styles.UserReviewsWrapper}>
             {this.state.reviews.map((review) => {
               return <p>{review.body}</p>;

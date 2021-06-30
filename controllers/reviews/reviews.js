@@ -6,18 +6,24 @@ module.exports = {
   create : async (req, res) => {
     business = req.params;
     id = business.businessId;
-    console.log(id)
     // console.log(business)
-    // console.log(req.params)
-    const { body } = req.body;
+    let request = req.body;
+    let username = request.username;
+    let body = request.body;
+    let rating = request.rating;
+    // const { body } = req.body;
+    // const { username } = req.body;
+    // const { rating } = req.body;
     const review = await Review.create({
       body,
-      business:id
+      business:id,
+      username,
+      rating
     });
     await review.save();
+    
 
     const businessById = await Business.findById(id);
-    console.log(businessById);
 
     businessById.reviews.push(review);
     await businessById.save();

@@ -8,6 +8,7 @@ const mSTP = (state, ownProps) => ({
   business: state.businesses[ownProps.match.params.id],
 	products: state.products,
   reviews: state.reviews,
+  currentUser: state.session.user
 });
 
 const mDTP = (dispatch) => ({
