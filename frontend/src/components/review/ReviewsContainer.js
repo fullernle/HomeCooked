@@ -7,7 +7,7 @@ const mSTP = (state, ownProps) => ({
 })
 
 const mDTP = (dispatch) => ({
-  fetchReviews: (reviewsId) => dispatch(fetchReviews(reviewsId)),
+  fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
   createReview: (businessId, review) => dispatch(createReview(businessId, review)),
 });
 
