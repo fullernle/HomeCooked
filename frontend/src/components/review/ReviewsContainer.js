@@ -3,7 +3,7 @@ import { fetchReviews, createReview } from '../../actions/ReviewActions';
 import Reviews from './Reviews';
 
 const mSTP = (state, ownProps) => ({
-  reviews: state.reviews 
+  reviews: state.reviews
 })
 
 const mDTP = (dispatch) => ({

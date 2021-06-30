@@ -18,6 +18,7 @@ export default class Business extends Component {
 
     this.state = {
       products: null,
+      reviews: null
     };
   }
 
@@ -26,10 +27,16 @@ export default class Business extends Component {
     fetchBusinessProducts(this.props.match.params.id).then((products) => {
       this.setState({ products: products.data });
     });
+    this.props.fetchReviews(this.props.match.params.id).then((reviews) => {
+      this.setState({reviews: reviews.reviews});
+    })
+   
+    
   }
 
   render() {
-    if (this.state.products === null) {
+    if (this.state.products === null || this.state.reviews === null) {
+      
       return null;
     } else {
       let { products } = this.state;
@@ -121,6 +128,11 @@ export default class Business extends Component {
           </div>
 
           <ReviewsContainer businessId={this.props.match.params.id} />
+          <div className={styles.UserReviewsWrapper}>
+            {this.state.reviews.map((review) => {
+              return <p>{review.body}</p>;
+            })}
+          </div>
         </div>
       );
     }
