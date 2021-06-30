@@ -10,11 +10,11 @@ class Review extends React.Component {
       review: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    console.log(this.props);
+    // console.log(this.props);
   }
 
   componentDidMount() {
-    // this.props.fetchReviews();
+    this.props.fetchReviews(this.props.businessId);
     console.log(this.props.reviews)
   };
 
