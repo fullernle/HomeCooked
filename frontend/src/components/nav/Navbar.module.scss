@@ -86,7 +86,6 @@
   align-items: center;
   cursor: pointer;
   background-color: $accent-color;
-  margin-right: 8px;
 }
 
 .CartIcon {
@@ -110,6 +109,10 @@
   align-items: center;
   justify-content: space-between;
 	width: 220px;
+}
+
+.NavBttnsWrapper.WithLogout {
+	width: 350px;
 }
 
 // GitHub Button

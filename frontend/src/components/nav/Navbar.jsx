@@ -25,7 +25,7 @@ class Navbar extends React.Component {
       } else {
         return (
           <>
-            <div className={styles.NavBttnsWrapper}>
+            <div className={`${styles.NavBttnsWrapper} ${styles.WithLogout}`}>
               <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
                 <img
                   className={styles.CartIcon}
