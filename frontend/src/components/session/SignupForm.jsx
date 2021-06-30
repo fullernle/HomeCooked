@@ -45,6 +45,7 @@ class SignupForm extends React.Component {
   renderErrors() {
     return (
       <ul>
+				{console.log(this.props.errors)}
         {Object.values(this.props.errors).map((error, i) => (
           <li key={`error-${i}`}>{error}</li>
         ))}
@@ -56,6 +57,8 @@ class SignupForm extends React.Component {
     if (this.props.isSignedIn) {
       this.props.openModal();
     }
+
+		const { errors } = this.props;
     return (
       <div className={styles.SignupFormWrapper}>
         <div onClick={this.props.closeModal} className={styles.CloseX}>
@@ -67,9 +70,10 @@ class SignupForm extends React.Component {
             <span>{this.props.otherForm}</span>
           </header>
 
-          {this.renderErrors()}
+          {/* {this.renderErrors()} */}
           <div className={styles.Form}>
             <label>
+              <span className={styles.Errors}>{errors.email}</span>
               <input
                 className={styles.FormInput}
                 type="text"
@@ -81,6 +85,7 @@ class SignupForm extends React.Component {
             </label>
 
             <label>
+              <span className={styles.Errors}>{errors.username}</span>
               <input
                 type="text"
                 value={this.state.username}
@@ -92,6 +97,7 @@ class SignupForm extends React.Component {
             </label>
 
             <label>
+              <span className={styles.Errors}>{errors.password}</span>
               <input
                 className={styles.FormInput}
                 type="password"
@@ -102,6 +108,7 @@ class SignupForm extends React.Component {
               />
             </label>
             <label>
+              <span className={styles.Errors}>{errors.password2}</span>
               <input
                 className={styles.FormInput}
                 type="password"
