@@ -1,4 +1,5 @@
 // const Business = require('../../models/Business');
+const Business = require('../../models/Business');
 const Review = require('../../models/Review');
 
 module.exports = {
@@ -25,7 +26,11 @@ module.exports = {
   },
 
   fetchAllReviews : async (req, res) => {
-    const reviews = await Review.find()
-    return res.send(reviews)
+    business = req.params;
+    id = business.businessId;
+    // console.log(id)
+    const businessById = await Business.findById(id);
+
+    res.send(businessById.reviews);
   },
 }
