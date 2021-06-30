@@ -14,7 +14,7 @@ class Navbar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
-    this.props.logout()
+    this.props.logout();
   }
 
   // Selectively render links dependent on whether the user is logged in
@@ -32,6 +32,9 @@ class Navbar extends React.Component {
                   src="https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png"
                 />
               </Link>
+              <Link to="/search" className={styles.SrchBttn}>
+                Search
+              </Link>
               <button className={styles.NavBttn} onClick={this.logoutUser}>
                 Logout
               </button>
@@ -43,6 +46,9 @@ class Navbar extends React.Component {
       return (
         <>
           <div className={styles.NavBttnsWrapper}>
+            <Link to="/search" className={styles.SrchBttn}>
+              Search
+            </Link>
             <button
               className={styles.NavBttn}
               onClick={() => this.props.openModal("login")}
@@ -54,7 +60,7 @@ class Navbar extends React.Component {
       );
     }
   }
-	
+
   transNav() {
     return (
       <div className={styles.NavWrapper}>
@@ -85,8 +91,8 @@ class Navbar extends React.Component {
     return (
       <>
         {this.props.location.pathname === "/homecooks" ||
-        this.props.location.pathname === "/search" || 
-				this.props.location.pathname.includes("/cart")
+        this.props.location.pathname === "/search" ||
+        this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}
       </>

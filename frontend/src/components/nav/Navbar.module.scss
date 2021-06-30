@@ -47,6 +47,28 @@
   transition: 200ms;
 }
 
+.SrchBttn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+  border: none;
+  background: $main-color;
+  color: $font-color;
+  border-radius: 24px;
+  border: none;
+  height: 34px;
+  font-size: 16px;
+  width: 100px;
+  transition: 200ms;
+}
+
+.SrchBttn:hover {
+  background-color: $font-color;
+  color: $main-color;
+  transform: scale(1.05);
+}
+
 .NavBttn:hover {
   background-color: $main-color-hover;
   color: white;
@@ -87,7 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 32px;
+	width: 220px;
 }
 
 // GitHub Button
