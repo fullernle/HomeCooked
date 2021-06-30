@@ -13,6 +13,11 @@ class Review extends React.Component {
     console.log(this.props);
   }
 
+  componentDidMount() {
+    // this.props.fetchReviews();
+    console.log(this.props.reviews)
+  };
+
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state)
@@ -29,6 +34,7 @@ class Review extends React.Component {
 
   render() {
     return (
+
       <form onSubmit={this.handleSubmit}>
         <textarea onChange={this.update('body')} className={styles.Reviews}></textarea>
         <button type="submit">Submit</button>

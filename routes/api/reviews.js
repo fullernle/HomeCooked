@@ -8,5 +8,7 @@ res.json({msg: "This is the reviews route"}));
 
 router.post("/:businessId/review", passport.authenticate("jwt", { session: false }), Review.create);
 
+router.get("/:businessId/reviews", Review.fetchAllReviews)
+
 module.exports = router;
 
