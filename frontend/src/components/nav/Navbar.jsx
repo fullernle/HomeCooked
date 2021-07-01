@@ -29,17 +29,27 @@ class Navbar extends React.Component {
               <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
                 <i class="fas fa-shopping-cart" style={{ color: "black" }}></i>
               </Link>
-              <Link to="/search" className={styles.SrchBttn}>
+              <Link
+                to="/search"
+                className={`${styles.SrchBttn} ${styles.NavBttn}`}
+              >
                 Search
               </Link>
-              <button className={styles.NavBttn} onClick={this.logoutUser}>
+              <button className={`${styles.NavBttn}`} onClick={this.logoutUser}>
                 Logout
               </button>
               <div className={styles.Divider}>|</div>
-              <Link to="/about" className={styles.SrchBttn}>
+              <Link
+                to="/about"
+                className={`${styles.AbtBttn} ${styles.NavBttn}`}
+              >
                 About
               </Link>
-              <a href="https://github.com/fullernle/HomeCooked" target="_blank">
+              <a
+                className={`${styles.Git} ${styles.NavBttn}`}
+                href="https://github.com/fullernle/HomeCooked"
+                target="_blank"
+              >
                 Github
               </a>
             </div>
@@ -50,7 +60,10 @@ class Navbar extends React.Component {
       return (
         <>
           <div className={styles.NavBttnsWrapper}>
-            <Link to="/search" className={styles.SrchBttn}>
+            <Link
+              to="/search"
+              className={`${styles.SrchBttn} ${styles.NavBttn}`}
+            >
               Search
             </Link>
             <button
@@ -60,10 +73,14 @@ class Navbar extends React.Component {
               Sign In
             </button>
             <div className={styles.Divider}>|</div>
-            <Link to="/about" className={styles.AbtBttn}>
+            <Link to="/about" className={`${styles.AbtBttn} ${styles.NavBttn}`}>
               About
             </Link>
-            <a className={styles.Git} href="https://github.com/fullernle/HomeCooked" target="_blank">
+            <a
+              className={`${styles.Git} ${styles.NavBttn}`}
+              href="https://github.com/fullernle/HomeCooked"
+              target="_blank"
+            >
               Github
             </a>
           </div>
