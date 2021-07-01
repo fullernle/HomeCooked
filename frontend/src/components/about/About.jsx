@@ -3,6 +3,7 @@ import styles from "./About.module.scss";
 import fuller from "../../images/fuller_le.jpg";
 import dennis from "../../images/dennis_yu.jpg";
 import jonathan from "../../images/jonathon_yu.jpg";
+import ibrahim from "../../images/ibrahim_ali.jpg";
 
 function About() {
   return (
@@ -44,7 +45,7 @@ function About() {
           </div>
 
           <div className={styles.Member}>
-            <img src={jonathan} alt="" />
+            <img src={jonathan} alt="Jonathan Yu Image" />
             <h3>Jonathan Yu</h3>
             <a href="https://github.com/JonYu87" target="_blank">
               Github
@@ -58,12 +59,15 @@ function About() {
           </div>
 
           <div className={styles.Member}>
-            <img src="" alt="" />
+            <img src={ibrahim} alt="Ibrahim Ali Image" />
             <h3>Ibrahim Ali</h3>
             <a href="https://github.com/ElephantTalk" target="_blank">
               Github
             </a>
-            <a href="" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/ibrahim-a-998a39171/"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </div>

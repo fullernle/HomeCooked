@@ -27,7 +27,7 @@ class Navbar extends React.Component {
           <>
             <div className={`${styles.NavBttnsWrapper} ${styles.WithLogout}`}>
               <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
-                <i class="fas fa-shopping-cart" style={{color: "black"}}></i>
+                <i class="fas fa-shopping-cart" style={{ color: "black" }}></i>
               </Link>
               <Link to="/search" className={styles.SrchBttn}>
                 Search
@@ -35,6 +35,13 @@ class Navbar extends React.Component {
               <button className={styles.NavBttn} onClick={this.logoutUser}>
                 Logout
               </button>
+              <div className={styles.Divider}>|</div>
+              <Link to="/about" className={styles.SrchBttn}>
+                About
+              </Link>
+              <a href="https://github.com/fullernle/HomeCooked" target="_blank">
+                Github
+              </a>
             </div>
           </>
         );
@@ -52,6 +59,13 @@ class Navbar extends React.Component {
             >
               Sign In
             </button>
+            <div className={styles.Divider}>|</div>
+            <Link to="/about" className={styles.AbtBttn}>
+              About
+            </Link>
+            <a className={styles.Git} href="https://github.com/fullernle/HomeCooked" target="_blank">
+              Github
+            </a>
           </div>
         </>
       );
@@ -89,7 +103,7 @@ class Navbar extends React.Component {
       <>
         {this.props.location.pathname === "/homecooks" ||
         this.props.location.pathname === "/search" ||
-				this.props.location.pathname === "/about" ||
+        this.props.location.pathname === "/about" ||
         this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}
