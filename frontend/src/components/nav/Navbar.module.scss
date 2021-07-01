@@ -36,6 +36,10 @@
 }
 
 .NavBttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border: none;
   background: $font-color;
   color: $main-color;
@@ -45,34 +49,42 @@
   font-size: 16px;
   width: 100px;
   transition: 200ms;
+  margin: 0 12px;
 }
 
 .SrchBttn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-  border: none;
-  background: $main-color;
+  background-color: $main-color;
   color: $font-color;
-  border-radius: 24px;
-  border: none;
-  height: 34px;
-  font-size: 16px;
-  width: 100px;
-  transition: 200ms;
 }
 
-.SrchBttn:hover {
-  background-color: $font-color;
-  color: $main-color;
-  transform: scale(1.05);
+.Git {
+  color: $accent-color-hover;
 }
 
 .NavBttn:hover {
   background-color: $main-color-hover;
   color: white;
   transform: scale(1.05);
+}
+
+.AbtBttn {
+  background-color: $accent-color;
+  color: $font-color;
+}
+
+.AbtBttn:hover {
+  background-color: $font-color;
+  color: $accent-color;
+}
+
+.Git:hover {
+  background-color: $accent-color;
+  color: $font-color;
+}
+
+.SrchBttn:hover {
+  background-color: $font-color;
+  color: $main-color;
 }
 
 .Cart {
@@ -86,9 +98,8 @@
   align-items: center;
   cursor: pointer;
   background-color: $accent-color;
-	text-decoration: none;
+  text-decoration: none;
 }
-
 
 .Cart:hover {
   background-color: $accent-color-hover;
@@ -103,11 +114,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-	width: 220px;
 }
 
 .NavBttnsWrapper.WithLogout {
-	width: 350px;
+  width: 350px;
 }
 
 // GitHub Button
@@ -137,7 +147,7 @@
   max-width: 1400px;
   padding: 0 32px;
   height: 36px;
-	width: 90vw;
+  width: 90vw;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -167,4 +177,10 @@
 .Wrapper {
   display: flex;
   margin-top: 30px;
+}
+
+.Divider {
+  color: $main-color;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
