@@ -22,6 +22,11 @@ h2 {
 	margin-bottom: 32px;
 }
 
+h3 {
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin-bottom: 8px;
+}
 
 .AboutWrapper {
 	max-width: 1200px;
@@ -46,4 +51,9 @@ h2 {
 	object-fit: cover;
 	aspect-ratio: 1;
 	margin-bottom: 16px;
+}
+
+.Member > a {
+	font-size: 1.25rem;
+	margin-bottom: 8px;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./About.module.scss";
 import fuller from "../../images/fuller_le.jpg";
 import dennis from "../../images/dennis_yu.jpg";
+import jonathan from "../../images/jonathon_yu.jpg";
 
 function About() {
   return (
@@ -23,28 +24,28 @@ function About() {
           <div className={styles.Member}>
             <img src={fuller} alt="Fuller Le Image" />
             <h3>Fuller Le</h3>
-            <a href="">Github</a>
+            <a href="https://github.com/fullernle">Github</a>
             <a href="">LinkedIn</a>
           </div>
 
           <div className={styles.Member}>
             <img src={dennis} alt="Dennis Yu Image" />
             <h3>Denni Yu</h3>
-            <a href="">Github</a>
+            <a href="https://github.com/dennis-25">Github</a>
             <a href="">LinkedIn</a>
           </div>
 
           <div className={styles.Member}>
-            <img src="" alt="" />
+            <img src={jonathan} alt="" />
             <h3>Jonathan Yu</h3>
-            <a href="">Github</a>
+            <a href="https://github.com/JonYu87">Github</a>
             <a href="">LinkedIn</a>
           </div>
 
           <div className={styles.Member}>
             <img src="" alt="" />
             <h3>Ibrahim Ali</h3>
-            <a href="">Github</a>
+            <a href="https://github.com/ElephantTalk">Github</a>
             <a href="">LinkedIn</a>
           </div>
         </div>
