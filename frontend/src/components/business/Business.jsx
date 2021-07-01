@@ -128,7 +128,7 @@ export default class Business extends Component {
           ) : null}
           <div className={styles.UserReviewsWrapper}>
             {this.state.reviews.map((review) => {
-              return <p>{review.body}</p>;
+              return <p className={styles.UserReviews}>{review.body}</p>;
             })}
           </div>
         </div>

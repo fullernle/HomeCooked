@@ -47,8 +47,8 @@ class Review extends React.Component {
           <Rating
             onClick={this.handleRating}
             ratingValue={this.state.rating}
-            size={20}
-            label
+            size={36}
+            // label
             transition
             fillColor="orange"
             emptyColor="gray"
@@ -59,7 +59,8 @@ class Review extends React.Component {
             onChange={this.update("body")}
             className={styles.Reviews}
           ></textarea>
-          <button type="submit">Submit</button>
+          <br />
+          <button className={styles.Submit} type="submit">Submit</button>
         </form>
       </div>
     );

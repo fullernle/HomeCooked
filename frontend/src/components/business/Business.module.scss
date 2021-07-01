@@ -11,7 +11,7 @@
 }
 
 .BusinessContent {
-	padding: 0 32px;
+  padding: 0 32px;
 }
 
 .HeaderWrapper {
@@ -47,7 +47,7 @@
 }
 
 .Content {
-	display: flex;
+  display: flex;
 }
 .Header {
   margin-top: 160px;
@@ -66,7 +66,7 @@
   font-size: 24px;
   font-weight: 500;
   margin-top: 8px;
-	margin-left: 2px;
+  margin-left: 2px;
   margin-right: 8px;
   text-align: center;
   display: flex;
@@ -84,58 +84,58 @@
 }
 
 .SubDetails {
-	display: flex;
-	align-items: center;
-	margin-top: 8px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
 }
 
 .Price {
   font-size: 16px;
-	height: 27px;
-	display: flex;
-	font-weight: 500;
-	justify-content: center;
-	align-items: center;
+  height: 27px;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
-	padding: 0 12px;
-	border-radius: 24px;
-	background-color: $accent-color;
-	transition: all 100ms;
-	margin-left: 8px;
+  padding: 0 12px;
+  border-radius: 24px;
+  background-color: $accent-color;
+  transition: all 100ms;
+  margin-left: 8px;
 }
 
 .Rating {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
   width: fit-content;
-	padding: 0 12px;
-	border-radius: 24px;
-	background-color: $main-color;
-	transition: all 100ms;
+  padding: 0 12px;
+  border-radius: 24px;
+  background-color: $main-color;
+  transition: all 100ms;
 }
 
 .Rating:hover {
-	transform:scale(1.02)
+  transform: scale(1.02);
 }
 
 .Categories {
-	font-size: 16px;
-	// font-style: italic;
-	font-weight: 300;
+  font-size: 16px;
+  // font-style: italic;
+  font-weight: 300;
 }
 .InfoWrapper {
-	margin-top:8px;
-	margin-left: 2px;
+  margin-top: 8px;
+  margin-left: 2px;
   display: flex;
-	flex-direction: column;
-	// background-color: $font-color;
-	// min-height: 100px;
-	// padding: 8px;
+  flex-direction: column;
+  // background-color: $font-color;
+  // min-height: 100px;
+  // padding: 8px;
 }
 
 .BusinessInfo {
   color: $black;
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .BusinessLocation {
@@ -146,7 +146,7 @@
 .BusinessNumber {
   font-size: 12px;
   color: $font-color;
-	margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .BusinessHours {
@@ -155,6 +155,26 @@
 }
 
 .HoursTitle {
-	font-size: 18px;
-	margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.UserReviewsWrapper {
+  border: 1px solid darken($black, 5%);
+  border-radius: $black;
+  margin: 24px 0;
+  font-family: sans-serif;
+  min-width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  background-color: darkgray;
+  color: $font-color;
+  text-align: center;
+}
+
+.UserReviews {
+  font-size: 24px;
+  border-radius: $black;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+  padding: 18px;
 }
