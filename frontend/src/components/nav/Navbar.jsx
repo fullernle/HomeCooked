@@ -89,6 +89,7 @@ class Navbar extends React.Component {
       <>
         {this.props.location.pathname === "/homecooks" ||
         this.props.location.pathname === "/search" ||
+				this.props.location.pathname === "/about" ||
         this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}

@@ -1,0 +1,24 @@
+.Wrapper {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 64px;
+}
+
+.Team {
+	display: flex;
+
+}
+
+.Member {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Member > img {
+	width: 18vw;
+	object-fit: cover;
+	aspect-ratio: 1;
+
+}

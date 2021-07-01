@@ -8,6 +8,7 @@ import Modal from "../components/modal/Modal";
 import BusinessesContainer from "./business/BusinessesContainer";
 import CartContainer from "./cart/CartContainer";
 import Search from "./nav/Search"
+import About from "./about/About";
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
     <Switch>
       <Route exact path="/search" component={Search} />
       <ProtectedRoute exact path="/carts/:userId" component={CartContainer} />
+			<Route exact path="/about" component={About} />
       <Route exact path="/homecooks" component={BusinessesContainer} />
       <Route exact path="/homecook/:id" component={BusinessContainer} />
       <Route exact path="/" component={MainPageContainer} />

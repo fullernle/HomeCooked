@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./About.module.scss";
+import fuller from "../../images/fuller_le.jpg";
+import dennis from "../../images/dennis_yu.jpg";
+
 function About() {
   return (
-    <div>
+    <div className={styles.Wrapper}>
       <h1>About</h1>
       <p>
         Have you ever been in this situation? You want Pho, but with the love
@@ -14,9 +17,36 @@ function About() {
         on popular food delivery services, but for home cooks!
       </p>
 
-			<div>
+      <h2>Meet our Team</h2>
+      <div className={styles.Team}>
+        <div className={styles.Member}>
+          <img src={fuller} alt="Fuller Le Image" />
+          <h3>Fuller Le</h3>
+          <a href="">Github</a>
+          <a href="">LinkedIn</a>
+        </div>
 
-			</div>
+        <div className={styles.Member}>
+          <img src={dennis} alt="Dennis Yu Image" />
+          <h3>Denni Yu</h3>
+          <a href="">Github</a>
+          <a href="">LinkedIn</a>
+        </div>
+
+        <div className={styles.Member}>
+          <img src="" alt="" />
+          <h3>Jonathan Yu</h3>
+          <a href="">Github</a>
+          <a href="">LinkedIn</a>
+        </div>
+
+        <div className={styles.Member}>
+          <img src="" alt="" />
+          <h3>Ibrahim Ali</h3>
+          <a href="">Github</a>
+          <a href="">LinkedIn</a>
+        </div>
+      </div>
     </div>
   );
 }
