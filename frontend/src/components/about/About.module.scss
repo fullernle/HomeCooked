@@ -1,5 +1,30 @@
+@import "../variables.scss";
+
+
 .Wrapper {
-	max-width: 1400px;
+	border-top: 2px solid $main-color;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 500;
+}
+
+p {
+	font-size: 1.25rem;
+	line-height: 1.5;
+	margin: 32px 0;
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 500;
+	margin-bottom: 32px;
+}
+
+
+.AboutWrapper {
+	max-width: 1200px;
 	width: 100%;
 	margin: 0 auto;
 	padding-top: 64px;
@@ -7,7 +32,7 @@
 
 .Team {
 	display: flex;
-
+	justify-content: space-between;
 }
 
 .Member {
@@ -17,8 +42,8 @@
 }
 
 .Member > img {
-	width: 18vw;
+	width: 250px;
 	object-fit: cover;
 	aspect-ratio: 1;
-
+	margin-bottom: 16px;
 }
