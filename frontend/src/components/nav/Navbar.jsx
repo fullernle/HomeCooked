@@ -27,7 +27,7 @@ class Navbar extends React.Component {
           <>
             <div className={`${styles.NavBttnsWrapper} ${styles.WithLogout}`}>
               <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
-                <i class="fas fa-shopping-cart" style={{ color: "black" }}></i>
+                <i class="fas fa-shopping-cart" style={{ color: "#c26700" }}></i>
               </Link>
               <Link
                 to="/search"
