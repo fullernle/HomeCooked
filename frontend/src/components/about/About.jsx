@@ -19,34 +19,53 @@ function About() {
           on popular food delivery services, but for home cooks!
         </p>
 
-        <h2>Meet our Team</h2>
+        <h2>The Team</h2>
         <div className={styles.Team}>
           <div className={styles.Member}>
             <img src={fuller} alt="Fuller Le Image" />
             <h3>Fuller Le</h3>
-            <a href="https://github.com/fullernle">Github</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/fullernle" target="_blank">
+              Github
+            </a>
+            <a href="https://www.linkedin.com/in/fullernle/" target="_blank">
+              LinkedIn
+            </a>
           </div>
 
           <div className={styles.Member}>
             <img src={dennis} alt="Dennis Yu Image" />
             <h3>Denni Yu</h3>
-            <a href="https://github.com/dennis-25">Github</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/dennis-25" target="_blank">
+              Github
+            </a>
+            <a href="https://www.linkedin.com/in/dennis-yu/" target="_blank">
+              LinkedIn
+            </a>
           </div>
 
           <div className={styles.Member}>
             <img src={jonathan} alt="" />
             <h3>Jonathan Yu</h3>
-            <a href="https://github.com/JonYu87">Github</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/JonYu87" target="_blank">
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jonathan-yu-352b02186/"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
           </div>
 
           <div className={styles.Member}>
             <img src="" alt="" />
             <h3>Ibrahim Ali</h3>
-            <a href="https://github.com/ElephantTalk">Github</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/ElephantTalk" target="_blank">
+              Github
+            </a>
+            <a href="" target="_blank">
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
