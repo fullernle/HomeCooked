@@ -97,8 +97,9 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: $accent-color;
+  background-color: $font-color;
   text-decoration: none;
+	margin: 0 12px;
 }
 
 .Cart:hover {
@@ -114,10 +115,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.NavBttnsWrapper.WithLogout {
-  width: 350px;
 }
 
 // GitHub Button
@@ -180,7 +177,7 @@
 }
 
 .Divider {
-  color: $main-color;
+  color: $font-color;
   font-size: 1.5rem;
   font-weight: 400;
 }
