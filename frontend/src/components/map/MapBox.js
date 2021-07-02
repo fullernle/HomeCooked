@@ -10,7 +10,7 @@ import styles from "./Map.module.scss";
 import { styled } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
-const MAPBOX_TOKEN = require("../../config/mapToken").MAPBOX_TOKEN;
+const mapToken = require("../../config/mapToken").mapBoxToken;
 
 const MyStar = styled(StarIcon)({
   color: "rgb(248, 38, 38)",
@@ -47,10 +47,10 @@ function MapBox() {
   }, []);
 
   return (
-    <div style={{ height: "100vh", width: '60vw' }}>
+    <div style={{ height: "100vh", width: "60vw" }}>
       <MapGL
         {...viewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
+        mapboxApiAccessToken={mapToken}
         width="100%"
         height="100%"
         mapStyle="mapbox://styles/ibrahim-ali00/ckpyj7c391f4w17o3sw1bkywp"
@@ -89,10 +89,14 @@ function MapBox() {
                 className={styles.PopupContainer}
               >
                 <div className={styles.Popup}>
-									<div className={styles.PopupHeader}>
-          	        <Link to={`/homecook/${biz._id}`} className={styles.Name}>{biz.name}</Link>
-										<div className={styles.Category}>{biz.categories[0].title}</div>
-									</div>
+                  <div className={styles.PopupHeader}>
+                    <Link to={`/homecook/${biz._id}`} className={styles.Name}>
+                      {biz.name}
+                    </Link>
+                    <div className={styles.Category}>
+                      {biz.categories[0].title}
+                    </div>
+                  </div>
                   {/* <label>Reviews</label> */}
                   <div className={styles.SmallDetails}>
                     <div className={styles.Price}>{biz.price}</div>

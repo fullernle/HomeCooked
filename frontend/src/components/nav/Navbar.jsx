@@ -15,41 +15,80 @@ class Navbar extends React.Component {
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
-    // this.props.history.push("/");
   }
 
   // Selectively render links dependent on whether the user is logged in
   getLinks() {
     if (this.props.loggedIn) {
-      return (
-        <>
-          <div className={styles.NavBttnsWrapper}>
-            <div className={styles.Cart}>
-              <ShoppingCartOutlinedIcon
-                style={{ fill: "#fcf4f0", fontWeight: 300 }}
-              ></ShoppingCartOutlinedIcon>
+      if (!this.props.user) {
+        return null;
+      } else {
+        return (
+          <>
+            <div className={`${styles.NavBttnsWrapper} ${styles.WithLogout}`}>
+              <Link to={`/carts/${this.props.user.id}`} className={styles.Cart}>
+                <i class="fas fa-shopping-cart" style={{ color: "#c26700" }}></i>
+              </Link>
+              <Link
+                to="/search"
+                className={`${styles.SrchBttn} ${styles.NavBttn}`}
+              >
+                Search
+              </Link>
+              <button className={`${styles.NavBttn}`} onClick={this.logoutUser}>
+                Logout
+              </button>
+              <div className={styles.Divider}>|</div>
+              <Link
+                to="/about"
+                className={`${styles.AbtBttn} ${styles.NavBttn}`}
+              >
+                About
+              </Link>
+              <a
+                className={`${styles.Git} ${styles.NavBttn}`}
+                href="https://github.com/fullernle/HomeCooked"
+                target="_blank"
+              >
+                Github
+              </a>
             </div>
-            <button className={styles.NavBttn} onClick={this.logoutUser}>
-              Logout
-            </button>
-          </div>
-        </>
-      );
+          </>
+        );
+      }
     } else {
       return (
         <>
           <div className={styles.NavBttnsWrapper}>
+            <Link
+              to="/search"
+              className={`${styles.SrchBttn} ${styles.NavBttn}`}
+            >
+              Search
+            </Link>
             <button
               className={styles.NavBttn}
               onClick={() => this.props.openModal("login")}
             >
               Sign In
             </button>
+            <div className={styles.Divider}>|</div>
+            <Link to="/about" className={`${styles.AbtBttn} ${styles.NavBttn}`}>
+              About
+            </Link>
+            <a
+              className={`${styles.Git} ${styles.NavBttn}`}
+              href="https://github.com/fullernle/HomeCooked"
+              target="_blank"
+            >
+              Github
+            </a>
           </div>
         </>
       );
     }
   }
+
   transNav() {
     return (
       <div className={styles.NavWrapper}>
@@ -57,7 +96,6 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          {this.props.location.pathname === "/familystyle" ? <Search /> : null}
           {this.getLinks()}
         </header>
       </div>
@@ -71,7 +109,6 @@ class Navbar extends React.Component {
           <Link to="/" className={styles.Logo}>
             HomeCooked
           </Link>
-          <Search />
           {this.getLinks()}
         </header>
       </div>
@@ -82,7 +119,9 @@ class Navbar extends React.Component {
     return (
       <>
         {this.props.location.pathname === "/homecooks" ||
-        this.props.location.pathname === "/familystyle"
+        this.props.location.pathname === "/search" ||
+        this.props.location.pathname === "/about" ||
+        this.props.location.pathname.includes("/cart")
           ? this.normalNav()
           : this.transNav()}
       </>

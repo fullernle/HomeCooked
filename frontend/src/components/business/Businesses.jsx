@@ -11,7 +11,6 @@ export default class Business extends Component {
   }
 
   getImage(productId) {
-    console.log(productId);
     return this.props.products.find((x) => x._id === productId).photos[0];
   }
   render() {
@@ -21,36 +20,66 @@ export default class Business extends Component {
       if (this.props.products.length < 1) {
         return null;
       } else {
-        console.log(this.props.products);
         return (
           <div className={styles.Wrapper}>
             <div className={styles.List}>
-              {this.props.businesses.map((business) => {
-                return (
-                  <>
-                    <div className={styles.Item}>
-                      <div className={styles.Details}>
-                        <Link
-                          className={styles.NavLink}
-                          to={`/homecook/${business._id}`}
-                        >
-                          {business.name}
-                        </Link>
-                        <p className={styles.Categories}>
-                          {business.categories[0].title},{" "}
-                          {business.categories[1].title},{" "}
-                          {business.categories[2].title}{" "}
+              {this.props.businesses
+                .filter((business) => {
+                  if (this.props.query === "") {
+                    return true;
+                  } else if (
+                    business.name
+                      .toLowerCase()
+                      .includes(this.props.query.toLowerCase()) ||
+                    business.location.display_address[0]
+                      .toLowerCase()
+                      .includes(this.props.query.toLowerCase()) ||
+                    business.categories[0].title
+                      .toLowerCase()
+                      .includes(this.props.query.toLowerCase()) ||
+                    business.categories[1].title
+                      .toLowerCase()
+                      .includes(this.props.query.toLowerCase()) ||
+                    business.categories[2].title
+                      .toLowerCase()
+                      .includes(this.props.query.toLowerCase())
+                  ) {
+                    return true;
+                  }
+                })
+                .map((business) => {
+                  return (
+                    <>
+                      <Link
+                        to={`/homecook/${business._id}`}
+                        className={styles.Item}
+                      >
+                        <div className={styles.Details}>
+                          <Link
+                            className={styles.NavLink}
+                            to={`/homecook/${business._id}`}
+                          >
+                            {business.name}
+                          </Link>
+                          <p className={styles.Categories}>
+                            {business.categories[0].title},{" "}
+                            {business.categories[1].title},{" "}
+                            {business.categories[2].title}{" "}
+                          </p>
+                          <p>{business.location.display_address[0]}</p>
+                          <p>{business.location.display_address[1]}</p>
+                        </div>
+                        <p className={styles.PhotoWrapper}>
+                          <img
+                            className={styles.Photo}
+                            src={this.getImage(business.products[0])}
+                            alt=""
+                          />
                         </p>
-                        <p>{business.location.display_address[0]}</p>
-                        <p>{business.location.display_address[1]}</p>
-                      </div>
-                      <p className={styles.PhotoWrapper}>
-                        <img className={styles.Photo} src={this.getImage(business.products[0])} alt="" />
-                      </p>
-                    </div>
-                  </>
-                );
-              })}
+                      </Link>
+                    </>
+                  );
+                })}
             </div>
           </div>
         );

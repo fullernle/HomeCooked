@@ -19,7 +19,7 @@ export default class MainPage extends Component {
           <h1 className={styles.Header}>Homecooked meals,</h1>
           <h1 className={styles.Header}>delivered to your door!</h1>
 
-          <Link to="/familystyle" className={styles.Link}>
+          <Link to="/search" className={styles.Link}>
             Welcome Home Sunny!
           </Link>
 
@@ -40,7 +40,7 @@ export default class MainPage extends Component {
             <div>
               <img
                 className={styles.MiddlePic}
-                src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.6435-9/120353962_1084437715304816_5064892278192494043_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=ZQDsJ7bEJhYAX-14ARv&_nc_ht=scontent-lga3-1.xx&oh=309f7fc10e0903439d872d6f85d709cf&oe=60CE1C8B"
+                src="https://di-uploads-pod11.dealerinspire.com/wildetoyota/uploads/2019/12/MilwaukeeChineseFood.jpg"
               />
             </div>
           </div>

@@ -3,19 +3,29 @@ import { closeModal } from "../../actions/ModalActions";
 import { connect } from "react-redux";
 import LoginFormContainer from "../session/LoginFormContainer";
 import SignupFormContainer from "../session/SignupFormContainer";
-import styles from "./Modal.module.scss"
+import RequireLogin from "../session/RequireLogin";
+import CartItemAdded from "../cart/CartItemAdded";
+import styles from "./Modal.module.scss";
 
-function Modal({ modal, closeModal}) {
+
+function Modal({ modal, closeModal }) {
   if (!modal) {
     return null;
   }
-  let component; switch (modal) {
+  let component;
+  switch (modal) {
     case "login":
       component = <LoginFormContainer />;
       break;
     case "signup":
       component = <SignupFormContainer />;
       break;
+    case "requireLogin":
+      component = <RequireLogin />;
+      break;
+    case "cartItemAdded":
+      component = <CartItemAdded />;
+			break;
     default:
       return null;
   }
