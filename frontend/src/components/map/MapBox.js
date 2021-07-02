@@ -13,8 +13,8 @@ import { Link } from "react-router-dom";
 const mapToken = require("../../config/mapToken").mapBoxToken;
 
 const MyStar = styled(StarIcon)({
-  color: "rgb(248, 38, 38)",
-  width: "2vh",
+  color: "#ff8800",
+  width: "18px",
   backgroundColor: "transparent",
 });
 
@@ -25,13 +25,13 @@ function MapBox() {
     width: 400,
     height: 400,
     latitude: 37.77,
-    longitude: -122.43,
-    zoom: 11.5,
+    longitude: -122.44,
+    zoom: 12.2,
   });
 
-  const handleMarkerClick = (id, latitude, longitude) => {
+  const handleMarkerClick = (id) => {
     setCurrentBusinessId(id);
-    setViewport({ ...viewport, latitude: latitude, longitude: longitude });
+    // setViewport({ ...viewport, latitude: latitude, longitude: longitude });
   };
 
   useEffect(() => {
@@ -67,14 +67,8 @@ function MapBox() {
             >
               <RoomIcon
                 className={styles.Icon}
-                style={{ fontSize: 3 * viewport.zoom }}
-                onClick={() =>
-                  handleMarkerClick(
-                    biz._id,
-                    biz.coordinates.latitude,
-                    biz.coordinates.longitude
-                  )
-                }
+                style={{ fontSize: 3 * viewport.zoom, cursor: "pointer" }}
+                onClick={() => handleMarkerClick(biz._id)}
               />
             </Marker>
             {biz._id === currentBusinessId && (
