@@ -12,7 +12,7 @@
 
 .Icon {
   font-size: 3;
-  color: $accent-color;
+  color: $tertiary-color;
   cursor: pointer;
 }
 
@@ -53,7 +53,7 @@
   width: fit-content;
 	padding: 0 12px;
 	border-radius: 24px;
-	background-color: $tertiary-color;
+	background-color: $accent-color;
 	color: $font-color;
 	transition: all 100ms;
 	// margin-left: 8px;
