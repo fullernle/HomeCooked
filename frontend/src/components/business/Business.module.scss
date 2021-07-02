@@ -164,11 +164,15 @@
   border-radius: $black;
   margin: 24px 0;
   font-family: sans-serif;
-  min-width: 200px;
+  max-width: 1000px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   background-color: darkgray;
   color: $font-color;
   text-align: center;
+  overflow-wrap: break-word;
+  :hover {
+	transform:scale(1.02)
+}
 }
 
 .UserReviews {

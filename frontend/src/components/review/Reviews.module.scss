@@ -2,7 +2,8 @@
 
 .ReviewForm {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  align-items: left;
 }
 
 .Rating {
@@ -24,6 +25,7 @@
   font-size: 18px;
   color: $black;
   line-height: 1.2;
+  align-items: center;
 }
 
 .Submit {
@@ -42,4 +44,6 @@
   cursor: pointer;
   overflow: hidden;
   transition: all 0.35s;
+  align-items: center;
 }
+
