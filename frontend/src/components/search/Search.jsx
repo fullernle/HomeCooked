@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import styles from "./Navbar.module.scss";
+import styles from "./Search.module.scss";
 import MapContainer from "../map/MapContainer";
-import BusinessesContainer from "../business/BusinessesContainer";
+import BusinessesContainer from "../business/BusinessesIndexContainer";
 
 export default class Search extends Component {
   constructor(props) {
@@ -40,6 +40,8 @@ export default class Search extends Component {
             placeholder="Search"
             onChange={this.handleOnInputChange}
           />
+
+          <i class="fas fa-search" style={{"margin-right": "12px"}}></i>
         </div>
         <div className={styles.Wrapper}>
           <BusinessesContainer query={query} />

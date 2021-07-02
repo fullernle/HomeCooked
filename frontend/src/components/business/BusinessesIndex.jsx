@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./Businesses.module.scss";
+import styles from "./BusinessesIndex.module.scss";
 import { Link } from "react-router-dom";
 
 export default class Business extends Component {

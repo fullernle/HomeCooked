@@ -8,7 +8,7 @@ import { styled } from "@material-ui/core/styles";
 
 const MyStar = styled(StarIcon)({
   color: "#fcf4f0",
-  width: "2vh",
+  width: "15px",
   backgroundColor: "transparent",
 });
 
