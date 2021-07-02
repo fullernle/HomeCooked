@@ -67,7 +67,7 @@ function MapBox() {
             >
               <RoomIcon
                 className={styles.Icon}
-                style={{ fontSize: 3 * viewport.zoom }}
+                style={{ fontSize: 3 * viewport.zoom, cursor: "pointer" }}
                 onClick={() => handleMarkerClick(biz._id)}
               />
             </Marker>

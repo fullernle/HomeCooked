@@ -13,11 +13,11 @@
 .Icon {
   font-size: 3;
   color: $tertiary-color;
-  cursor: pointer;
 }
 
 .Name {
 	font-size: 16px;
+	width: fit-content;
 	font-weight: 500;
 	text-decoration: none;
 	color: $black;
@@ -76,6 +76,7 @@
 
 .PopupContainer {
 	border-radius: 24px;
+	cursor: default;
 }
 
 .PopupHeader {
