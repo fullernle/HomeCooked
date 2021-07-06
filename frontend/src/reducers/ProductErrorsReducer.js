@@ -21,4 +21,4 @@ const ProductErrorsReducer = (state = _nullErrors, action) => {
   }
 };
 
-export default ProductErrorsReducer
+export default ProductErrorsReducer;

@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const users = require("./routes/api/users");
 const businesses = require("./routes/api/businesses");
 const products = require("./routes/api/products");
+const reviews = require("./routes/api/reviews");
 const carts = require("./routes/api/carts");
 
 const bodyParser = require("body-parser");
@@ -35,6 +36,7 @@ mongoose
 app.use("/api/businesses", businesses);
 app.use("/api/users", users);
 app.use("/api/products", products);
+app.use("/api/business", reviews);
 app.use("/api/carts", carts);
 
 app.use(passport.initialize());
