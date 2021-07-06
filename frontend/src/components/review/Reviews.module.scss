@@ -1,8 +1,11 @@
 @import "../variables.scss";
 
 .Wrapper {
-	max-width: 1400px;
-	margin: 0 auto;
+	max-width: 1100px;
+	// margin: 0 auto;
+
+	padding: 24px;
+	border-radius: 8px;
 }
 
 .Wrapper > h3 {

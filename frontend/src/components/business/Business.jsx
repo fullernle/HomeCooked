@@ -121,17 +121,24 @@ export default class Business extends Component {
             </div>
           </div>
 
-          {(currentUser &&
-            Object.keys(currentUser).length === 0 &&
-            currentUser.constructor === Object) ||
-          currentUser === undefined ? null : (
-            <ReviewsContainer businessId={this.props.match.params.id} />
-          )}
+          <div className={styles.ReviewWrapper}>
+            <h4>Reviews</h4>
+            {(currentUser &&
+              Object.keys(currentUser).length === 0 &&
+              currentUser.constructor === Object) ||
+            currentUser === undefined ? null : (
+              <ReviewsContainer businessId={this.props.match.params.id} />
+            )}
 
-          <div className={styles.UserReviewsWrapper}>
-            {this.state.reviews.map((review) => {
-              return <p className={styles.UserReviews}>{review.body}</p>;
-            })}
+            {this.state.reviews.length === 0 ? (
+              "No reviews yet! Be the first!"
+            ) : (
+              <div className={styles.UserReviewsWrapper}>
+                {this.state.reviews.map((review) => {
+                  return <p className={styles.UserReviews}>{review.body}</p>;
+                })}
+              </div>
+            )}
           </div>
         </div>
       );
