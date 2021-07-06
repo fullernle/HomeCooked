@@ -1,17 +1,17 @@
 @import "../variables.scss";
 
 .Wrapper {
-  height: 100vh;
+  // height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 24px 0 24px;
   max-width: 1400px;
-  margin: auto;
+  margin-bottom: 80px;
 }
 
 .BusinessContent {
   max-width: 1400px;
   margin: 0 auto;
+  margin-bottom: 32px;
 }
 
 .HeaderWrapper {
@@ -155,13 +155,57 @@
 .ReviewWrapper {
   box-shadow: 0px 0px 0.1px 1px rgba(0, 0, 0, 0.1);
   background-color: $font-color;
-	border-radius: 8px;
-	padding: 24px;
+  border-radius: 8px;
+  padding: 28px;
 }
 
 .ReviewWrapper > h4 {
-	font-weight: 500;
-	font-size: 30px;
-	margin-bottom: 24px;
-	border-bottom: 1px solid rgb(46, 46, 46);
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgb(46, 46, 46);
+}
+
+.ReviewsListWrapper {
+  margin-top: 16px;
+}
+
+.ReviewsList {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.SingleReview {
+  box-shadow: 0px 0px 0.1px 1px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  margin: 4px auto;
+	width: 1300px;
+	display: flex;
+	flex-direction: column;
+}
+
+.SingleReview > div >  h5 {
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.SingleReview > div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.SingleReview > div > div {
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	margin-left: 8px;
+}
+
+.SingleReview > p {
+	padding-left: 12px;
+	font-size: 18px;
+	white-space: pre-line;
 }

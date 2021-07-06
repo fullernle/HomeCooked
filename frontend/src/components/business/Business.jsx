@@ -9,7 +9,13 @@ import ReviewsContainer from "../review/ReviewsContainer";
 
 const MyStar = styled(StarIcon)({
   color: "#fcf4f0",
-  width: "15px",
+  width: "16px",
+  backgroundColor: "transparent",
+});
+
+const MyStar2 = styled(StarIcon)({
+  color: "#ff8800",
+  width: "16px",
   backgroundColor: "transparent",
 });
 
@@ -122,19 +128,38 @@ export default class Business extends Component {
             {(currentUser &&
               Object.keys(currentUser).length === 0 &&
               currentUser.constructor === Object) ||
-            currentUser === undefined ? null : (
+            currentUser === undefined ? (
+              "Login to leave a review!"
+            ) : (
               <ReviewsContainer businessId={this.props.match.params.id} />
             )}
+            <div className={styles.ReviewsListWrapper}>
+              {business.reviews.length === 0 ? (
+                "No reviews yet! Be the first!"
+              ) : (
+                <div className={styles.ReviewsList}>
+                  {business.reviews.reverse().map((review) => {
+                    return (
+                      <div className={styles.SingleReview}>
+                        <div>
+                          <h5>{review.username}</h5>
+                          <div>
+                            {review.rating === 0
+                              ? "0 stars"
+                              : Array(Math.floor(review.rating)).fill(
+                                  <MyStar2></MyStar2>
+                                )}
+                          </div>
+                        </div>
+                        <p>{review.body}</p>
 
-            {business.reviews.length === 0 ? (
-              "No reviews yet! Be the first!"
-            ) : (
-              <div className={styles.UserReviewsWrapper}>
-                {business.reviews.map((review) => {
-                  return <p className={styles.UserReviews}>{review.body}</p>;
-                })}
-              </div>
-            )}
+												
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       );
