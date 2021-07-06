@@ -7,9 +7,9 @@ class Review extends React.Component {
   constructor(props) {
     super(props);
 
-		let currUser = this.props.currentUser 
-		let name = ""
-		if (currUser) name = currUser.username
+    let currUser = this.props.currentUser;
+    let name = "";
+    if (currUser) name = currUser.username;
     this.state = {
       body: "",
       username: name,
@@ -27,45 +27,51 @@ class Review extends React.Component {
       body: "",
       username: this.props.currentUser.username,
       rating: 0,
-    })
+    });
   }
 
   update(field) {
-   
     return (e) => {
       this.setState({
         [field]: e.currentTarget.value,
       });
-    }
+    };
   }
 
-  handleRating = number => {
-    const rating = {rating: number}
-    this.setState(rating)
+  handleRating = (number) => {
+    const rating = { rating: number };
+    this.setState(rating);
   };
-  
+
   render() {
     return (
-      <div className={styles.ReviewForm}>
-        <form onSubmit={this.handleSubmit}>
-          <Rating
-            onClick={this.handleRating}
-            ratingValue={this.state.rating}
-            size={36}
-            // label
-            transition
-            fillColor="orange"
-            emptyColor="gray"
-            className={styles.Rating} // Will remove the inline style if applied
-          />
-          <textarea
-            value={this.state.body}
-            onChange={this.update("body")}
-            className={styles.Reviews}
-          ></textarea>
-          <br />
-          <button className={styles.Submit} type="submit">Submit</button>
-        </form>
+      <div className={styles.Wrapper}>
+        <h3>Leave a Review!</h3>
+        <div className={styles.ReviewForm}>
+          <form onSubmit={this.handleSubmit}>
+            <label className={styles.RatingWrapper}> Rating
+              <Rating
+                onClick={this.handleRating}
+                ratingValue={this.state.rating}
+                size={20}
+                // label
+                transition
+                fillColor="orange"
+                emptyColor="gray"
+                className={styles.Rating} // Will remove the inline style if applied
+              />
+            </label>
+            <textarea
+              value={this.state.body}
+              onChange={this.update("body")}
+              className={styles.Body}
+            ></textarea>
+            <br />
+            <button className={styles.Submit} type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

@@ -120,11 +120,14 @@ export default class Business extends Component {
               </div>
             </div>
           </div>
+
           {(currentUser &&
-          Object.keys(currentUser).length === 0 &&
-          currentUser.constructor === Object) || currentUser === undefined ? (
-            null
-          ) : <ReviewsContainer businessId={this.props.match.params.id} />}
+            Object.keys(currentUser).length === 0 &&
+            currentUser.constructor === Object) ||
+          currentUser === undefined ? null : (
+            <ReviewsContainer businessId={this.props.match.params.id} />
+          )}
+
           <div className={styles.UserReviewsWrapper}>
             {this.state.reviews.map((review) => {
               return <p className={styles.UserReviews}>{review.body}</p>;
