@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { fetchBusinessProducts } from "../../util/BusinessUtil";
 import styles from "./Business.module.scss";
 import Product from "../product/Product";
+import ProductContainer from "../product/ProductContainer";
 import StarIcon from "@material-ui/icons/Star";
 import { styled } from "@material-ui/core/styles";
 import ReviewsContainer from "../review/ReviewsContainer";
 
 const MyStar = styled(StarIcon)({
   color: "#fcf4f0",
-  width: "2vh",
+  width: "15px",
   backgroundColor: "transparent",
 });
 
@@ -118,7 +119,7 @@ export default class Business extends Component {
             <div className={styles.Content}>
               <div className={styles.ProductWrapper}>
                 {products.map((product) => {
-                  return <Product product={product} />;
+                  return <ProductContainer product={product} />;
                 })}
               </div>
             </div>

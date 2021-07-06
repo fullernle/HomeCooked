@@ -8,11 +8,11 @@ const BusinessSchema = new Schema({
   coordinates: {
     latitude: {
       type: Number,
-      required: true,
+      // required: true,
     },
     longitude: {
       type: Number,
-      required: true,
+      // required: true,
     },
   },
   categories: [{ type: Object }],

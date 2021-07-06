@@ -112,3 +112,17 @@
 .CloseX:hover {
   background-color: rgba(182, 182, 182, 0.541);
 }
+
+.SignupFormWrapper, .LoginFormWrapper{
+	height: 450px;
+	width: 340px;
+}
+
+.RequireLogin {
+	text-align: center;
+}
+
+.Errors {
+	color: red;
+	font-size: 12px;
+}

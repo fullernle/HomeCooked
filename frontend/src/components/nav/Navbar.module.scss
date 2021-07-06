@@ -36,6 +36,10 @@
 }
 
 .NavBttn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   border: none;
   background: $font-color;
   color: $main-color;
@@ -45,12 +49,42 @@
   font-size: 16px;
   width: 100px;
   transition: 200ms;
+  margin: 0 12px;
+}
+
+.SrchBttn {
+  background-color: $main-color;
+  color: $font-color;
+}
+
+.Git {
+  color: $accent-color-hover;
 }
 
 .NavBttn:hover {
   background-color: $main-color-hover;
   color: white;
   transform: scale(1.05);
+}
+
+.AbtBttn {
+  background-color: $accent-color;
+  color: $font-color;
+}
+
+.AbtBttn:hover {
+  background-color: $font-color;
+  color: $accent-color;
+}
+
+.Git:hover {
+  background-color: $accent-color;
+  color: $font-color;
+}
+
+.SrchBttn:hover {
+  background-color: $font-color;
+  color: $main-color;
 }
 
 .Cart {
@@ -63,17 +97,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background-color: $accent-color;
-  margin-right: 8px;
+  background-color: $font-color;
+  text-decoration: none;
+	margin: 0 12px;
 }
 
-.CartIcon {
-  background-color: transparent;
-  height: 24px;
-  width: 24px;
-  border: none;
-  cursor: pointer;
-}
 .Cart:hover {
   background-color: $accent-color-hover;
   transform: scale(1.05);
@@ -87,7 +115,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 32px;
 }
 
 // GitHub Button
@@ -113,50 +140,13 @@
   transform: scale(1.05);
 }
 
-.SearchContainer {
-  width: 100%;
-  padding: 0 32px;
-  height: 36px;
-  margin-bottom: 8px;
+.Wrapper {
+  display: flex;
+  margin-top: 30px;
 }
 
-.SearchInput {
-  width: 100%;
-  height: 100%;
-  // min-width: 100px;
-  // max-width: 777px;
-  // width: 777px;
-  // width: 325%;
-  // padding: 10px 24px;
-  border-radius: 24px;
-  transition: 250ms;
-  backface-visibility: hidden;
-  font-size: 16px;
-  color: $black;
-  padding-left: 12px;
-
-  // float: right;
-  // padding-left: -50px;
-  // position: relative;
-  // margin: auto;
-
-  background-color: $font-color;
-
-  &::placeholder {
-    color: $black;
-    letter-spacing: 1px;
-  }
-
-  // &:hover {
-  //   padding: 12px 0;
-  //   outline: 0;
-  //   border: 1px solid transparent;
-  //   border-bottom: 1px solid #575756;
-  //   border-radius: 28;
-  //   background-position: 100% center;
-  // }
-}
-
-.SearchInput:focus {
-  outline: none;
+.Divider {
+  color: $font-color;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
