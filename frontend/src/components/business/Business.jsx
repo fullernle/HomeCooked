@@ -19,7 +19,6 @@ export default class Business extends Component {
 
     this.state = {
       products: null,
-      reviews: null,
     };
 
     this.timeConverter = this.timeConverter.bind(this);
@@ -29,9 +28,6 @@ export default class Business extends Component {
     this.props.fetchBusiness(this.props.match.params.id);
     fetchBusinessProducts(this.props.match.params.id).then((products) => {
       this.setState({ products: products.data });
-    });
-    this.props.fetchReviews(this.props.match.params.id).then((reviews) => {
-      this.setState({ reviews: reviews.reviews });
     });
   }
 
@@ -49,7 +45,7 @@ export default class Business extends Component {
   }
 
   render() {
-    if (this.state.products === null || this.state.reviews === null) {
+    if (this.state.products === null) {
       return null;
     } else {
       let { products } = this.state;
@@ -130,11 +126,11 @@ export default class Business extends Component {
               <ReviewsContainer businessId={this.props.match.params.id} />
             )}
 
-            {this.state.reviews.length === 0 ? (
+            {business.reviews.length === 0 ? (
               "No reviews yet! Be the first!"
             ) : (
               <div className={styles.UserReviewsWrapper}>
-                {this.state.reviews.map((review) => {
+                {business.reviews.map((review) => {
                   return <p className={styles.UserReviews}>{review.body}</p>;
                 })}
               </div>
