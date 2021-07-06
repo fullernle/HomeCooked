@@ -5,9 +5,9 @@ import NavBarContainer from "./nav/NavbarContainer";
 import BusinessContainer from "./business/BusinessContainer";
 import MainPageContainer from "./main/MainPageContainer";
 import Modal from "../components/modal/Modal";
-import BusinessesContainer from "./business/BusinessesContainer";
+import BusinessesContainer from "./business/BusinessesIndexContainer";
 import CartContainer from "./cart/CartContainer";
-import Search from "./nav/Search"
+import Search from "./search/Search"
 import About from "./about/About";
 
 const App = () => (
