@@ -6,9 +6,13 @@ import { withRouter } from "react-router-dom";
 class Review extends React.Component {
   constructor(props) {
     super(props);
+
+		let currUser = this.props.currentUser 
+		let name = ""
+		if (currUser) name = currUser.username
     this.state = {
       body: "",
-      username: this.props.currentUser.username,
+      username: name,
       rating: 0,
     };
     this.handleSubmit = this.handleSubmit.bind(this);

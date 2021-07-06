@@ -21,6 +21,8 @@ export default class Business extends Component {
       products: null,
       reviews: null,
     };
+
+    this.timeConverter = this.timeConverter.bind(this);
   }
 
   componentDidMount() {
@@ -33,12 +35,25 @@ export default class Business extends Component {
     });
   }
 
+  timeConverter(string) {
+    let startTime = string.split(":");
+    let hours = Number(startTime[0]);
+    let minutes = Number(startTime[1]);
+    let startTimeValue;
+    if (hours > 0 && hours <= 12) startTimeValue = "" + hours;
+    else if (hours > 12) startTimeValue = "" + (hours - 12);
+    else if (hours == 0) startTimeValue = "12";
+    startTimeValue += minutes < 10 ? ":0" + minutes : ":" + minutes; // get minutes
+    startTimeValue += hours >= 12 ? " P.M." : " A.M."; // get AM/PM
+    return startTimeValue;
+  }
+
   render() {
     if (this.state.products === null || this.state.reviews === null) {
       return null;
     } else {
       let { products } = this.state;
-      let { business } = this.props;
+      let { business, currentUser } = this.props;
       let photos = [];
 
       products.forEach((product) => {
@@ -58,21 +73,8 @@ export default class Business extends Component {
       let start = `${beforeStart}:${afterStart}`;
       let end = `${beforeEnd}:${afterEnd}`;
 
-      function timeConverter(string) {
-        let startTime = string.split(":");
-        let hours = Number(startTime[0]);
-        let minutes = Number(startTime[1]);
-        let startTimeValue;
-        if (hours > 0 && hours <= 12) startTimeValue = "" + hours;
-        else if (hours > 12) startTimeValue = "" + (hours - 12);
-        else if (hours == 0) startTimeValue = "12";
-        startTimeValue += minutes < 10 ? ":0" + minutes : ":" + minutes; // get minutes
-        startTimeValue += hours >= 12 ? " P.M." : " A.M."; // get AM/PM
-        return startTimeValue;
-      }
-
-      let startTime = timeConverter(start);
-      let endTime = timeConverter(end);
+      let startTime = this.timeConverter(start);
+      let endTime = this.timeConverter(end);
 
       return (
         <div className={styles.BusinessContent}>
@@ -99,16 +101,10 @@ export default class Business extends Component {
                 </div>
                 <div className={styles.BusinessDetails}>
                   <div className={styles.InfoWrapper}>
-                    {/* <div className={styles.BusinessInfo}>Details:</div> */}
-                    {/* <div className={styles.BusinessLocation}>
-                    {business.location.display_address}
-                  </div> */}
                     <div className={styles.BusinessNumber}>
                       {business.display_phone}
                     </div>
-                    {/* <div className={styles.HoursTitle}>Hours:</div> */}
                     <div className={styles.BusinessHours}>
-                      {/* 7 Days A Week */}
                       {startTime}-{endTime}
                     </div>
                   </div>
@@ -124,9 +120,11 @@ export default class Business extends Component {
               </div>
             </div>
           </div>
-          {this.props.currentUser ? (
-            <ReviewsContainer businessId={this.props.match.params.id} />
-          ) : null}
+          {(currentUser &&
+          Object.keys(currentUser).length === 0 &&
+          currentUser.constructor === Object) || currentUser === undefined ? (
+            null
+          ) : <ReviewsContainer businessId={this.props.match.params.id} />}
           <div className={styles.UserReviewsWrapper}>
             {this.state.reviews.map((review) => {
               return <p className={styles.UserReviews}>{review.body}</p>;
