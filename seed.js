@@ -9,15 +9,17 @@ seeder.connect(db, function () {
     "./models/Product",
     "./models/User",
   ]);
-  seeder.clearModels(["Business", "Cart", "Product", "User"]);
-  seeder.populateModels(data, function (err, done) {
-    if (err) {
-      return console.log("Seeding failed", err);
-    }
-    if (done) {
-      return console.log("Seeding complete", done);
-    }
-    seeder.disconnect();
+  seeder.clearModels(["Business", "Cart", "Product", "User"], function(){
+
+    seeder.populateModels(data, function (err, done) {
+      if (err) {
+        return console.log("Seeding failed", err);
+      }
+      if (done) {
+        return console.log("Seeding complete", done);
+      }
+      seeder.disconnect();
+    });
   });
 });
 
@@ -31,41 +33,41 @@ const data = [
         "password": "test123",
       },
       {
-        "username": "",
-        "email": "",
-        "password": "",
+        "username": "HungryHippo",
+        "email": "hungryhungry@hippo.com",
+        "password": "test123",
       },
       {
-        "username": "",
-        "email": "",
-        "password": "",
+        "username": "ItsAlwaysLunchTime",
+        "email": "timetoeat@asdsa.com",
+        "password": "test123",
       },
       {
-        "username": "",
-        "email": "",
-        "password": "",
+        "username": "ILoveFood",
+        "email": "foodislife@eat.com",
+        "password": "test123",
       },
     ],
   },
-  {
-    model: "Business",
-    documents: [
-      {
-        "name": "Pho Hoa",
-        "phone": "+14152836431",
-        "display_phone": "(415) 283-6431",
-        "review_count": 1124,
-        "categories": [{
-          "title": "Vietnamese",
-          "title": "Asian",
-          "title": "Pho"
-        }],
-        "rating": 4,
-        "location":{
+  // {
+  //   model: "Business",
+  //   documents: [
+  //     {
+  //       "name": "Pho Hoa",
+  //       "phone": "+14152836431",
+  //       "display_phone": "(415) 283-6431",
+  //       "review_count": 1124,
+  //       "categories": [{
+  //         "title": "Vietnamese",
+  //         "title": "Asian",
+  //         "title": "Pho"
+  //       }],
+  //       "rating": 4,
+  //       "location":{
           
-        }
+  //       }
 
-      }
-    ]
-  },
+  //     }
+  //   ]
+  // },
 ];
