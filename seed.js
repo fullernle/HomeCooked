@@ -1,6 +1,6 @@
-import seeder from "mongoose-seed";
+var seeder = require("mongoose-seed");
 
-const db = "mongodb:http://localhost:3000/#/";
+const db = "mongodb+srv://Seed1:!seeds1@cluster0.s5ate.mongodb.net/TestSeeds?retryWrites=true&w=majority";
 
 seeder.connect(db, function () {
   seeder.loadModels([
