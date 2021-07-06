@@ -1,0 +1,2202 @@
+[{
+  "_id": {
+    "$oid": "60cb6fe7dbe11746905cf84e"
+  },
+  "name": "Pho Hoa",
+  "phone": "+14152836431",
+  "display_phone": "(415) 283-6431",
+  "review_count": 1124,
+  "categories": [
+    {
+      "title": "Vietnamese"
+    },
+    {
+      "title": "Asian"
+    },
+    {
+      "title": "Pho"
+    }
+  ],
+  "rating": 4,
+  "location": {
+    "address1": "4717 Bay St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "4717 Bay St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.80123,
+    "longitude": -122.42214
+  },
+  "products": [
+    {
+      "$oid": "60cbf0cd1efcc63a66f1379f"
+    },
+    {
+      "$oid": "60cbf1101efcc63a66f137a0"
+    },
+    {
+      "$oid": "60cbf1211efcc63a66f137a1"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ],
+  "reviews": [
+    {
+      "_id": {
+        "$oid": "60e49993afc67ef462065bef"
+      },
+      "body": "This place is great!",
+      "business": {
+        "$oid": "60cb6fe7dbe11746905cf84e"
+      },
+      "username": "test1",
+      "rating": 4,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e49d40afc67ef462065bf5"
+      },
+      "body": "Great place!",
+      "business": {
+        "$oid": "60cb6fe7dbe11746905cf84e"
+      },
+      "username": "test1",
+      "rating": 4,
+      "__v": 0
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cb70b0dbe11746905cf84f"
+  },
+  "name": "Red Sea Delish",
+  "phone": "+14153213123",
+  "display_phone": "(415) 321-3123",
+  "review_count": 812,
+  "categories": [
+    {
+      "title": "Ethiopian"
+    },
+    {
+      "title": "African"
+    },
+    {
+      "title": "Injera"
+    }
+  ],
+  "rating": 4,
+  "location": {
+    "address1": "9211 Park Ave",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "800 N Point St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.80231,
+    "longitude": -122.43214
+  },
+  "products": [
+    {
+      "$oid": "60cbf83b1efcc63a66f137a2"
+    },
+    {
+      "$oid": "60cbf8a51efcc63a66f137a4"
+    },
+    {
+      "$oid": "60cbf8c31efcc63a66f137a5"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ],
+  "reviews": [
+    {
+      "_id": {
+        "$oid": "60e4a16dafc67ef462065bf6"
+      },
+      "body": "This place is amazing!",
+      "business": {
+        "$oid": "60cb70b0dbe11746905cf84f"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a28aafc67ef462065bf8"
+      },
+      "body": "Bro, this place sucks",
+      "business": {
+        "$oid": "60cb70b0dbe11746905cf84f"
+      },
+      "username": "test1",
+      "rating": 1,
+      "__v": 0
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cb72a9dbe11746905cf851"
+  },
+  "name": "Lucha Libre Tacos",
+  "phone": "+1415113212",
+  "display_phone": "(415) 511-3212",
+  "review_count": 7876,
+  "categories": [
+    {
+      "title": "Mexican"
+    },
+    {
+      "title": "Tacos"
+    },
+    {
+      "title": "Burritos"
+    }
+  ],
+  "rating": 5,
+  "location": {
+    "address1": "1810 W Washington St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "1810 W Washington St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.8199,
+    "longitude": -122.4783
+  },
+  "products": [
+    {
+      "$oid": "60cbfa241efcc63a66f137a7"
+    },
+    {
+      "$oid": "60cbfa461efcc63a66f137a9"
+    },
+    {
+      "$oid": "60cbfa531efcc63a66f137aa"
+    },
+    {
+      "$oid": "60cbfae01efcc63a66f137ab"
+    },
+    {
+      "$oid": "60cbfafa1efcc63a66f137ac"
+    },
+    {
+      "$oid": "60cbfb221efcc63a66f137ad"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1730",
+          "end": "2200",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ],
+  "reviews": [
+    {
+      "_id": {
+        "$oid": "60e4a32dafc67ef462065bf9"
+      },
+      "body": "WAAA",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a3a8afc67ef462065bfb"
+      },
+      "body": "Testing again",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 2,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a483aa8b3c2aa3b6f048"
+      },
+      "body": "asdf",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a4e39209112bff705661"
+      },
+      "body": "Helloooo",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a4f29209112bff705662"
+      },
+      "body": "asdf",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a5049209112bff705663"
+      },
+      "body": "fudgeee",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a7fb9209112bff705666"
+      },
+      "body": "This... place... IS AMAZING.",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 4,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a8349209112bff705667"
+      },
+      "body": "Oh, my god... becky.",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4a84f9209112bff705668"
+      },
+      "body": "Wait wat",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4c44c9209112bff70566d"
+      },
+      "body": "This place is amazing",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4c49f9209112bff70566e"
+      },
+      "body": "This place is trash!\n\nLIke wtf mang\n\n\n- I wanted freebies\n- How long can I make this Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrash.",
+      "business": {
+        "$oid": "60cb72a9dbe11746905cf851"
+      },
+      "username": "test1",
+      "rating": 0,
+      "__v": 0
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbd0946829417119c23f15"
+  },
+  "name": "Dishes Done Dirt Cheap",
+  "phone": "+14155431235",
+  "display_phone": "(415) 543-1235",
+  "review_count": 6321,
+  "categories": [
+    {
+      "title": "British"
+    },
+    {
+      "title": "Pot Roast"
+    },
+    {
+      "title": "Beer"
+    }
+  ],
+  "rating": 3.5,
+  "location": {
+    "address1": "2131 Irving St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "2131 Irving St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.767219,
+    "longitude": -122.451368
+  },
+  "products": [
+    {
+      "$oid": "60cc00e01efcc63a66f137ae"
+    },
+    {
+      "$oid": "60cc010a1efcc63a66f137b0"
+    },
+    {
+      "$oid": "60cc01421efcc63a66f137b1"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "2100",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "2100",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "2100",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "2100",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "0800",
+          "end": "2100",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2100",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ],
+  "reviews": [
+    {
+      "_id": {
+        "$oid": "60e4c91d9209112bff705678"
+      },
+      "body": "WTF",
+      "business": {
+        "$oid": "60cbd0946829417119c23f15"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbdad85b40229c80419f78"
+  },
+  "name": "La Nonna",
+  "phone": "+14155329435",
+  "display_phone": "(415) 532-9435",
+  "review_count": 6321,
+  "categories": [
+    {
+      "title": "Italian"
+    },
+    {
+      "title": "Pasta"
+    },
+    {
+      "title": "Pizza"
+    }
+  ],
+  "rating": 3.5,
+  "location": {
+    "address1": "4212 Alderman Ln",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "4212 Alderman Ln",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.78657,
+    "longitude": -122.400096
+  },
+  "products": [
+    {
+      "$oid": "60cbf3a3cc9bd5583da3e56f"
+    },
+    {
+      "$oid": "60cbf3c1cc9bd5583da3e570"
+    },
+    {
+      "$oid": "60cbf3dccc9bd5583da3e571"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "0900",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "0900",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "0900",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "0900",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "0900",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbdc665b40229c8041f3dd"
+  },
+  "name": "Babushka's Beets",
+  "phone": "+14159299292",
+  "display_phone": "(415) 929-9292",
+  "review_count": 13,
+  "categories": [
+    {
+      "title": "Russian"
+    },
+    {
+      "title": "Borsht"
+    },
+    {
+      "title": "Kvass"
+    }
+  ],
+  "rating": 3.5,
+  "location": {
+    "address1": "123 Balboa St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "123 Balboa St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.77595,
+    "longitude": -122.48954
+  },
+  "products": [
+    {
+      "$oid": "60cc0181cc9bd5583da3e572"
+    },
+    {
+      "$oid": "60cc01decc9bd5583da3e573"
+    },
+    {
+      "$oid": "60cc0234cc9bd5583da3e574"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbe5335b40229c8043ebda"
+  },
+  "name": "Thaddeus' Greek",
+  "phone": "+14155555552",
+  "display_phone": "(415) 555-5552",
+  "review_count": 5133,
+  "categories": [
+    {
+      "title": "Greek"
+    },
+    {
+      "title": "Gyros"
+    },
+    {
+      "title": "Baklava"
+    }
+  ],
+  "rating": 3,
+  "location": {
+    "address1": "3411 Tyre Blvd",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "3411 Tyre Blvd",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.77911,
+    "longitude": -122.44331
+  },
+  "products": [
+    {
+      "$oid": "60cc0335cc9bd5583da3e575"
+    },
+    {
+      "$oid": "60cc039bcc9bd5583da3e576"
+    },
+    {
+      "$oid": "60cc03d9cc9bd5583da3e577"
+    },
+    {
+      "$oid": "60cc040bcc9bd5583da3e578"
+    },
+    {
+      "$oid": "60cc0437cc9bd5583da3e579"
+    },
+    {
+      "$oid": "60cc048bcc9bd5583da3e57a"
+    }
+  ],
+  "price": "$$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbe6115b40229c80441f39"
+  },
+  "name": "Guga's Steaks",
+  "phone": "+14155123928",
+  "display_phone": "(415) 512-3928",
+  "review_count": 4132,
+  "categories": [
+    {
+      "title": "Brazilian"
+    },
+    {
+      "title": "Steak"
+    },
+    {
+      "title": "Grill"
+    }
+  ],
+  "rating": 5,
+  "location": {
+    "address1": "512 3rd St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "512 3rd St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.76598,
+    "longitude": -122.38883
+  },
+  "products": [
+    {
+      "$oid": "60cc0556cc9bd5583da3e57b"
+    },
+    {
+      "$oid": "60cc05accc9bd5583da3e57c"
+    },
+    {
+      "$oid": "60cc0615cc9bd5583da3e57d"
+    }
+  ],
+  "price": "$$$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ],
+  "reviews": [
+    {
+      "_id": {
+        "$oid": "60e4c8f99209112bff705675"
+      },
+      "body": "WAT",
+      "business": {
+        "$oid": "60cbe6115b40229c80441f39"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4c9029209112bff705677"
+      },
+      "body": "I don't understand.",
+      "business": {
+        "$oid": "60cbe6115b40229c80441f39"
+      },
+      "username": "test1",
+      "rating": 3,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4c9439209112bff70567a"
+      },
+      "body": "WHY YOU LAG",
+      "business": {
+        "$oid": "60cbe6115b40229c80441f39"
+      },
+      "username": "test1",
+      "rating": 5,
+      "__v": 0
+    },
+    {
+      "_id": {
+        "$oid": "60e4ca159209112bff70567b"
+      },
+      "body": "asdf",
+      "business": {
+        "$oid": "60cbe6115b40229c80441f39"
+      },
+      "username": "test1",
+      "rating": 4,
+      "__v": 0
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbe6f05b40229c80445fa5"
+  },
+  "name": "George's Pastries",
+  "phone": "+14156423928",
+  "display_phone": "(415) 642-3928",
+  "review_count": 1412,
+  "categories": [
+    {
+      "title": "Desserts"
+    },
+    {
+      "title": "Cake"
+    },
+    {
+      "title": "Donuts"
+    }
+  ],
+  "rating": 1,
+  "location": {
+    "address1": "3122 Lincoln Way",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "3122 Lincoln Way",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.75659,
+    "longitude": -122.49553
+  },
+  "products": [
+    {
+      "$oid": "60cbf6af47ee78bdd300c5b6"
+    },
+    {
+      "$oid": "60cbf6c247ee78bdd300c5b7"
+    },
+    {
+      "$oid": "60cbf6d147ee78bdd300c5b8"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbe7e75b40229c8044a65e"
+  },
+  "name": "Nainai's Dumplings",
+  "phone": "+14159325151",
+  "display_phone": "(415) 932-5151",
+  "review_count": 1765,
+  "categories": [
+    {
+      "title": "Chinese"
+    },
+    {
+      "title": "Dumplings"
+    },
+    {
+      "title": "Dim Sum"
+    }
+  ],
+  "rating": 2.5,
+  "location": {
+    "address1": "4254 16th St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "4254 16th St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.76163,
+    "longitude": -122.42382
+  },
+  "products": [
+    {
+      "$oid": "60cc0774cc9bd5583da3e57e"
+    },
+    {
+      "$oid": "60cc07c6cc9bd5583da3e580"
+    },
+    {
+      "$oid": "60cc07f7cc9bd5583da3e581"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbe8d55b40229c8044f0e3"
+  },
+  "name": "Lola's Lumpia",
+  "phone": "+14157379212",
+  "display_phone": "(415) 737-9212",
+  "review_count": 76,
+  "categories": [
+    {
+      "title": "Filipino"
+    },
+    {
+      "title": "Lumpia"
+    },
+    {
+      "title": "Adobo"
+    }
+  ],
+  "rating": 4.5,
+  "location": {
+    "address1": "234 Market St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "234 Market St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.7405,
+    "longitude": -122.43294
+  },
+  "products": [
+    {
+      "$oid": "60cc087dcc9bd5583da3e582"
+    },
+    {
+      "$oid": "60cc08b7cc9bd5583da3e584"
+    },
+    {
+      "$oid": "60cc0905cc9bd5583da3e585"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbf56d5b40229c804868c7"
+  },
+  "name": "Thai Kitchen",
+  "phone": "+14159194421",
+  "display_phone": "(415) 919-4421",
+  "review_count": 2653,
+  "categories": [
+    {
+      "title": "Thai"
+    },
+    {
+      "title": "Pad Thai"
+    },
+    {
+      "title": "Noodles"
+    }
+  ],
+  "rating": 3.5,
+  "location": {
+    "address1": "7654 Oak St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "234 Oak St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.74641,
+    "longitude": -122.46904
+  },
+  "products": [
+    {
+      "$oid": "60cbf79b47ee78bdd300c5b9"
+    },
+    {
+      "$oid": "60cbf7a747ee78bdd300c5ba"
+    },
+    {
+      "$oid": "60cbf7b647ee78bdd300c5bb"
+    }
+  ],
+  "price": "$$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbf6555b40229c80489951"
+  },
+  "name": "Sam Wo Lunches",
+  "phone": "+14154923921",
+  "display_phone": "(415) 492-3921",
+  "review_count": 931,
+  "categories": [
+    {
+      "title": "Chinese"
+    },
+    {
+      "title": "Wonton Soup"
+    },
+    {
+      "title": "Fried Rice"
+    }
+  ],
+  "rating": 3,
+  "location": {
+    "address1": "122 Moraga St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "122 Moraga St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.78862,
+    "longitude": -122.48645
+  },
+  "products": [
+    {
+      "$oid": "60cbf80547ee78bdd300c5bc"
+    },
+    {
+      "$oid": "60cbf82147ee78bdd300c5bd"
+    },
+    {
+      "$oid": "60cbf86747ee78bdd300c5be"
+    },
+    {
+      "$oid": "60cbf8a747ee78bdd300c5bf"
+    },
+    {
+      "$oid": "60cbf8c947ee78bdd300c5c0"
+    },
+    {
+      "$oid": "60cbf9bd47ee78bdd300c5c1"
+    },
+    {
+      "$oid": "60cbfa0547ee78bdd300c5c2"
+    },
+    {
+      "$oid": "60cbfa2447ee78bdd300c5c3"
+    }
+  ],
+  "price": "$$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbf76e5b40229c8048d465"
+  },
+  "name": "Ly's Vietnamese Cuisine",
+  "phone": "+14153919822",
+  "display_phone": "(415) 391-9822",
+  "review_count": 479,
+  "categories": [
+    {
+      "title": "Vietnamese"
+    },
+    {
+      "title": "Pho"
+    },
+    {
+      "title": "Noodles"
+    }
+  ],
+  "rating": 4,
+  "location": {
+    "address1": "8391 Geary Blvd",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "8391 Geary Blvd",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.78572,
+    "longitude": -122.42015
+  },
+  "products": [
+    {
+      "$oid": "60cc0a28cc9bd5583da3e586"
+    },
+    {
+      "$oid": "60cc0a8acc9bd5583da3e588"
+    },
+    {
+      "$oid": "60cc0acacc9bd5583da3e589"
+    },
+    {
+      "$oid": "60cc0b01cc9bd5583da3e58a"
+    },
+    {
+      "$oid": "60cc0b42cc9bd5583da3e58b"
+    },
+    {
+      "$oid": "60cc0b90cc9bd5583da3e58c"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbf84f5b40229c8049027f"
+  },
+  "name": "Tacos al Pastor",
+  "phone": "+14159891231",
+  "display_phone": "(415) 989-1231",
+  "review_count": 2534,
+  "categories": [
+    {
+      "title": "Mexican"
+    },
+    {
+      "title": "Tacos"
+    },
+    {
+      "title": "Birria"
+    }
+  ],
+  "rating": 2.5,
+  "location": {
+    "address1": "12390 Ripley St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "12390 Ripley St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.74694,
+    "longitude": -122.40917
+  },
+  "products": [
+    {
+      "$oid": "60cc0c84cc9bd5583da3e58d"
+    },
+    {
+      "$oid": "60cc0ccfcc9bd5583da3e58f"
+    },
+    {
+      "$oid": "60cc0d29cc9bd5583da3e590"
+    },
+    {
+      "$oid": "60cc0dc6cc9bd5583da3e591"
+    },
+    {
+      "$oid": "60cc0e28cc9bd5583da3e592"
+    },
+    {
+      "$oid": "60cc0e75cc9bd5583da3e593"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbfc865b40229c8049e313"
+  },
+  "name": "Agni Tandoor",
+  "phone": "+141592183174",
+  "display_phone": "(415) 921-3174",
+  "review_count": 81,
+  "categories": [
+    {
+      "title": "Indian"
+    },
+    {
+      "title": "Biryani"
+    },
+    {
+      "title": "Curry"
+    }
+  ],
+  "rating": 5,
+  "location": {
+    "address1": "8291 Evans Ave",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "8291 Evans Ave",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.7505,
+    "longitude": -122.39212
+  },
+  "products": [
+    {
+      "$oid": "60cc12e8cc9bd5583da3e594"
+    },
+    {
+      "$oid": "60cc13c9cc9bd5583da3e596"
+    },
+    {
+      "$oid": "60cc1445cc9bd5583da3e597"
+    }
+  ],
+  "price": "$$$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbfd235b40229c804a0245"
+  },
+  "name": "Alcatraz Eats",
+  "phone": "+14155128911",
+  "display_phone": "(415) 512-8911",
+  "review_count": 1892,
+  "categories": [
+    {
+      "title": "Prison"
+    },
+    {
+      "title": "Slop"
+    },
+    {
+      "title": "Crickets"
+    }
+  ],
+  "rating": 5,
+  "location": {
+    "address1": "111 Alcatraz Ave",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "111 Alcatraz Ave",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.82593,
+    "longitude": -122.42219
+  },
+  "products": [
+    {
+      "$oid": "60cc1996cc9bd5583da3e5a0"
+    },
+    {
+      "$oid": "60cc1a2ecc9bd5583da3e5a2"
+    },
+    {
+      "$oid": "60cc1a9bcc9bd5583da3e5a3"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cbfe465b40229c804a3c77"
+  },
+  "name": "Khosrow Kabob",
+  "phone": "+14152431235",
+  "display_phone": "(415) 243-1235",
+  "review_count": 362,
+  "categories": [
+    {
+      "title": "Persian"
+    },
+    {
+      "title": "Kabob"
+    },
+    {
+      "title": "Tahdig"
+    }
+  ],
+  "rating": 4.5,
+  "location": {
+    "address1": "529 California St",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "529 California St",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.78032,
+    "longitude": -122.46726
+  },
+  "products": [
+    {
+      "$oid": "60cc164ccc9bd5583da3e598"
+    },
+    {
+      "$oid": "60cc16a8cc9bd5583da3e59a"
+    },
+    {
+      "$oid": "60cc175acc9bd5583da3e59b"
+    }
+  ],
+  "price": "$$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "60cc12475b40229c804ec983"
+  },
+  "name": "Shawarma Shop",
+  "phone": "+14153240921",
+  "display_phone": "(415) 324-0921",
+  "review_count": 872,
+  "categories": [
+    {
+      "title": "Arab"
+    },
+    {
+      "title": "Halal"
+    },
+    {
+      "title": "Shawarma"
+    }
+  ],
+  "rating": 4,
+  "location": {
+    "address1": "381 Presidio Ave",
+    "address2": "",
+    "address3": "",
+    "city": "San Francisco",
+    "zip_code": "94109",
+    "country": "US",
+    "state": "CA",
+    "display_address": [
+      "381 Presidio Ave",
+      "San Francisco, CA 94109"
+    ],
+    "cross_streets": ""
+  },
+  "coordinates": {
+    "latitude": 37.79149,
+    "longitude": -122.4475
+  },
+  "products": [
+    {
+      "$oid": "60cc1874cc9bd5583da3e59c"
+    },
+    {
+      "$oid": "60cc18f4cc9bd5583da3e59e"
+    },
+    {
+      "$oid": "60cc1923cc9bd5583da3e59f"
+    }
+  ],
+  "price": "$",
+  "hours": [
+    {
+      "open": [
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "1800",
+          "day": 0
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 1
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 2
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 3
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 4
+        },
+        {
+          "is_overnight": false,
+          "start": "1200",
+          "end": "2000",
+          "day": 5
+        },
+        {
+          "is_overnight": false,
+          "start": "1000",
+          "end": "2000",
+          "day": 6
+        }
+      ],
+      "hours_type": "REGULAR",
+      "is_open_now": true
+    }
+  ]
+}]

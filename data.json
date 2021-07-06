@@ -1,0 +1,279 @@
+{
+
+  "products": {
+    "_model": "Product",
+    "beefPho": {
+      "photos": [
+        "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2015%2F03%2F2133754_-Authentic-Pho-Photo-by-James-Lane.jpg&q=85"
+      ],
+      "name": "Beef Pho",
+      "price": "5.00"
+    }
+  },
+
+  "businesses": {
+    "_model": "Business",
+    "pho": {
+      "name": "Pho Hoa",
+      "phone": "+14152836431",
+      "display_phone": "(415) 283-6431",
+      "review_count": 1124,
+      "categories": [
+        {
+          "title": "Vietnamese"
+        },
+        {
+          "title": "Asian"
+        },
+        {
+          "title": "Pho"
+        }
+      ],
+      "rating": 4,
+      "location": {
+        "address1": "4717 Bay St",
+        "address2": "",
+        "address3": "",
+        "city": "San Francisco",
+        "zip_code": "94109",
+        "country": "US",
+        "state": "CA",
+        "display_address": ["4717 Bay St", "San Francisco, CA 94109"],
+        "cross_streets": ""
+      },
+      "coordinates": {
+        "latitude": 37.80123,
+        "longitude": -122.42214
+      },
+      "products": [
+				"products.beefPho"
+			],
+      "price": "$$",
+      "hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "reviews": []
+    },
+
+    "red": {
+      "name": "Red Sea Delish",
+      "phone": "+14153213123",
+      "display_phone": "(415) 321-3123",
+      "review_count": 812,
+      "categories": [
+        {
+          "title": "Ethiopian"
+        },
+        {
+          "title": "African"
+        },
+        {
+          "title": "Injera"
+        }
+      ],
+      "rating": 4,
+      "location": {
+        "address1": "9211 Park Ave",
+        "address2": "",
+        "address3": "",
+        "city": "San Francisco",
+        "zip_code": "94109",
+        "country": "US",
+        "state": "CA",
+        "display_address": ["800 N Point St", "San Francisco, CA 94109"],
+        "cross_streets": ""
+      },
+      "coordinates": {
+        "latitude": 37.80231,
+        "longitude": -122.43214
+      },
+      "products": [],
+      "price": "$",
+      "hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "reviews": []
+    },
+
+    "lucha": {
+      "name": "Lucha Libre Tacos",
+      "phone": "+1415113212",
+      "display_phone": "(415) 511-3212",
+      "review_count": 7876,
+      "categories": [
+        {
+          "title": "Mexican"
+        },
+        {
+          "title": "Tacos"
+        },
+        {
+          "title": "Burritos"
+        }
+      ],
+      "rating": 5,
+      "location": {
+        "address1": "1810 W Washington St",
+        "address2": "",
+        "address3": "",
+        "city": "San Francisco",
+        "zip_code": "94109",
+        "country": "US",
+        "state": "CA",
+        "display_address": ["1810 W Washington St", "San Francisco, CA 94109"],
+        "cross_streets": ""
+      },
+      "coordinates": {
+        "latitude": 37.8199,
+        "longitude": -122.4783
+      },
+      "products": [],
+      "price": "$$",
+      "hours": [
+        {
+          "open": [
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 0
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 1
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 2
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 3
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 4
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 5
+            },
+            {
+              "is_overnight": false,
+              "start": "1730",
+              "end": "2200",
+              "day": 6
+            }
+          ],
+          "hours_type": "REGULAR",
+          "is_open_now": true
+        }
+      ],
+      "reviews": []
+    }
+  }
+}
