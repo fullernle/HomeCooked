@@ -28,6 +28,7 @@ export default class Business extends Component {
     };
 
     this.timeConverter = this.timeConverter.bind(this);
+		this.timeStamp = this.timeStamp.bind(this);
   }
 
   componentDidMount() {
@@ -49,6 +50,11 @@ export default class Business extends Component {
     startTimeValue += hours >= 12 ? " P.M." : " A.M."; // get AM/PM
     return startTimeValue;
   }
+
+	timeStamp(time) {
+		let date = time.slice(0,10);
+		return date;
+	}
 
   render() {
     if (this.state.products === null) {
@@ -151,6 +157,7 @@ export default class Business extends Component {
                                 )}
                           </div>
                         </div>
+												<span>{this.timeStamp(review.createdAt)}</span>
                         <p>{review.body}</p>
 
 												
