@@ -40,7 +40,7 @@ class LoginForm extends React.Component {
   }
 
   demoUser() {
-    let demoUser = { email: "test@test.com", password: "test123" };
+    let demoUser = { email: "demo@test.com", password: "123123" };
     this.props.login(demoUser).then((res) => {;
       if (this.props.errors.length < 1) {
         this.props.closeModal();
