@@ -1,0 +1,66 @@
+@import "../variables.scss";
+
+.Wrapper {
+  max-width: 1100px;
+  // margin: 0 auto;
+
+  padding: 0 24px 24px 24px;
+  border-radius: 8px;
+}
+
+.Wrapper > h3 {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.ReviewForm {
+  display: flex;
+  width: 1400px;
+}
+
+.RatingWrapper {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.Body {
+  width: 1000px;
+  height: 200px;
+  border-radius: 4px;
+  padding: 12px;
+  resize: none;
+  margin-bottom: 12px;
+}
+
+.Body:focus {
+  outline: none;
+}
+
+.Submit {
+  background: rgb(54, 52, 52);
+  color: $font-color;
+  border-radius: 24px;
+  height: 32px;
+  font-size: 12px;
+  width: 92px;
+  border: none;
+  transition: 100ms;
+}
+
+.Submit:hover {
+  background-color: rgb(46, 46, 46);
+  transform: scale(1.05);
+}
+
+.Submit:active {
+  background-color: $accent-color;
+}

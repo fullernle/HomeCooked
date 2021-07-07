@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
-import Search from "./Search";
 class Navbar extends React.Component {
   constructor(props) {
     super(props);

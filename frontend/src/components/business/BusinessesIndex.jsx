@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./Businesses.module.scss";
+import styles from "./BusinessesIndex.module.scss";
 import { Link } from "react-router-dom";
 
 export default class Business extends Component {
@@ -20,34 +20,39 @@ export default class Business extends Component {
       if (this.props.products.length < 1) {
         return null;
       } else {
+        let bussList = this.props.businesses.filter((business) => {
+          if (this.props.query === "") {
+            return true;
+          } else if (
+            business.name
+              .toLowerCase()
+              .includes(this.props.query.toLowerCase()) ||
+            business.location.display_address[0]
+              .toLowerCase()
+              .includes(this.props.query.toLowerCase()) ||
+            business.categories[0].title
+              .toLowerCase()
+              .includes(this.props.query.toLowerCase()) ||
+            business.categories[1].title
+              .toLowerCase()
+              .includes(this.props.query.toLowerCase()) ||
+            business.categories[2].title
+              .toLowerCase()
+              .includes(this.props.query.toLowerCase())
+          ) {
+            return true;
+          }
+        });
+
         return (
           <div className={styles.Wrapper}>
             <div className={styles.List}>
-              {this.props.businesses
-                .filter((business) => {
-                  if (this.props.query === "") {
-                    return true;
-                  } else if (
-                    business.name
-                      .toLowerCase()
-                      .includes(this.props.query.toLowerCase()) ||
-                    business.location.display_address[0]
-                      .toLowerCase()
-                      .includes(this.props.query.toLowerCase()) ||
-                    business.categories[0].title
-                      .toLowerCase()
-                      .includes(this.props.query.toLowerCase()) ||
-                    business.categories[1].title
-                      .toLowerCase()
-                      .includes(this.props.query.toLowerCase()) ||
-                    business.categories[2].title
-                      .toLowerCase()
-                      .includes(this.props.query.toLowerCase())
-                  ) {
-                    return true;
-                  }
-                })
-                .map((business) => {
+              {bussList.length === 0 ? (
+                <p className={styles.NoResults}>
+                  No results for "{this.props.query}"
+                </p>
+              ) : (
+                bussList.map((business) => {
                   return (
                     <>
                       <Link
@@ -79,7 +84,8 @@ export default class Business extends Component {
                       </Link>
                     </>
                   );
-                })}
+                })
+              )}
             </div>
           </div>
         );

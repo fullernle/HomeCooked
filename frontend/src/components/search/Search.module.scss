@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.SearchContainer {
+	display: flex;
+	max-width: 1300px;
+	border: 1px solid black;
+	width: 600px;
+  height: 36px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+
+}
+
+.SearchInput {
+  width: 100%;
+  transition: 250ms;
+  font-size: 16px;
+  color: $black;
+  padding-left: 18px;
+	border: none;
+
+  &::placeholder {
+    color: $black;
+    letter-spacing: 1px;
+  }
+}
+
+.SearchInput:focus {
+  outline: none;
+}
+
+.Wrapper {
+	display: flex;
+	height: 88vh;
+}

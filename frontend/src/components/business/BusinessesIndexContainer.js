@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { fetchBusinesses } from "../../actions/BusinessActions";
 import { fetchProducts } from "../../actions/ProductActions";
-import Businesses from "./Businesses";
+import Businesses from "./BusinessesIndex";
 
 const mSTP = (state, ownProps) => ({
   businesses: Object.values(state.businesses),

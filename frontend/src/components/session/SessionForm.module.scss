@@ -9,13 +9,14 @@
 }
 
 .FormInput {
-  width: 100%;
+  width: 95%;
   background: none;
   border: solid 2px lightgray;
   height: 38px;
   border-radius: 6px;
   margin-top: 8px;
   transition: transform 100ms ease-out, background 150ms ease-out;
+	padding-left: 8px;
 }
 
 .FormInput:hover {
