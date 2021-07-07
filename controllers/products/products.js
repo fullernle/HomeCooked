@@ -5,12 +5,14 @@ module.exports = {
   create: async (req, res) => {
     business = req.params;
     id = business.id;
-    const { name, price, category, quantity } = req.body;
+    const { name, price, category, quantity, description, image } = req.body;
     const product = await Product.create({
       name,
       price,
       category,
       quantity,
+			description,
+			photos: [image],
       business: id,
     });
     await product.save();
