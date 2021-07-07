@@ -50,6 +50,14 @@ const data = [
     ],
   },
   {
+    model: "Product",
+    documents: [{
+      business: "businesses.name",
+      name: "Beef Pho",
+      price: "5.00"
+    }]
+  },
+  {
     model: "Business",
     documents: [
       {
@@ -78,8 +86,8 @@ const data = [
           latitude: 37.80123,
           longitude: -122.42214,
         },
-        // products: [],
-        // price: "$$",
+        products: [],
+        price: "$$",
         hours_type: "REGULAR",
         is_open_now: true,
         reviews: [],
@@ -134,4 +142,5 @@ const data = [
       },
     ],
   },
+  
 ];
