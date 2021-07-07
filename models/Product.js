@@ -18,6 +18,11 @@ const ProductSchema = new Schema({
     type: String,
     required: true,
   },
+
+	description: {
+		type: String,
+	},
+	
   photos: [{ type: String }]
 });
 
