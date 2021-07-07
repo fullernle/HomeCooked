@@ -192,7 +192,6 @@
 .SingleReview > div {
 	display: flex;
 	align-items: center;
-	margin-bottom: 8px;
 }
 
 .SingleReview > div > div {
@@ -208,6 +207,11 @@
 	padding-left: 12px;
 	font-size: 18px;
 	white-space: pre-line;
+}
+
+.SingleReview span {
+	font-size: 12px;
+	margin-bottom: 16px;
 }
 
 .ReviewWrapper > h4 {
