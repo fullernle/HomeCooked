@@ -135,13 +135,13 @@ export default class Business extends Component {
               Object.keys(currentUser).length === 0 &&
               currentUser.constructor === Object) ||
             currentUser === undefined ? (
-              "Login to leave a review!"
+              <span> Login to leave a review! </span>
             ) : (
               <ReviewsContainer businessId={this.props.match.params.id} />
             )}
             <div className={styles.ReviewsListWrapper}>
               {business.reviews.length === 0 ? (
-                "No reviews yet! Be the first!"
+                <span> No reviews yet! Be the first! </span>
               ) : (
                 <div className={styles.ReviewsList}>
                   {business.reviews.reverse().map((review) => {
@@ -157,10 +157,8 @@ export default class Business extends Component {
                                 )}
                           </div>
                         </div>
-												<span>{this.timeStamp(review.createdAt)}</span>
+                        <span>{this.timeStamp(review.createdAt)}</span>
                         <p>{review.body}</p>
-
-												
                       </div>
                     );
                   })}

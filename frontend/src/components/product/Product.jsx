@@ -27,15 +27,15 @@ export default class Product extends Component {
     return (
       <>
         <div className={styles.Product}>
-          <div
-            style={{ backgroundImage: `url(${photo})` }}
-            className={styles.Photo}
-          ></div>
+          <div className={styles.Photo}>
+            <img src={photo} alt="food item" />
+          </div>
 
           <div className={styles.ProductInfo}>
             <div>
               <div className={styles.Name}>{product.name}</div>
               <div className={styles.Price}>${product.price}</div>
+              <p className={styles.Description}> {product.description} </p>
             </div>
             <button onClick={this.addToCart} className={styles.CartBttn}>
               Add To Cart
