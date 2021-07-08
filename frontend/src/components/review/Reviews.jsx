@@ -44,12 +44,15 @@ class Review extends React.Component {
   };
 
   render() {
+    const { errors } = this.props;
     return (
       <div className={styles.Wrapper}>
         <h3>Leave a Review!</h3>
         <div className={styles.ReviewForm}>
           <form onSubmit={this.handleSubmit}>
-            <label className={styles.RatingWrapper}> Rating
+            <label className={styles.RatingWrapper}>
+              {" "}
+              Rating
               <Rating
                 onClick={this.handleRating}
                 ratingValue={this.state.rating}
@@ -60,12 +63,24 @@ class Review extends React.Component {
                 emptyColor="gray"
                 className={styles.Rating} // Will remove the inline style if applied
               />
+              {errors && errors.rating ? (
+                <span className={styles.Error}>
+                  Rating must be minimum 1 star
+                </span>
+              ) : null}
             </label>
-            <textarea
-              value={this.state.body}
-              onChange={this.update("body")}
-              className={styles.Body}
-            ></textarea>
+
+            <div className={styles.BodyWrapper}>
+              <textarea
+                value={this.state.body}
+                onChange={this.update("body")}
+                className={styles.Body}
+              ></textarea>
+              {errors && errors.body ? (
+                <span className={styles.Error}>Body must contain text</span>
+              ) : null}
+            </div>
+
             <br />
             <button className={styles.Submit} type="submit">
               Submit

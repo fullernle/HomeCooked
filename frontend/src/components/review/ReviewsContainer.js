@@ -4,7 +4,8 @@ import Reviews from './Reviews';
 
 const mSTP = (state, ownProps) => ({
   reviews: state.reviews,
-  currentUser: state.session.user 
+  currentUser: state.session.user,
+	errors: state.errors.review.errors
 })
 
 const mDTP = (dispatch) => ({
