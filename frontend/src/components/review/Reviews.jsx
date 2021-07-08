@@ -19,6 +19,9 @@ class Review extends React.Component {
     this.handleRating = this.handleRating.bind(this);
   }
 
+	componentDidMount() {
+		this.props.resetReviewErrors();
+	}
   handleSubmit(e) {
     e.preventDefault();
     const review = Object.assign({}, this.state);

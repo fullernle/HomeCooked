@@ -36,6 +36,7 @@ export default class Business extends Component {
     fetchBusinessProducts(this.props.match.params.id).then((products) => {
       this.setState({ products: products.data });
     });
+		this.props.resetReviewErrors();
   }
 
   timeConverter(string) {

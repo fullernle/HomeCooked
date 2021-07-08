@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchReviews, createReview } from '../../actions/ReviewActions';
+import { fetchReviews, createReview, resetReviewErrors } from '../../actions/ReviewActions';
 import Reviews from './Reviews';
 
 const mSTP = (state, ownProps) => ({
@@ -11,6 +11,7 @@ const mSTP = (state, ownProps) => ({
 const mDTP = (dispatch) => ({
   fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
   createReview: (businessId, review) => dispatch(createReview(businessId, review)),
+	resetReviewErrors: () => dispatch(resetReviewErrors()),
 });
 
 export default connect(mSTP, mDTP)(Reviews);
