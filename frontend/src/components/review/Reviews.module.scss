@@ -64,3 +64,14 @@
 .Submit:active {
   background-color: $accent-color;
 }
+
+.Error {
+	font-size: 12px;
+	color: red;
+	margin-left: 12px;
+}
+
+.BodyWrapper {
+	display: flex;
+	flex-direction: column;
+}
