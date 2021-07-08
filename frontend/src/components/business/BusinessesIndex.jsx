@@ -6,15 +6,13 @@ export default class Business extends Component {
   componentDidMount() {
     this.props.fetchBusinesses();
     this.props.fetchProducts();
-
-    this.getImage = this.getImage.bind(this);
   }
 
   getImage(productId) {
     return this.props.products.find((x) => x._id === productId).photos[0];
   }
   render() {
-    if (!Array.isArray(this.props.businesses)) {
+    if (!Array.isArray(this.props.businesses) || this.props.products === undefined || this.props.products === null) {
       return null;
     } else {
       if (this.props.products.length < 1) {
