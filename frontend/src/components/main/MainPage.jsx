@@ -10,6 +10,8 @@ export default class MainPage extends Component {
         <span className={styles.Username}>{this.props.user.username}</span>
       );
     }
+
+		const {user} = this.props;
     return (
       <>
         <div className={styles.Background}></div>
@@ -20,7 +22,7 @@ export default class MainPage extends Component {
           <h1 className={styles.Header}>delivered to your door!</h1>
 
           <Link to="/search" className={styles.Link}>
-            Welcome Home Sunny!
+            Welcome Home, {(user && Object.keys(user).length === 0 && user.constructor === Object) || user === undefined ?  "Sunny!" : user.username}
           </Link>
 
           <div className={styles.MainMiddle}>
