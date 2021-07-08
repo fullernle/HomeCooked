@@ -2,6 +2,7 @@ import {
   RECEIVE_CURRENT_REVIEW,
   RECEIVE_REVIEW_ERRORS,
   RECEIVE_REVIEWS,
+	RESET_REVIEW_ERRORS,
 } from "../actions/ReviewActions";
 
 const _nullErrors = [];
@@ -16,6 +17,8 @@ const ReviewErrorsReducer = (state = _nullErrors, action) => {
       return _nullErrors;
     case RECEIVE_REVIEW_ERRORS:
       return action.errors;
+		case RESET_REVIEW_ERRORS:
+			return _nullErrors;
     default:
       return state;
   }
