@@ -19,13 +19,13 @@ HomeCooked will be a website similar to that of other food delivery services.  I
 -  [x] Search functionality
 ![search](https://user-images.githubusercontent.com/63718493/124989245-cc25ac00-dff3-11eb-8b29-38dd99e45bfb.gif)
 
--  [ ] Interactive web page for ordering meals 
+-  [x] Interactive web page for ordering meals 
 ![interactive_order_small](https://user-images.githubusercontent.com/63718493/124989383-ecee0180-dff3-11eb-88ef-fb34cc45f3af.gif)
 
--  [ ] Ability to create Reviews 
+-  [x] Ability to create Reviews 
 ![review](https://user-images.githubusercontent.com/63718493/124989391-f0818880-dff3-11eb-8279-034fb1dcf64d.gif)
 
--  [ ] Cart integration 
+-  [x] Cart integration 
 ![cart_integration](https://user-images.githubusercontent.com/63718493/124989400-f37c7900-dff3-11eb-99ba-993bb80fb953.gif)
 
 
