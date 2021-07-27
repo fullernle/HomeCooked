@@ -8,7 +8,6 @@ module.exports = {
 
       business = req.params;
       id = business.businessId;
-    // console.log(business)
     let request = req.body;
     let username = request.username;
     let body = request.body;
@@ -38,7 +37,6 @@ module.exports = {
   fetchAllReviews: async (req, res) => {
     business = req.params;
     id = business.businessId;
-    // console.log(id)
     const businessById = await Business.findById(id);
     
     res.send(businessById.reviews);

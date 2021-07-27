@@ -40,7 +40,6 @@ function MapBox() {
         const allBusinesses = await axios.get("/api/businesses");
         setBusinesses(allBusinesses.data);
       } catch (err) {
-        console.log(err);
       }
     };
     getBusinesses();
