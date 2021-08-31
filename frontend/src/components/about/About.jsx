@@ -35,7 +35,7 @@ function About() {
 
           <div className={styles.Member}>
             <img src={dennis} alt="Dennis Yu Image" />
-            <h3>Denni Yu</h3>
+            <h3>Dennis Yu</h3>
             <a href="https://github.com/dennis-25" target="_blank">
               Github
             </a>
