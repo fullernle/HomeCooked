@@ -11,19 +11,27 @@ export default class MainPage extends Component {
       );
     }
 
-		const {user} = this.props;
+    const { user } = this.props;
     return (
       <>
         <div className={styles.Background}></div>
         <div className={styles.Overlay}></div>
         <div className={styles.Underlay}></div>
         <div className={styles.MainPage}>
-          <h1 className={styles.Header}>Homecooked meals,</h1>
-          <h1 className={styles.Header}>delivered to your door!</h1>
+          <div className={styles.HeaderContainer}>
+            <h1 className={styles.Header}>Homecooked meals,</h1>
+            <h1 className={styles.Header}>delivered to your door!</h1>
 
-          <Link to="/search" className={styles.Link}>
-            Welcome Home, {(user && Object.keys(user).length === 0 && user.constructor === Object) || user === undefined ?  "Sunny!" : user.username}
-          </Link>
+            <Link to="/search" className={styles.Link}>
+              Welcome Home,{" "}
+              {(user &&
+                Object.keys(user).length === 0 &&
+                user.constructor === Object) ||
+              user === undefined
+                ? "Sunny!"
+                : user.username}
+            </Link>
+          </div>
 
           <div className={styles.MainMiddle}>
             <div className={styles.MiddleText}>
@@ -42,7 +50,7 @@ export default class MainPage extends Component {
             <div>
               <img
                 className={styles.MiddlePic}
-                src="https://di-uploads-pod11.dealerinspire.com/wildetoyota/uploads/2019/12/MilwaukeeChineseFood.jpg"
+                src="https://app-homecooked-images.s3.us-west-1.amazonaws.com/HomeCookedSplashOne.jpg"
               />
             </div>
           </div>
@@ -51,7 +59,7 @@ export default class MainPage extends Component {
             <div>
               <img
                 className={styles.LowerPic}
-                src="https://utsc.utoronto.ca/news-events/sites/default/files/image/article/Culinaria-banner-small.jpg"
+                src="https://app-homecooked-images.s3.us-west-1.amazonaws.com/HomeCookedSplashImage.jpg"
               />
             </div>
             <div className={styles.LowerText}>
@@ -67,11 +75,9 @@ export default class MainPage extends Component {
             </div>
           </div>
 
-          <div>
-            <footer className={styles.Footer}>
-              Copyright &copy; 2021 HomeCooked
-            </footer>
-          </div>
+          <footer className={styles.Footer}>
+            Copyright &copy; 2021 HomeCooked
+          </footer>
         </div>
       </>
     );
